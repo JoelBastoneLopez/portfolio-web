@@ -1587,6 +1587,7 @@ button {
 
 .footer-slider {
   display: flex;
+  justify-content: safe center;
   gap: 2rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
