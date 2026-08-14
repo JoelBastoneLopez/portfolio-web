@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ducharme Seating | Joel Bastone</title>
+  <meta name="description" content="Visualización de recintos a gran escala para Ducharme Seating." />
+  <meta name="keywords" content="Ducharme Seating, Render 3D, CGI, Auditorios, Joel Bastone Lopez" />
+  <meta name="author" content="Joel Bastone Lopez" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .ducharme-text-block {
+      max-width: 900px;
+      margin: 6rem auto;
+      text-align: center;
+      padding: 0 5%;
+    }
+    .ducharme-text-block p {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 300;
+    }
+    
+    .grid-3-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1440px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+    .grid-3-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    
+    .full-width-img {
+      max-width: 1440px;
+      margin: 0 auto 4rem;
+      padding: 0 2rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .full-width-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .vertical-img-container {
+      max-width: 800px; /* Ancho más contenido para imágenes verticales */
+      margin: 0 auto 4rem;
+      padding: 0 2rem;
+    }
+    .vertical-img-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .grid-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 1440px;
+      margin: 0 auto 4rem;
+      padding: 0 2rem;
+    }
+    .grid-split-left img {
+      width: 100%;
+      height: 100%;
+      max-height: 800px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .grid-split-right {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .grid-split-right img {
+      width: 100%;
+      height: 100%;
+      max-height: calc(400px - 0.75rem);
+      object-fit: contain;
+      border-radius: 8px;
+      background: #fff;
+    }
+    
+    @media (max-width: 900px) {
+      .grid-3-col, .grid-split {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .grid-3-col, .grid-split {
+        grid-template-columns: 1fr;
+      }
+      .grid-split-left img {
+        max-height: 60vh;
+      }
+      .ducharme-text-block p {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">JOEL BASTONE LOPEZ</a>
+      <div class="nav-links">
+        <a href="index.html#portfolio" class="nav-link">Volver al Portfolio</a>
+        <a href="index.html#contact" class="nav-link nav-cta">Hablemos</a>
+      </div>
+      <div class="nav-burger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+      <a href="index.html#contact" class="nav-link">Hablemos</a>
+    </div>
+  </nav>
+
+  <main class="project-page">
+    
+    <!-- HEADER -->
+    <header class="project-hero">
+      <div class="project-hero-bg">
+        <img src="assets/img/ducharme/Env-1.jpg" alt="Ducharme Environment Hero" style="width: 100%; height: 100%; object-fit: cover;" />
+      </div>
+      <div class="project-hero-content">
+        <div class="project-meta">
+          <span class="project-badge">ArchViz</span>
+          <span class="project-badge">CGI 3D</span>
+        </div>
+        <h1 class="project-title">DUCHARME SEATING</h1>
+        <h2 class="project-subtitle">Visualización de recintos a gran escala</h2>
+      </div>
+    </header>
+
+    <!-- CONTENT GALLERY -->
+    <section class="project-gallery">
+      
+      <!-- Bloque de Texto 1 -->
+      <div class="ducharme-text-block">
+        <p>Colaboré con Ducharme Seating para crear un catálogo digital completo de sus butacas premium para auditorios y teatros. El proyecto implicó visualizar la precisión de cada producto y su integración ambiental a gran escala para recintos de alta gama.</p>
+      </div>
+
+      <!-- Imagen Vertical + 2 Nuevas -->
+      <div class="grid-split">
+        <div class="grid-split-left">
+          <img src="assets/img/ducharme/Render_view_vertical_00000.png" alt="Detalle Vertical" />
+        </div>
+        <div class="grid-split-right">
+          <img src="assets/img/ducharme/Aristocrat-Fabric-1-Wood-1_view1.jpg" alt="Aristocrat Fabric 1" />
+          <img src="assets/img/ducharme/Aristocrat-Fabric-2-Wood-1_view1.jpg" alt="Aristocrat Fabric 2" />
+        </div>
+      </div>
+
+      <!-- Bloque de Texto 2 -->
+      <div class="ducharme-text-block">
+        <p>Desarrollé un flujo de trabajo 3D modular para renderizar eficientemente múltiples variaciones de color y materiales, proporcionando a la marca activos versátiles para cualquier licitación de ventas.</p>
+      </div>
+
+      <!-- Grilla 2 (6 variaciones) -->
+      <div class="grid-3-col">
+        <img src="assets/img/ducharme/Environment-Option1-Fabric1-Wood1-View2.jpg" alt="Variación 1" />
+        <img src="assets/img/ducharme/Environment-Option1-Fabric2-Wood1-View2.jpg" alt="Variación 2" />
+        <img src="assets/img/ducharme/Environment-Option2-Fabric1-Wood2-View2.jpg" alt="Variación 4" />
+        <img src="assets/img/ducharme/ducharme-land.jpg" alt="Ducharme Land" />
+        <img src="assets/img/ducharme/Environment-Option2-Fabric2-Wood1.jpg" alt="Variación 6" />
+        <img src="assets/img/ducharme/Environment-Option2-Fabric2-Wood1-View3.jpg" alt="Variación 5" />
+      </div>
+
+      <!-- Bloque de Texto 3 -->
+      <div class="ducharme-text-block">
+        <p>Gestioné entornos complejos con miles de elementos de alta poligonalidad (filas de asientos) manteniendo la integridad de la iluminación y los materiales fotorrealistas.</p>
+      </div>
+
+      <!-- Imagen Horizontal Full -->
+      <div class="full-width-img">
+        <img src="assets/img/ducharme/Render_view_01820.png" alt="Render Vista General" />
+      </div>
+
+      <!-- Bloque de Texto 4 -->
+      <div class="ducharme-text-block">
+        <p>Se elaboraron animaciones técnicas para demostrar la distribución espacial y la mecánica de los asientos, satisfaciendo la necesidad del cliente de una forma interactiva de presentar los planos del recinto.</p>
+      </div>
+
+      <!-- Video Final -->
+      <div class="full-width-img" style="margin-bottom: 6rem;">
+        <video src="assets/video/ducharme-animation.mp4" autoplay loop muted playsinline style="width: 100%; border-radius: 8px; display: block;"></video>
+      </div>
+
+    </section>
+
+    <!-- FOOTER NAV SLIDER -->
+    <section class="project-footer">
+      <div class="footer-slider-header">
+        <h3>Otros Proyectos</h3>
+      </div>
+      <div class="footer-slider-container">
+        <div class="footer-slider">
+          <a href="project-kaisar.html" class="slider-item">
+            <img src="assets/img/kaisar.jpg" alt="Kaisar" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">KAISAR</h4>
+                <span class="slider-cat">LookDev & Animación</span>
+              </div>
+            </div>
+          </a>
+          <a href="project-8bottle.html" class="slider-item">
+            <img src="assets/img/8bottle.jpg" alt="8Bottle" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">8BOTTLE</h4>
+                <span class="slider-cat">Product CGI 3D</span>
+              </div>
+            </div>
+          </a>
+          <a href="project-primicia.html" class="slider-item">
+            <img src="assets/img/primicia/armado2.jpg" alt="Primicia" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">PRIMICIA</h4>
+                <span class="slider-cat">Configurador Web 3D</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GSAP & Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
