@@ -54,22 +54,134 @@
     <!-- HEADER -->
     <header class="project-hero">
       <div class="project-hero-bg">
-        <!-- Placeholder for hero image or video -->
+        <video src="assets/video/seccion-1.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
       </div>
       <div class="project-hero-content">
         <div class="project-meta">
           <span class="project-badge">Product CGI</span>
-          <span class="project-badge">Visualizador 3D</span>
+          <span class="project-badge">Configurador Web 3D</span>
         </div>
         <h1 class="project-title">PRIMICIA</h1>
-        <h2 class="project-subtitle">TITULO AQUI</h2>
-        <p class="project-brief">DESCRIPCION AQUI</p>
+        <h2 class="project-subtitle">Línea Lab</h2>
+        <p class="project-brief">Desarrollo de experiencia de personalización en tiempo real para e-commerce, uniendo diseño paramétrico, modelado optimizado e ingeniería web.</p>
       </div>
     </header>
 
-    <!-- CONTENT PLACEHOLDER -->
-    <section class="project-section project-gallery no-padding-top">
-      <!-- Secciones dinámicas que agregaremos luego -->
+    <!-- CONTENT -->
+    <style>
+      .custom-bg-block {
+        position: relative;
+        max-width: 1440px; /* Ancho aumentado un 20% respecto a los 1200px anteriores */
+        min-height: 45vh; /* Altura reducida */
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        display: flex;
+        align-items: center;
+        padding: 3rem 6%;
+        margin: 2rem auto; /* Centrado y con margen superior e inferior */
+        border-radius: 8px; /* Bordes redondeados para igualar los videos */
+        overflow: hidden;
+      }
+      .custom-bg-block::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
+        z-index: 1;
+      }
+      .custom-bg-block.right-bg::before {
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
+      }
+      .custom-bg-block.center-bg::before {
+        background: rgba(0, 0, 0, 0.7);
+      }
+      .custom-bg-block.no-overlay::before {
+        display: none;
+      }
+      .custom-bg-content {
+        position: relative;
+        z-index: 2;
+        max-width: 700px;
+      }
+      .custom-bg-content.text-left {
+        margin-right: auto;
+        text-align: left;
+      }
+      .custom-bg-content.text-right {
+        margin-left: auto;
+        text-align: right;
+      }
+      .custom-bg-content.text-center {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 900px;
+      }
+      .custom-bg-content p.custom-bold-text {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.3;
+        font-family: var(--font-d);
+        color: #000000;
+      }
+      .custom-bg-content p.custom-light-text {
+        font-size: 1.15rem;
+        font-weight: 500;
+        line-height: 1.6;
+        color: #000000;
+      }
+      .custom-bg-content .features-list h4 {
+        font-size: 1.6rem;
+        color: #000000;
+        margin-bottom: 0.8rem;
+        font-family: var(--font-d);
+      }
+      .custom-bg-content .features-list p {
+        font-size: 1.1rem;
+        color: #000000;
+        margin-bottom: 2.5rem;
+        line-height: 1.5;
+        font-weight: 500; /* Un poco más de peso para que se lea mejor en negro */
+      }
+    </style>
+
+    <section class="project-section project-gallery no-padding-top" style="padding-top: 2rem;">
+      
+      <!-- Bloque 1: armado2.jpg -->
+      <div class="custom-bg-block no-overlay" style="background-image: url('assets/img/primicia/armado2.jpg');">
+        <div class="custom-bg-content text-right">
+          <p class="custom-bold-text">Llevar la experiencia de compra de e-commerce al siguiente nivel requería transformar un producto físico complejo en un activo digital interactivo.</p>
+          <p class="custom-light-text">Para la línea 'Lab' de Primicia, diseñamos y desarrollamos un configurador web 3D en tiempo real que permite a los usuarios personalizar cada componente de la valija con actualización instantánea de precios y vistas previas fotorrealistas.</p>
+        </div>
+      </div>
+
+      <!-- Video seccion_2.webm -->
+      <div style="max-width: 1440px; margin: 2rem auto; overflow: hidden; border-radius: 8px;">
+        <video src="assets/video/seccion_2.webm" autoplay loop muted playsinline class="img-fluid reveal-img" style="width: 100%; display: block; border-radius: 8px;"></video>
+      </div>
+
+      <!-- Bloque 2: armado3.jpg -->
+      <div class="custom-bg-block no-overlay" style="background-image: url('assets/img/primicia/armado3.jpg'); min-height: 70vh;">
+        <div class="custom-bg-content text-right">
+          <div class="features-list">
+            <div class="feature-item">
+              <h4>Modularidad total</h4>
+              <p>Cada pieza de la valija fue estructurada como un sub-modelo independiente para permitir combinaciones infinitas de colores, texturas textiles y estampas sin penalizar el rendimiento.</p>
+            </div>
+            <div class="feature-item mt-4">
+              <h4>Transparencia y Resumen</h4>
+              <p>Diseñamos modales de validación claros y un desglose automatizado en el carrito que detalla con precisión cada selección y su impacto en el costo final.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video seccion_3.webm -->
+      <div style="max-width: 1440px; margin: 2rem auto; overflow: hidden; border-radius: 8px;">
+        <video src="assets/video/seccion_3.webm" autoplay loop muted playsinline class="img-fluid reveal-img" style="width: 100%; display: block; border-radius: 8px;"></video>
+      </div>
+
     </section>
 
     <!-- FOOTER NAV SLIDER -->
