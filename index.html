@@ -22,28 +22,39 @@
   <meta property="twitter:description" content="Portfolio profesional de Joel Bastone Lopez. 3D Product CGI & AI Artist." />
   <meta property="twitter:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/foto_perfil.png" />
   
-  <!-- Canonical -->
+  <!-- Canonical & SEO -->
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://joelbastonelopez.github.io/portfolio-web/" />
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Joel Bastone Lopez",
-    "url": "https://joelbastonelopez.github.io/portfolio-web/",
-    "image": "https://joelbastonelopez.github.io/portfolio-web/assets/img/foto_perfil.png",
-    "jobTitle": "3D Product CGI Artist & Diseñador Multimedial",
-    "description": "Portfolio profesional de Joel Bastone Lopez. Diseñador Multimedial, 3D Product CGI & AI Artist especializado en E-commerce, Advertising y Web 3D.",
-    "sameAs": [
-      "https://www.linkedin.com/in/joel-bastone-lopez/",
-      "https://www.behance.net/joelbastone1"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Buenos Aires",
-      "addressCountry": "AR"
-    }
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://joelbastonelopez.github.io/portfolio-web/#person",
+        "name": "Joel Bastone Lopez",
+        "jobTitle": "3D Product CGI Artist & Diseñador Multimedial",
+        "url": "https://joelbastonelopez.github.io/portfolio-web/",
+        "image": "https://joelbastonelopez.github.io/portfolio-web/assets/img/foto_perfil.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/joel-bastone-lopez/",
+          "https://www.behance.net/joelbastone1",
+          "https://www.fiverr.com/joelbl11"
+        ],
+        "knowsAbout": ["3D Modeling", "Product Rendering", "CGI", "Web 3D", "Multimedia Design"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://joelbastonelopez.github.io/portfolio-web/#website",
+        "url": "https://joelbastonelopez.github.io/portfolio-web/",
+        "name": "Portfolio de Joel Bastone Lopez",
+        "publisher": {
+          "@id": "https://joelbastonelopez.github.io/portfolio-web/#person"
+        }
+      }
+    ]
   }
   </script>
 
