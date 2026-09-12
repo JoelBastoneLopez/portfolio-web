@@ -1307,7 +1307,7 @@ button {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-  .nav-links, .nav-cta {
+  .nav-links, .nav-actions {
     display: none;
   }
   .nav-burger {
