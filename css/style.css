@@ -1673,3 +1673,9 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* LANGUAGE SWITCHER */
+.lang-switch { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--text); text-decoration: none; padding-left: 1rem; border-left: 1px solid rgba(255,255,255,0.2); }
+.lang-switch span { opacity: 0.5; transition: opacity 0.3s; }
+.lang-switch span.active { opacity: 1; }
+.lang-switch:hover span:not(.active) { opacity: 0.8; }
