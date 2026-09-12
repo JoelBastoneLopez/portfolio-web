@@ -1679,3 +1679,10 @@ button {
 .lang-switch span { opacity: 0.5; transition: opacity 0.3s; }
 .lang-switch span.active { opacity: 1; }
 .lang-switch:hover span:not(.active) { opacity: 0.8; }
+
+/* FIX NAV ACTIONS OVERLAP */
+.nav-actions { display: flex; align-items: center; position: absolute; right: 2rem; }
+.nav-actions .nav-cta { position: relative; right: auto; margin-right: 1rem; }
+@media (max-width: 900px) {
+  .nav-mobile .lang-switch { min-height: 44px; min-width: 44px; padding: 1rem 2rem; z-index: 100; pointer-events: auto; font-size: 1.2rem; }
+}
