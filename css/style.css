@@ -1688,3 +1688,53 @@ button {
 @media (max-width: 900px) {
   .nav-mobile .lang-switch { min-height: 44px; min-width: 44px; padding: 1rem 2rem; z-index: 100; pointer-events: auto; font-size: 1.2rem; }
 }
+
+
+/* Custom Video Wrapper */
+.custom-video-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.unmute-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  color: white;
+  z-index: 10;
+}
+
+.custom-video-wrapper:hover .unmute-btn {
+  opacity: 1;
+}
+
+.unmute-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.unmute-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
