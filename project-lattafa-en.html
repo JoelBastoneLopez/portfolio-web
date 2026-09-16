@@ -62,16 +62,24 @@
     <div class="nav-inner">
       <a href="index-en.html" class="nav-logo">JOEL BASTONE LOPEZ</a>
       <div class="nav-links">
-        <a href="index-en.html#proyectos" class="nav-link">Volver al Portfolio</a>
-        <a href="index.html#contacto" class="nav-link nav-cta">Hablemos</a>
+        <a href="index-en.html#proyectos" class="nav-link">Back to Portfolio</a>
       </div>
-      <div class="nav-burger">
+      <div class="nav-actions">
+        <a href="index-en.html#contacto" class="nav-link nav-cta" style="margin-right: 1rem;">Let's Talk</a>
+        <a href="project-lattafa.html" class="lang-switch">
+          <span>ES</span> | <span class="active">EN</span>
+        </a>
+      </div>
+      <button class="nav-burger" aria-label="Menú">
         <span></span><span></span><span></span>
-      </div>
+      </button>
     </div>
     <div class="nav-mobile">
       <a href="index-en.html#proyectos" class="nav-link">Portfolio</a>
-      <a href="index.html#contacto" class="nav-link">Hablemos</a>
+      <a href="index-en.html#contacto" class="nav-link">Let's Talk</a>
+      <a href="project-lattafa.html" class="lang-switch" style="border:none; padding-left:0; margin-top:1rem; justify-content:center;">
+        <span>ES</span> | <span class="active">EN</span>
+      </a>
     </div>
   </nav>
 
@@ -99,19 +107,24 @@
     <section class="project-section project-gallery">
       <div class="project-section-inner">
         <div class="project-text-block">
-          <h3 class="section-title">Dirección de Arte e IA Generativa</h3>
-          <p class="section-subtitle">Aprovechando herramientas de IA para idear rápidamente conceptos visuales innovadores para perfumería de lujo, manteniendo un control preciso sobre la iluminación, los materiales y la composición.</p>
+          <h3 class="section-title">Art Direction and Generative AI</h3>
+          <p class="section-subtitle">Leveraging AI tools to quickly conceptualize innovative visuals for luxury perfumery, maintaining precise control over lighting, materials, and composition.</p>
         </div>
         
-        <div class="custom-video-wrapper mt-2 mb-2">
-            <video id="lattafa-video" autoplay loop muted playsinline>
-              <source src="assets/video/lattafa-anim.mp4" type="video/mp4">
-            </video>
-            <button class="unmute-btn" onclick="toggleMute('lattafa-video', this)">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
-            </button>
-          </div>
-          <div class="gallery-grid-3">
+        <div class="gallery-grid-2 mt-2">
+          <img src="assets/img/lattafa/proyecto-lattafa-2.webp" alt="Lattafa Concept 2" class="img-fluid reveal-img" loading="lazy" />
+          <img src="assets/img/lattafa/proyecto-lattafa-3.webp" alt="Lattafa Concept 3" class="img-fluid reveal-img" loading="lazy" />
+        </div>
+        <div class="gallery-grid-2 mt-2">
+          <img src="assets/img/lattafa/proyecto-lattafa-4.webp" alt="Lattafa Concept 4" class="img-fluid reveal-img" loading="lazy" />
+          <img src="assets/img/lattafa/proyecto-lattafa-5.webp" alt="Lattafa Concept 5" class="img-fluid reveal-img" loading="lazy" />
+        </div>
+        <div class="gallery-grid-2 mt-2">
+          <img src="assets/img/lattafa/proyecto-lattafa-6.webp" alt="Lattafa Concept 6" class="img-fluid reveal-img" loading="lazy" />
+          <img src="assets/img/lattafa/proyecto-lattafa-7.webp" alt="Lattafa Concept 7" class="img-fluid reveal-img" loading="lazy" />
+        </div>
+
+        <div class="gallery-grid-3 mt-2">
           <img src="assets/img/lattafa/story1_cropped.webp" alt="Concept Story 1" class="img-fluid reveal-img" loading="lazy" />
           <img src="assets/img/lattafa/story2_cropped.webp" alt="Concept Story 2" class="img-fluid reveal-img" loading="lazy" />
           <img src="assets/img/lattafa/story3_cropped.webp" alt="Concept Story 3" class="img-fluid reveal-img" loading="lazy" />
@@ -119,12 +132,31 @@
       </div>
     </section>
 
-    <!-- DETALLES DE PRODUCTO -->
+    <!-- ANIMATION -->
     <section class="project-section bg-secondary">
       <div class="project-section-inner">
         <div class="project-text-block">
-          <h3 class="section-title">Materialidad y Composición</h3>
-          <p class="section-subtitle">Trabajo de LookDev centrado en cómo la luz atraviesa el vidrio tallado y se refracta en el líquido — el detalle que define si un render de perfumería se siente genuino o artificial.</p>
+          <h3 class="section-title">Animation and Motion</h3>
+          <p class="section-subtitle">Based on the approved static images, a fluid animation was created to bring the scene to life, adding subtle movement to the elements and highlighting the product's atmosphere.</p>
+        </div>
+        
+        <div class="custom-video-wrapper mt-2 mb-2">
+          <video id="lattafa-video" autoplay loop muted playsinline>
+            <source src="assets/video/lattafa-anim.mp4" type="video/mp4">
+          </video>
+          <button class="unmute-btn" onclick="toggleMute('lattafa-video', this)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILS -->
+    <section class="project-section">
+      <div class="project-section-inner">
+        <div class="project-text-block">
+          <h3 class="section-title">Materials and Composition</h3>
+          <p class="section-subtitle">LookDev work focused on how light passes through carved glass and refracts in the liquid — the crucial detail that defines whether a perfume render feels genuine or artificial.</p>
         </div>
         
         <div class="gallery-grid-2">
@@ -134,12 +166,12 @@
       </div>
     </section>
 
-    <!-- VARIANTES FINALES -->
-    <section class="project-section">
+    <!-- FINAL VARIANTS -->
+    <section class="project-section bg-secondary">
       <div class="project-section-inner">
         <div class="project-text-block">
-          <h3 class="section-title">Conceptos Finales</h3>
-          <p class="section-subtitle">Piezas finales pensadas para funcionar como fotografía de campaña: atmósfera, textura y una sola luz protagonista guiando el ojo hacia el producto.</p>
+          <h3 class="section-title">Final Concepts</h3>
+          <p class="section-subtitle">Final pieces designed to work as campaign photography: atmosphere, texture, and a single dramatic key light guiding the eye toward the product.</p>
         </div>
         
         <div class="gallery-grid-2">
