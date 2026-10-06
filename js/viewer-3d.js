@@ -167,7 +167,7 @@ export function initViewer3D() {
     }
 
     // Carga inicial
-    const initialModel = container.getAttribute('data-model') || 'assets/models/espadita.glb';
+    const initialModel = container.getAttribute('data-model') || 'assets/models/valija.glb';
     load3DModel(initialModel);
 
     // Interacción UI: Cambio de Modelos 3D
