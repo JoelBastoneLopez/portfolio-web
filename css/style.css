@@ -166,32 +166,26 @@ button {
   
   .nav-logo {
     font-family: 'Alien Block', sans-serif;
-    font-size: 1.75rem;
+    font-size: 2.05rem;
     font-weight: 400;
     font-style: normal;
     color: #C9A96F;
     letter-spacing: 2px;
-    opacity: 0;
-    max-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
-    text-decoration: none;
-  }
-  
-  .nav.scrolled .nav-logo {
     opacity: 1;
-    max-width: 400px;
     pointer-events: auto;
+    text-decoration: none;
+    line-height: 1;
+    display: flex;
+    align-items: center;
   }
 
   .nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 2rem;
     align-items: center;
-    margin: 0 auto;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 .nav-link {
