@@ -141,10 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Do not redirect or open modal if clicking inside the 3D Viewer canvas
-            if (item.classList.contains('featured-viewer-item')) {
-                return;
-            }
 
             const projectUrl = item.getAttribute('data-url');
             if (projectUrl) {

@@ -577,15 +577,10 @@ button {
   grid-row: span 2;
 }
 
-/* Featured 3D Interactive Item */
-.bento-item.featured-viewer-item {
+/* Featured Project Item */
+.bento-item.featured {
   grid-column: 1 / -1;
-  grid-row: auto;
-  height: 400px;
-  cursor: default;
-  background: var(--bg-card);
-  border: 1px solid rgba(201, 169, 110, 0.25);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  min-height: 380px;
 }
 
 .viewer-canvas-wrap {
@@ -1316,7 +1311,7 @@ button {
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .bento-item.wide, .bento-item.featured-viewer-item {
+  .bento-item.wide, .bento-item.featured {
     grid-column: span 2;
   }
 
@@ -1379,9 +1374,10 @@ button {
     grid-template-columns: 1fr;
     grid-auto-rows: 250px;
   }
-  .bento-item.wide, .bento-item.tall {
+  .bento-item.wide, .bento-item.tall, .bento-item.featured {
     grid-column: span 1;
     grid-row: span 1;
+    min-height: unset;
   }
   
   /* About Section */

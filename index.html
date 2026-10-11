@@ -170,33 +170,19 @@
       <!-- Bento grid -->
       <div class="bento-grid">
 
-        <!-- FEATURED PROJECT: Interactive 3D Viewer -->
-        <article class="bento-item featured-viewer-item wide animate-on-scroll" data-category="web" data-title="Visor 3D Interactivo en Tiempo Real" data-url="project-primicia.html">
-          <div class="viewer-canvas-wrap">
-            <div id="viewer-loading">Cargando valija 3D...</div>
-            <canvas id="viewer-canvas" class="viewer-canvas" data-model="assets/models/valija.glb"></canvas>
-            
-            <!-- Glowing Hero Text (Now with Badges) -->
-            <div class="viewer-glow-text">
-               <div class="bento-meta-head viewer-badges-top">
-                 <span class="bento-client-badge" id="viewer-client-badge">Primicia</span>
-                 <span class="bento-cat" id="viewer-cat-badge">Product CGI 3D</span>
-               </div>
-               
-               <h2 id="viewer-dynamic-title">Primicia - Línea Lab</h2>
-               <p id="viewer-dynamic-desc">Desarrollo de experiencia de personalización en tiempo real para e-commerce.</p>
-            </div>
-          </div>
-
-          <!-- Bottom Overlay with Menu and Link -->
-          <div class="bento-overlay viewer-bottom-overlay">
-            <div class="bento-overlay-content viewer-overlay-flex">
-              <!-- Vertical Model Switcher Menu -->
-              <div class="viewer-menu-vertical" id="model-controls">
-                <div class="viewer-menu-item active" data-model="assets/models/valija.glb" data-title="Primicia - Línea Lab" data-desc="Desarrollo de experiencia de personalización en tiempo real para e-commerce." data-client="Primicia" data-cat="Product CGI 3D" data-url="project-primicia.html" style="pointer-events: none;"><span class="dot">•</span> Valija 3D</div>
+        <!-- Project 1: Primicia — Línea Lab (Featured) -->
+        <article class="bento-item featured wide animate-on-scroll" data-category="web" data-title="Primicia — Línea Lab" data-url="project-primicia.html" data-desc="Desarrollo de experiencia de personalización en tiempo real para e-commerce." data-img="assets/img/primicia/banner.jpg">
+          <img src="assets/img/primicia/banner.jpg" alt="Primicia — Línea Lab" class="bento-img" loading="lazy" />
+          <div class="bento-overlay">
+            <div class="bento-overlay-content">
+              <div>
+                <div class="bento-meta-head">
+                  <span class="bento-client-badge">Primicia</span>
+                  <span class="bento-cat">Product CGI &amp; Interactive WebGL</span>
+                </div>
+                <h3 class="bento-label">Primicia — Línea Lab</h3>
               </div>
-
-              <a href="project-primicia.html" class="bento-link-btn" id="viewer-link-btn">Ver proyecto ↗</a>
+              <a href="project-primicia.html" class="bento-link-btn">View project ↗</a>
             </div>
           </div>
         </article>
@@ -420,13 +406,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script type="module">
-    import { initViewer3D } from './js/viewer-3d.js';
-    
-    document.addEventListener('DOMContentLoaded', () => {
-      initViewer3D();
-    });
-  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
