@@ -133,6 +133,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalClose = document.querySelector('.modal-close');
     const modalOverlay = document.querySelector('.modal-overlay');
 
+    // Generic Lightbox Triggers (Reviews, delivery images, etc.)
+    const lightboxTriggers = document.querySelectorAll('[data-lightbox-img]');
+    lightboxTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (modal) {
+                const imgSrc = trigger.getAttribute('data-lightbox-img');
+                const title = trigger.getAttribute('data-title') || 'Client Review';
+                const desc = trigger.getAttribute('data-desc') || '';
+                const cat = trigger.getAttribute('data-category') || 'Verified Review';
+                
+                if (modalImg) modalImg.src = imgSrc;
+                if (modalTitle) modalTitle.textContent = title;
+                if (modalDesc) modalDesc.textContent = desc;
+                if (modalCat) modalCat.textContent = cat;
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
     bentoItems.forEach(item => {
         item.addEventListener('click', (e) => {
             // If clicking directly on a link button, let the default <a> navigation happen
