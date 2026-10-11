@@ -15,7 +15,7 @@
 
   --txt-primary: #f0eee8;
   --txt-secondary: #9a9490;
-  --txt-muted: #5c5a56;
+  --txt-muted: #8c8a86;
 
   --border: rgba(201, 169, 110, 0.14);
   --border-sub: rgba(255, 255, 255, 0.05);
@@ -476,7 +476,7 @@ button {
    GENERAL SECTIONS
    ========================================================================== */
 .section {
-  padding: 3rem 0;
+  padding: 6rem 0;
   position: relative;
 }
 
@@ -556,7 +556,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  auto-rows: 280px;
+  grid-auto-rows: 280px;
 }
 
 .bento-item {
@@ -858,11 +858,6 @@ button {
   align-items: center;
 }
 
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
 .viewer-info {
   display: flex;
   flex-direction: column;
@@ -883,7 +878,7 @@ button {
 
 .method-img {
   width: 100%;
-  max-width: 105px;
+  max-width: 180px;
   height: auto;
   margin-top: 1.5rem;
   object-fit: contain;
@@ -1007,7 +1002,7 @@ button {
 
 .method-img {
   width: 100%;
-  max-width: 112px;
+  max-width: 180px;
   height: auto;
   margin-top: 1.2rem;
   object-fit: contain;
@@ -1382,7 +1377,7 @@ button {
   /* Projects */
   .bento-grid {
     grid-template-columns: 1fr;
-    auto-rows: 250px;
+    grid-auto-rows: 250px;
   }
   .bento-item.wide, .bento-item.tall {
     grid-column: span 1;
@@ -1675,7 +1670,7 @@ button {
 }
 
 /* LANGUAGE SWITCHER */
-.lang-switch { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--text); text-decoration: none; padding-left: 1rem; border-left: 1px solid rgba(255,255,255,0.2); }
+.lang-switch { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--txt-primary); text-decoration: none; padding-left: 1rem; border-left: 1px solid rgba(255,255,255,0.2); }
 .lang-switch span { opacity: 0.5; transition: opacity 0.3s; }
 .lang-switch span.active { opacity: 1; }
 .lang-switch:hover span:not(.active) { opacity: 0.8; }

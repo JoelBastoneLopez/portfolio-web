@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const projectUrl = item.getAttribute('data-url');
             if (projectUrl) {
-                window.open(projectUrl, '_blank', 'noopener,noreferrer');
+                window.location.href = projectUrl;
                 return;
             }
 
@@ -208,13 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animateElements.forEach(el => el.classList.add('visible'));
     }
 
-    // 7. RIGHT-CLICK PROTECTION ON IMAGES
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        img.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
-        });
-    });
+
 
 
 });
