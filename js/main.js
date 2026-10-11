@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 8. SCROLL INDICATOR
-        const scrollIndicator = document.querySelector('.scroll-indicator');
         if (scrollIndicator) {
             if (window.scrollY > 100) {
                 scrollIndicator.style.opacity = '0';

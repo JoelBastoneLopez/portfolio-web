@@ -580,7 +580,6 @@ button {
 /* Featured Project Item */
 .bento-item.featured {
   grid-column: 1 / -1;
-  min-height: 380px;
 }
 
 .viewer-canvas-wrap {
