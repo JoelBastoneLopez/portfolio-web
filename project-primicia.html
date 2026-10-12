@@ -3,273 +3,432 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Primicia - Valija 3D | JBL</title>
-  <meta name="description" content="Case study: Development of interactive 3D visualizer for Primicia." />
-  <meta name="keywords" content="Primicia, Valija 3D, Render 3D, CGI, WebGL, JBL, Joel Bastone Lopez" />
+  <title>PRIMICIA — Lab Line: Real-time 3D Configurator | JBL</title>
+  <meta name="description" content="A real-time 3D configurator for the Primicia Lab line that lets customers assemble their own case component by component, with instant price feedback and photoreal previews." />
+  <meta name="keywords" content="Primicia, Lab Line, Real-time 3D Configurator, WebGL, Three.js, Blender, Substance 3D Painter, E-commerce, Tiendanube, JBL, Joel Bastone Lopez" />
   <meta name="author" content="JBL" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" />
 
-  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://joelbastonelopez.github.io/portfolio-web/project-primicia.html" />
-  <meta property="og:title" content="Primicia - Valija 3D | JBL" />
-  <meta property="og:description" content="Case study: Development of interactive 3D visualizer for Primicia." />
-  <meta property="og:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/primicia/armado2.webp" />
+  <meta property="og:title" content="PRIMICIA — Lab Line: Real-time 3D Configurator | JBL" />
+  <meta property="og:description" content="A real-time 3D configurator for the Primicia Lab line that lets customers assemble their own case component by component, with instant price feedback and photoreal previews." />
+  <meta property="og:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/primicia/banner.jpg" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://joelbastonelopez.github.io/portfolio-web/project-primicia.html" />
-  <meta property="twitter:title" content="Primicia - Valija 3D | JBL" />
-  <meta property="twitter:description" content="Development of interactive 3D visualizer for Primicia." />
-  <meta property="twitter:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/primicia/armado2.webp" />
+  <meta property="twitter:title" content="PRIMICIA — Lab Line: Real-time 3D Configurator | JBL" />
+  <meta property="twitter:description" content="A real-time 3D configurator for the Primicia Lab line that lets customers assemble their own case component by component, with instant price feedback and photoreal previews." />
+  <meta property="twitter:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/primicia/banner.jpg" />
 
-  <!-- Canonical & SEO -->
+  <!-- Canonical & Robots -->
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://joelbastonelopez.github.io/portfolio-web/project-primicia.html" />
 
-  <!-- Schema Markup -->
+  <!-- Schema Markup (Structured Data) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": "Primicia - Valija 3D | JBL",
+    "@type": "TechArticle",
+    "headline": "PRIMICIA — Lab Line: Real-time 3D Configurator",
+    "name": "PRIMICIA — Lab Line Case Study",
     "author": {
       "@type": "Person",
       "name": "JBL"
     },
-    "description": "Case study: Development of interactive 3D visualizer for Primicia.",
-    "image": "https://joelbastonelopez.github.io/portfolio-web/assets/img/primicia/armado2.webp",
-    "genre": "3D CGI Rendering",
-    "keywords": "Primicia, Valija 3D, Render 3D, CGI, WebGL, JBL, Joel Bastone Lopez"
+    "description": "A real-time 3D configurator for the Primicia Lab line that lets customers assemble their own case component by component, with instant price feedback and photoreal previews.",
+    "image": "https://joelbastonelopez.github.io/portfolio-web/assets/img/primicia/banner.jpg",
+    "genre": "Interactive 3D WebGL Development & CGI",
+    "keywords": "Primicia, Lab Line, 3D Configurator, WebGL, Three.js, Blender, Substance 3D Painter"
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Outfit:wght@300;400;500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Styles -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Skip link for keyboard & assistive technology accessibility -->
+  <a href="#main-case" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
-    <nav class="nav">
+  <nav class="nav" aria-label="Main Navigation">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">JBL</a>
+      <a href="index.html" class="nav-logo" aria-label="JBL Homepage">JBL</a>
       <div class="nav-links">
         <a href="index.html#proyectos" class="nav-link">Projects</a>
         <a href="index.html#sobre-mi" class="nav-link">About</a>
+        <a href="index.html#reviews" class="nav-link">Reviews</a>
         <a href="index.html#contacto" class="nav-link">Contact</a>
       </div>
       <div class="nav-actions">
         <a href="index.html#contacto" class="nav-cta">Get a Quote</a>
       </div>
-      <button class="nav-toggle" aria-label="Toggle menu">
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <div class="nav-mobile">
+    <div class="nav-mobile" aria-label="Mobile Navigation">
       <a href="index.html#proyectos" class="nav-link">Projects</a>
       <a href="index.html#sobre-mi" class="nav-link">About</a>
+      <a href="index.html#reviews" class="nav-link">Reviews</a>
       <a href="index.html#contacto" class="nav-link">Contact</a>
       <a href="index.html#contacto" class="nav-cta">Get a Quote</a>
     </div>
   </nav>
 
-  <main class="project-page">
+  <main class="project-page" id="main-case">
     
-    <!-- HEADER -->
-    <header class="project-hero">
+    <!-- HERO / COVER -->
+    <header class="project-hero" aria-labelledby="case-title">
       <div class="project-hero-bg">
-        <video src="assets/video/seccion-1.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+        <img src="assets/img/primicia/banner.jpg" alt="Primicia 3D Lab Line Background" fetchpriority="high" />
       </div>
       <div class="project-hero-content">
         <div class="project-meta">
           <span class="project-badge">Product CGI</span>
-          <span class="project-badge">Configurador Web 3D</span>
+          <span class="project-badge">Real-time WebGL</span>
+          <span class="project-badge">E-commerce</span>
         </div>
-        <h1 class="project-title">PRIMICIA</h1>
-        <h2 class="project-subtitle">Línea Lab</h2>
-        <p class="project-brief">Desarrollo de experiencia de personalización en tiempo real para e-commerce, uniendo diseño paramétrico, modelado optimizado e ingeniería web.</p>
+        <h1 class="project-title" id="case-title">PRIMICIA</h1>
+        <h2 class="project-subtitle">Lab Line — Real-time 3D Configurator</h2>
+        <p class="project-brief">A real-time 3D configurator for the Lab line that lets customers assemble their own case component by component, with instant price feedback and photoreal previews.</p>
       </div>
     </header>
 
-    <!-- CONTENT -->
-    <style>
-      .custom-bg-block {
-        position: relative;
-        max-width: 1440px; /* Ancho aumentado un 20% respecto a los 1200px anteriores */
-        min-height: 45vh; /* Altura reducida */
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
-        display: flex;
-        align-items: center;
-        padding: 3rem 6%;
-        margin: 2rem auto; /* Centrado y con margen superior e inferior */
-        border-radius: 8px; /* Bordes redondeados para igualar los videos */
-        overflow: hidden;
-      }
-      .custom-bg-block::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
-        z-index: 1;
-      }
-      .custom-bg-block.right-bg::before {
-        background: linear-gradient(to left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
-      }
-      .custom-bg-block.center-bg::before {
-        background: rgba(0, 0, 0, 0.7);
-      }
-      .custom-bg-block.no-overlay::before {
-        display: none;
-      }
-      .custom-bg-content {
-        position: relative;
-        z-index: 2;
-        max-width: 700px;
-      }
-      .custom-bg-content.text-left {
-        margin-right: auto;
-        text-align: left;
-      }
-      .custom-bg-content.text-right {
-        margin-left: auto;
-        text-align: right;
-      }
-      .custom-bg-content.text-center {
-        margin: 0 auto;
-        text-align: center;
-        max-width: 900px;
-      }
-      .custom-bg-content p.custom-bold-text {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        line-height: 1.3;
-        font-family: var(--font-d);
-        color: #000000;
-      }
-      .custom-bg-content p.custom-light-text {
-        font-size: 1.15rem;
-        font-weight: 500;
-        line-height: 1.6;
-        color: #000000;
-      }
-      .custom-bg-content .features-list h4 {
-        font-size: 1.6rem;
-        color: #000000;
-        margin-bottom: 0.8rem;
-        font-family: var(--font-d);
-      }
-      .custom-bg-content .features-list p {
-        font-size: 1.1rem;
-        color: #000000;
-        margin-bottom: 2.5rem;
-        line-height: 1.5;
-        font-weight: 500; /* Un poco más de peso para que se lea mejor en negro */
-      }
-    </style>
+    <article class="case-study-container">
 
-    <section class="project-section project-gallery no-padding-top" style="padding-top: 2rem;">
-      
-      <!-- Video seccion_2.webm -->
-      <div style="max-width: 1440px; margin: 2rem auto; overflow: hidden; border-radius: 8px;">
-        <video src="assets/video/seccion_2.webm" autoplay loop muted playsinline class="img-fluid reveal-img" style="width: 100%; display: block; border-radius: 8px;"></video>
-      </div>
-
-      <!-- Bloque 1: armado2.jpg -->
-      <div class="custom-bg-block no-overlay" style="background-image: url('assets/img/primicia/armado2.webp');">
-        <div class="custom-bg-content text-right">
-          <p class="custom-bold-text">Llevar la experiencia de compra de e-commerce al siguiente nivel requería transformar un producto físico complejo en un activo digital interactivo.</p>
-          <p class="custom-light-text">Para la línea 'Lab' de Primicia, diseñamos y desarrollamos un configurador web 3D en tiempo real que permite a los usuarios personalizar cada componente de la valija con actualización instantánea de precios y vistas previas fotorrealistas.</p>
+      <!-- COVER MEDIA (Video: Ensamblado / rotación del producto) -->
+      <section class="case-media-section" aria-label="Cover Media">
+        <div class="case-media-block media-video" role="region" aria-label="Video: Ensamblado / rotación del producto">
+          <div class="media-placeholder-inner">
+            <span class="media-tag-badge badge-video">VIDEO</span>
+            <div class="media-big-type">VIDEO</div>
+            <h3 class="media-title-label">Ensamblado / rotación del producto</h3>
+            <p class="media-desc-label">Real-time product turntable and dynamic assembly sequence showcasing customizable modular luggage parts.</p>
+            <span class="media-tech-spec">Format: 16:9 • WebM / MP4 • 60&nbsp;fps Smooth Loop</span>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Video seccion_3.webm -->
-      <div style="max-width: 1440px; margin: 2rem auto; overflow: hidden; border-radius: 8px;">
-        <video src="assets/video/seccion_3.webm" autoplay loop muted playsinline class="img-fluid reveal-img" style="width: 100%; display: block; border-radius: 8px;"></video>
-      </div>
+      <!-- META ROW -->
+      <section class="case-meta-grid" aria-label="Project Metadata">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-val">3D Artist &amp; WebGL Developer</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Client</span>
+          <span class="case-meta-val">Primicia — Lab Line</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Year</span>
+          <span class="case-meta-val">2026</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Duration</span>
+          <span class="case-meta-val">16&nbsp;weeks (Feb–May)</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Stack</span>
+          <span class="case-meta-val">Blender · Substance 3D Painter · Three.js · WebGL · Tiendanube</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Deliverables</span>
+          <span class="case-meta-val">Real-time configurator, optimized asset library, cart integration</span>
+        </div>
+      </section>
 
-      <!-- Bloque 2: armado3.jpg -->
-      <div class="custom-bg-block no-overlay" style="background-image: url('assets/img/primicia/armado3.webp'); min-height: 70vh;">
-        <div class="custom-bg-content text-right" style="max-width: 550px;">
-          <div class="features-list">
-            <div class="feature-item">
-              <h4>Modularidad total</h4>
-              <p>Cada pieza de la valija fue estructurada como un sub-modelo independiente para permitir combinaciones infinitas de colores, texturas textiles y estampas sin penalizar el rendimiento.</p>
+      <!-- 01 — CONTEXT -->
+      <section class="case-section" id="context" aria-labelledby="heading-context">
+        <div class="case-section-head">
+          <span class="case-step-num">01</span>
+          <h2 class="case-step-title" id="heading-context">CONTEXT</h2>
+        </div>
+        <p class="case-body-text">Primicia is one of Argentina's leading luggage brands. With the Lab line, they moved into customizable product: instead of buying a finished case, the customer assembles one — shell, base, details, divider, lining, organizers — each selected separately. The value isn't in any single piece. It's in the combination.</p>
+
+        <!-- Media 01: Imagen — Render de la valija -->
+        <div class="case-media-block media-img" role="region" aria-label="Imagen: Render de la valija">
+          <div class="media-placeholder-inner">
+            <span class="media-tag-badge badge-img">IMG</span>
+            <div class="media-big-type">IMG</div>
+            <h3 class="media-title-label">Render de la valija</h3>
+            <p class="media-desc-label">High-fidelity studio CGI render of the full Primicia Lab customizable case assembly.</p>
+            <span class="media-tech-spec">Asset type: 16:9 • Ultra-HD Photoreal Render • WebP</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 — THE PROBLEM -->
+      <section class="case-section" id="problem" aria-labelledby="heading-problem">
+        <div class="case-section-head">
+          <span class="case-step-num">02</span>
+          <h2 class="case-step-title" id="heading-problem">THE PROBLEM</h2>
+        </div>
+        <p class="case-lead-text">Static photography can't sell a configurable product.</p>
+        <p class="case-body-text">Customers could see the pieces. They could never see their combination. Without a live preview, the buying decision rested on imagination — which produced hesitation, repeated color inquiries, and abandoned carts.</p>
+
+        <!-- Media 02: Imagen — Captura de UI (selector de colores) -->
+        <div class="case-media-block media-img" role="region" aria-label="Imagen: Captura de UI (selector de colores)">
+          <div class="media-placeholder-inner">
+            <span class="media-tag-badge badge-img">IMG</span>
+            <div class="media-big-type">IMG</div>
+            <h3 class="media-title-label">Captura de UI (selector de colores)</h3>
+            <p class="media-desc-label">Interface view highlighting interactive swatch selectors, component tabs, and dynamic pricing updates.</p>
+            <span class="media-tech-spec">Asset type: 16:9 • Interface Capture • WebP / Retina</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 — OBJECTIVES -->
+      <section class="case-section" id="objectives" aria-labelledby="heading-objectives">
+        <div class="case-section-head">
+          <span class="case-step-num">03</span>
+          <h2 class="case-step-title" id="heading-objectives">OBJECTIVES</h2>
+        </div>
+        <p class="case-body-text">Three hard targets framed the work:</p>
+
+        <div class="case-targets-grid">
+          <div class="case-metric-card">
+            <span class="case-metric-val">&lt;&nbsp;2s</span>
+            <span class="case-metric-label">Full 3D load on 4G mobile</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">60&nbsp;fps</span>
+            <span class="case-metric-label">Interaction on mid-range phones</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">1.26&nbsp;M</span>
+            <span class="case-metric-label">Possible combinations, with no performance penalty</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 — CONSTRAINTS -->
+      <section class="case-section" id="constraints" aria-labelledby="heading-constraints">
+        <div class="case-section-head">
+          <span class="case-step-num">04</span>
+          <h2 class="case-step-title" id="heading-constraints">CONSTRAINTS</h2>
+        </div>
+
+        <div class="case-cards-grid-2">
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Mobile-first</h3>
+            <p class="case-feature-desc">Mid-range Android was the baseline — not a desktop GPU.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">No third-party visualization SDK</h3>
+            <p class="case-feature-desc">No monthly licensing, no external viewer dependency.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Native to the store</h3>
+            <p class="case-feature-desc">The configurator had to live inside the existing e-commerce platform and feed its native cart.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">One page, no apps</h3>
+            <p class="case-feature-desc">No plugins, no separate experience to install or maintain.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 — PROCESS -->
+      <section class="case-section" id="process" aria-labelledby="heading-process">
+        <div class="case-section-head">
+          <span class="case-step-num">05</span>
+          <h2 class="case-step-title" id="heading-process">PROCESS</h2>
+        </div>
+
+        <div class="case-cards-grid-2">
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Component architecture</h3>
+            <p class="case-feature-desc">Every part defined as an independent sub-model, mapped to the UI state.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Modular modeling</h3>
+            <p class="case-feature-desc">Clean topology, low poly count, consistent pivots across pieces.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Procedural texturing</h3>
+            <p class="case-feature-desc">Map baking in Substance 3D Painter for polymers, textiles, and metal hardware.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Web integration &amp; QA</h3>
+            <p class="case-feature-desc">Real-time pipeline, on-demand loading, cart logic, and device testing.</p>
+          </div>
+        </div>
+
+        <!-- Media 05: 2 imágenes (Jerarquía en Blender + capas en Substance) -->
+        <div class="case-media-grid-2">
+          <div class="case-media-block media-img" role="region" aria-label="Imagen: Jerarquía en Blender">
+            <div class="media-placeholder-inner">
+              <span class="media-tag-badge badge-img">IMG</span>
+              <div class="media-big-type">IMG</div>
+              <h3 class="media-title-label">Jerarquía en Blender</h3>
+              <p class="media-desc-label">Outliner organization, modular sub-models, naming conventions, and origin pivot points.</p>
+              <span class="media-tech-spec">Asset type: 16:9 • Workspace Screenshot • WebP</span>
             </div>
-            <div class="feature-item mt-4">
-              <h4>Transparencia y Resumen</h4>
-              <p>Diseñamos modales de validación claros y un desglose automatizado en el carrito que detalla con precisión cada selección y su impacto en el costo final.</p>
+          </div>
+          <div class="case-media-block media-img" role="region" aria-label="Imagen: Capas en Substance">
+            <div class="media-placeholder-inner">
+              <span class="media-tag-badge badge-img">IMG</span>
+              <div class="media-big-type">IMG</div>
+              <h3 class="media-title-label">Capas en Substance 3D Painter</h3>
+              <p class="media-desc-label">Layer stack breakdown showing baked maps, PBR roughness, normal maps, and textile textures.</p>
+              <span class="media-tech-spec">Asset type: 16:9 • Texture Pipeline • WebP</span>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Imagen: armado4.png -->
-      <div style="max-width: 1440px; margin: 2rem auto; overflow: hidden; border-radius: 8px;">
-        <img loading="lazy" src="assets/img/primicia/armado4.webp" alt="Primicia Detalles Finales" class="img-fluid reveal-img" style="width: 100%; height: auto; display: block; border-radius: 8px;">
-      </div>
-
-      <!-- Bloque 3: armado5.jpg -->
-      <div class="custom-bg-block no-overlay" style="background-image: url('assets/img/primicia/armado5.webp'); min-height: 70vh;">
-        <div class="custom-bg-content text-left" style="max-width: 400px;">
-          <p class="custom-light-text">El modelo 3D fue modelado minuciosamente manteniendo una topología limpia y baja cantidad de polígonos. Posteriormente, se realizó el horneado de mapas y el texturizado procedural en Substance Painter para lograr la fidelidad exacta de los polímeros, texturas textiles y herrajes metálicos, garantizando una carga fluida en navegadores web móviles y de escritorio.</p>
+      <!-- 06 — KEY DECISIONS -->
+      <section class="case-section" id="decisions" aria-labelledby="heading-decisions">
+        <div class="case-section-head">
+          <span class="case-step-num">06</span>
+          <h2 class="case-step-title" id="heading-decisions">KEY DECISIONS</h2>
         </div>
-      </div>
 
-      <!-- Imagen: armado6.png -->
-      <div style="max-width: 1440px; margin: 2rem auto; overflow: hidden; border-radius: 8px;">
-        <img loading="lazy" src="assets/img/primicia/armado6.webp" alt="Primicia Armado 6" class="img-fluid reveal-img" style="width: 100%; height: auto; display: block; border-radius: 8px;">
-      </div>
-
-      <!-- Texto adicional -->
-      <div style="max-width: 1200px; margin: 6rem auto 4rem; padding: 0 5%; display: flex; flex-wrap: wrap; gap: 4rem; justify-content: center; text-align: left;">
-        <div style="flex: 1 1 400px;">
-          <h4 style="font-size: 1.8rem; color: var(--gold-light); margin-bottom: 1rem; font-family: var(--font-d);">Planificación e Implementación</h4>
-          <p style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.85); line-height: 1.6; font-weight: 300;">El proyecto se estructuró bajo un pipeline riguroso de desarrollo. Desde la arquitectura inicial de componentes, sincronización de estados de UI con el canvas 3D, hasta despliegue automatizado.</p>
+        <div class="case-cards-grid-2">
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Every part as an independent sub-model</h3>
+            <p class="case-feature-desc">Rather than one heavy asset, each component loads on demand, keeping the initial payload minimal.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">One source of truth</h3>
+            <p class="case-feature-desc">The same state that drives the 3D view also drives the price breakdown and cart summary — no duplication, no desync.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Native over third-party</h3>
+            <p class="case-feature-desc">A custom WebGL engine instead of a licensed viewer meant zero recurring costs for the client and full control over performance.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Cart as a set</h3>
+            <p class="case-feature-desc">Configured pieces are grouped so a design travels to checkout as one unit, not as scattered line items.</p>
+          </div>
         </div>
-        <div style="flex: 1 1 400px;">
-          <h4 style="font-size: 1.8rem; color: var(--gold-light); margin-bottom: 1rem; font-family: var(--font-d);">Rendimiento Web</h4>
-          <p style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.85); line-height: 1.6; font-weight: 300;">Implementación orientada a la ligereza de recursos, logrando una experiencia interactiva fluida de rotación, zoom y cambio de texturas sin fricción para el usuario final.</p>
+
+        <!-- Media 06: 1 video + 1 diagrama (Armado modular + esquema propio) -->
+        <div class="case-media-grid-2">
+          <div class="case-media-block media-video" role="region" aria-label="Video: Armado modular">
+            <div class="media-placeholder-inner">
+              <span class="media-tag-badge badge-video">VIDEO</span>
+              <div class="media-big-type">VIDEO</div>
+              <h3 class="media-title-label">Armado modular</h3>
+              <p class="media-desc-label">Dynamic assembly animation showing modular parts locking together into the master shell.</p>
+              <span class="media-tech-spec">Format: 16:9 • Video Clip • WebM / MP4</span>
+            </div>
+          </div>
+          <div class="case-media-block media-img" role="region" aria-label="Diagrama: Esquema propio">
+            <div class="media-placeholder-inner">
+              <span class="media-tag-badge badge-img">IMG</span>
+              <div class="media-big-type">IMG</div>
+              <h3 class="media-title-label">Esquema propio (Diagrama)</h3>
+              <p class="media-desc-label">Technical architecture diagram illustrating Three.js state machine, bundle caching, and cart synchronization.</p>
+              <span class="media-tech-spec">Asset type: 16:9 • Architecture Blueprint / Schema</span>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- 07 — RESULTS -->
+      <section class="case-section" id="results" aria-labelledby="heading-results">
+        <div class="case-section-head">
+          <span class="case-step-num">07</span>
+          <h2 class="case-step-title" id="heading-results">RESULTS</h2>
+        </div>
+
+        <div class="case-results-grid">
+          <div class="case-metric-card">
+            <span class="case-metric-val">1.2&nbsp;MB</span>
+            <span class="case-metric-label">Initial payload</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">&lt;&nbsp;2s</span>
+            <span class="case-metric-label">3D load on 4G mobile</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">60&nbsp;fps</span>
+            <span class="case-metric-label">Stable interaction on mid-range devices</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">+38%</span>
+            <span class="case-metric-label">Average time on page</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">-27%</span>
+            <span class="case-metric-label">Manual color inquiries</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">$0</span>
+            <span class="case-metric-label">Monthly licensing cost</span>
+          </div>
+        </div>
+
+        <!-- Media 07: 2 imágenes (Captura del carrito + render final) -->
+        <div class="case-media-grid-2">
+          <div class="case-media-block media-img" role="region" aria-label="Imagen: Captura del carrito">
+            <div class="media-placeholder-inner">
+              <span class="media-tag-badge badge-img">IMG</span>
+              <div class="media-big-type">IMG</div>
+              <h3 class="media-title-label">Captura del carrito</h3>
+              <p class="media-desc-label">Checkout integration showing the configured luggage as a unified custom set with itemized details.</p>
+              <span class="media-tech-spec">Asset type: 16:9 • E-commerce Cart Capture • WebP</span>
+            </div>
+          </div>
+          <div class="case-media-block media-img" role="region" aria-label="Imagen: Render final">
+            <div class="media-placeholder-inner">
+              <span class="media-tag-badge badge-img">IMG</span>
+              <div class="media-big-type">IMG</div>
+              <h3 class="media-title-label">Render final</h3>
+              <p class="media-desc-label">Polished marketing CGI visual showcasing the final customer-customized luggage in high-end lifestyle context.</p>
+              <span class="media-tech-spec">Asset type: 16:9 • Final Hero Render • WebP</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 — LEARNINGS -->
+      <section class="case-section" id="learnings" aria-labelledby="heading-learnings">
+        <div class="case-section-head">
+          <span class="case-step-num">08</span>
+          <h2 class="case-step-title" id="heading-learnings">LEARNINGS</h2>
+        </div>
+
+        <div class="case-quote-card">
+          <blockquote>“If I ran it again, I'd build the material system first, so the catalog could grow without rework for every new texture. It would have shortened the second half of the project.”</blockquote>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- FOOTER NAV SLIDER / OTROS PROYECTOS -->
+    <section class="project-footer" aria-label="More Projects">
+      <div class="footer-slider-header">
+        <h3>Otros Proyectos</h3>
       </div>
-
-      <!-- Imagen: armado7.jpg -->
-      <div style="max-width: 1440px; margin: 2rem auto; overflow: hidden; border-radius: 8px;">
-        <img loading="lazy" src="assets/img/primicia/armado7.webp" alt="Primicia Armado 7" class="img-fluid reveal-img" style="width: 100%; height: auto; display: block; border-radius: 8px;">
-      </div>
-
-    </section>
-
-    <!-- FOOTER NAV SLIDER -->
-  <section class="project-footer">
-    <div class="footer-slider-header">
-      <h3>Otros Proyectos</h3>
-    </div>
-    <div class="footer-slider-container">
+      <div class="footer-slider-container">
         <div class="footer-slider">
           <!-- KAISAR -->
-          <a href="project-kaisar-en.html" class="slider-item">
-            <img loading="lazy" src="assets/img/kaisar.webp" alt="Kaisar" class="slider-img">
+          <a href="project-kaisar.html" class="slider-item">
+            <img loading="lazy" src="assets/img/kaisar.webp" alt="Kaisar Case Study" class="slider-img">
             <div class="slider-overlay">
               <div>
                 <h4 class="slider-title">KAISAR</h4>
-                <span class="slider-cat">LookDev & Animación</span>
+                <span class="slider-cat">LookDev &amp; Animación</span>
               </div>
             </div>
           </a>
           <!-- 8BOTTLE -->
-          <a href="project-8bottle-en.html" class="slider-item">
-            <img loading="lazy" src="assets/img/8bottle.webp" alt="8Bottle" class="slider-img">
+          <a href="project-8bottle.html" class="slider-item">
+            <img loading="lazy" src="assets/img/8bottle.webp" alt="8Bottle Case Study" class="slider-img">
             <div class="slider-overlay">
               <div>
                 <h4 class="slider-title">8BOTTLE</h4>
@@ -278,18 +437,18 @@
             </div>
           </a>
           <!-- DUCHARME SEATING -->
-          <a href="project-ducharme-en.html" class="slider-item">
-            <img loading="lazy" src="assets/img/ducharme.webp" alt="Ducharme" class="slider-img">
+          <a href="project-ducharme.html" class="slider-item">
+            <img loading="lazy" src="assets/img/ducharme.webp" alt="Ducharme Seating Case Study" class="slider-img">
             <div class="slider-overlay">
               <div>
                 <h4 class="slider-title">DUCHARME SEATING</h4>
-                <span class="slider-cat">3D ArchViz & CGI</span>
+                <span class="slider-cat">3D ArchViz &amp; CGI</span>
               </div>
             </div>
           </a>
           <!-- LATTAFA -->
-          <a href="project-lattafa-en.html" class="slider-item">
-            <img loading="lazy" src="assets/img/lattafa_perfumes.webp" alt="Lattafa" class="slider-img">
+          <a href="project-lattafa.html" class="slider-item">
+            <img loading="lazy" src="assets/img/lattafa_perfumes.webp" alt="Lattafa Perfumes Case Study" class="slider-img">
             <div class="slider-overlay">
               <div>
                 <h4 class="slider-title">LATTAFA PERFUMES</h4>
@@ -297,19 +456,9 @@
               </div>
             </div>
           </a>
-          <!-- SEA SOCKET -->
-          <a href="index.html" class="slider-item">
-            <img loading="lazy" src="assets/img/sea-socket.webp" alt="Sea Socket" class="slider-img">
-            <div class="slider-overlay">
-              <div>
-                <h4 class="slider-title">SEA SOCKET</h4>
-                <span class="slider-cat">Visualización & Animación</span>
-              </div>
-            </div>
-          </a>
         </div>
-    </div>
-  </section>
+      </div>
+    </section>
 
   </main>
 
