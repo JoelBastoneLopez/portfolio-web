@@ -156,6 +156,19 @@ button {
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-sub);
   }
+
+  /* Primicia page only: dark translucent navbar with low opacity */
+  .nav.nav-primicia {
+    background-color: rgba(10, 10, 14, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav.nav-primicia.scrolled {
+    background-color: rgba(8, 8, 12, 0.88);
+    border-bottom: 1px solid var(--border-sub);
+  }
   
   .nav-inner {
     max-width: 1200px;
