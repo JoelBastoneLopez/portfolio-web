@@ -2391,12 +2391,7 @@ button {
   border: 1px solid var(--border-sub);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
   display: block;
-  transition: border-color var(--tr-fast), transform var(--tr-fast), box-shadow var(--tr-fast);
-}
-.case-media-figure:hover {
-  border-color: var(--border-hi);
-  transform: translateY(-2px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+  cursor: default;
 }
 .case-media-figure img,
 .case-media-figure video {
