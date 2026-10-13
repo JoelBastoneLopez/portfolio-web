@@ -2277,9 +2277,77 @@ button {
   gap: 1.5rem;
   margin: 2rem 0;
 }
-.case-media-grid-2 .case-media-block {
+.case-media-grid-2 .case-media-block,
+.case-media-grid-2 .case-media-figure {
   margin: 0;
   min-height: 320px;
+}
+
+/* Real Media Figures in Case Study */
+.case-media-figure {
+  width: 100%;
+  margin: 2.2rem 0;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  position: relative;
+  background: #09090c;
+  border: 1px solid var(--border-sub);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--tr-fast), transform var(--tr-fast), box-shadow var(--tr-fast);
+}
+.case-media-figure:hover {
+  border-color: var(--border-hi);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+}
+.case-media-figure img,
+.case-media-figure video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.case-media-grid-2 .case-media-figure img,
+.case-media-grid-2 .case-media-figure video {
+  flex: 1;
+  min-height: 240px;
+}
+.case-media-caption {
+  padding: 1rem 1.4rem;
+  background: rgba(14, 14, 18, 0.95);
+  border-top: 1px solid var(--border-sub);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.case-media-caption-text {
+  font-family: var(--font-b);
+  font-size: 0.9rem;
+  color: var(--txt-secondary);
+  line-height: 1.5;
+  flex: 1 1 250px;
+}
+.case-media-caption-title {
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+.case-media-caption-tag {
+  font-family: var(--font-m);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(201, 169, 111, 0.12);
+  border: 1px solid rgba(201, 169, 111, 0.25);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
