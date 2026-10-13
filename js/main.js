@@ -227,7 +227,167 @@ document.addEventListener('DOMContentLoaded', () => {
         animateElements.forEach(el => el.classList.add('visible'));
     }
 
+    // 7. CLIENT REVIEWS CAROUSEL
+    const reviewsTrack = document.getElementById('reviewsTrack');
+    const reviewsPrevBtn = document.getElementById('reviewsPrevBtn');
+    const reviewsNextBtn = document.getElementById('reviewsNextBtn');
+    const reviewsDotsContainer = document.getElementById('reviewsDots');
 
+    if (reviewsTrack) {
+        const cards = reviewsTrack.querySelectorAll('.review-card');
+        const totalCards = cards.length;
+        let isDown = false;
+        let startX = 0;
+        let scrollStart = 0;
+        let autoplayTimer = null;
 
+        // Calculate step (one card width + gap)
+        const getStep = () => {
+            if (cards.length > 1) {
+                return cards[1].offsetLeft - cards[0].offsetLeft;
+            }
+            return reviewsTrack.clientWidth;
+        };
+
+        // Create interactive dots
+        if (reviewsDotsContainer) {
+            reviewsDotsContainer.innerHTML = '';
+            cards.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = `reviews-dot ${idx === 0 ? 'active' : ''}`;
+                dot.setAttribute('aria-label', `Ir a reseña ${idx + 1}`);
+                dot.addEventListener('click', () => {
+                    const step = getStep();
+                    reviewsTrack.scrollTo({
+                        left: idx * step,
+                        behavior: 'smooth'
+                    });
+                    resetAutoplay();
+                });
+                reviewsDotsContainer.appendChild(dot);
+            });
+        }
+
+        // Update active dot on scroll
+        const updateActiveDot = () => {
+            if (!reviewsDotsContainer) return;
+            const step = getStep();
+            if (step <= 0) return;
+            const activeIndex = Math.min(
+                Math.round(reviewsTrack.scrollLeft / step),
+                totalCards - 1
+            );
+            const dots = reviewsDotsContainer.querySelectorAll('.reviews-dot');
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === activeIndex);
+            });
+        };
+
+        let scrollTicking = false;
+        reviewsTrack.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    updateActiveDot();
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        });
+
+        // Navigation Next / Prev
+        const scrollNext = () => {
+            const step = getStep();
+            const maxScroll = reviewsTrack.scrollWidth - reviewsTrack.clientWidth;
+            if (reviewsTrack.scrollLeft >= maxScroll - 15) {
+                reviewsTrack.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                reviewsTrack.scrollBy({ left: step, behavior: 'smooth' });
+            }
+        };
+
+        const scrollPrev = () => {
+            const step = getStep();
+            if (reviewsTrack.scrollLeft <= 15) {
+                reviewsTrack.scrollTo({ left: reviewsTrack.scrollWidth, behavior: 'smooth' });
+            } else {
+                reviewsTrack.scrollBy({ left: -step, behavior: 'smooth' });
+            }
+        };
+
+        if (reviewsNextBtn) {
+            reviewsNextBtn.addEventListener('click', () => {
+                scrollNext();
+                resetAutoplay();
+            });
+        }
+
+        if (reviewsPrevBtn) {
+            reviewsPrevBtn.addEventListener('click', () => {
+                scrollPrev();
+                resetAutoplay();
+            });
+        }
+
+        // Autoplay
+        const startAutoplay = () => {
+            if (autoplayTimer) clearInterval(autoplayTimer);
+            autoplayTimer = setInterval(scrollNext, 3800);
+        };
+
+        const pauseAutoplay = () => {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        };
+
+        const resetAutoplay = () => {
+            pauseAutoplay();
+            startAutoplay();
+        };
+
+        // Pause on Hover / Focus
+        const wrapper = reviewsTrack.closest('.reviews-carousel-wrapper') || reviewsTrack;
+        wrapper.addEventListener('mouseenter', pauseAutoplay);
+        wrapper.addEventListener('mouseleave', startAutoplay);
+        wrapper.addEventListener('focusin', pauseAutoplay);
+        wrapper.addEventListener('focusout', startAutoplay);
+
+        // Touch Interaction (Mobile)
+        reviewsTrack.addEventListener('touchstart', pauseAutoplay, { passive: true });
+        reviewsTrack.addEventListener('touchend', () => {
+            setTimeout(startAutoplay, 2500);
+        }, { passive: true });
+
+        // Mouse Drag to Scroll
+        reviewsTrack.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - reviewsTrack.offsetLeft;
+            scrollStart = reviewsTrack.scrollLeft;
+            pauseAutoplay();
+        });
+
+        reviewsTrack.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - reviewsTrack.offsetLeft;
+            const walk = (x - startX) * 1.4;
+            reviewsTrack.scrollLeft = scrollStart - walk;
+        });
+
+        const stopDrag = () => {
+            if (isDown) {
+                isDown = false;
+                startAutoplay();
+            }
+        };
+
+        reviewsTrack.addEventListener('mouseup', stopDrag);
+        reviewsTrack.addEventListener('mouseleave', stopDrag);
+
+        // Start autoplay
+        startAutoplay();
+    }
 
 });
