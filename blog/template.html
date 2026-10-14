@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Título del Post] | JBL Blog</title>
+  <meta name="description" content="[Descripción breve del artículo para Google]" />
+  <meta name="author" content="Joel Bastone Lopez" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://joelbastonelopez.github.io/portfolio-web/blog/[nombre-archivo].html" />
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="[Título del Post] | JBL Blog" />
+  <meta property="og:description" content="[Descripción breve del artículo]" />
+  <meta property="og:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/foto_perfil.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <!-- Barra de lectura superior -->
+  <div class="blog-progress-bar" id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- Navegación -->
+  <nav class="nav" id="main-nav" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="JBL Homepage">JBL</a>
+      <div class="nav-links">
+        <a href="../index.html#proyectos" class="nav-link">Projects</a>
+        <a href="../index.html#sobre-mi" class="nav-link">About</a>
+        <a href="../blog.html" class="nav-link active">Blog</a>
+        <a href="../index.html#reviews" class="nav-link">Reviews</a>
+        <a href="../index.html#contacto" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="../index.html#contacto" class="nav-cta">Get a Quote</a>
+      </div>
+      <button class="nav-burger" aria-label="Menú móvil">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" aria-label="Menú móvil de navegación">
+      <a href="../index.html#proyectos" class="nav-link">Projects</a>
+      <a href="../index.html#sobre-mi" class="nav-link">About</a>
+      <a href="../blog.html" class="nav-link active">Blog</a>
+      <a href="../index.html#reviews" class="nav-link">Reviews</a>
+      <a href="../index.html#contacto" class="nav-link">Contact</a>
+      <a href="../index.html#contacto" class="nav-cta">Get a Quote</a>
+    </div>
+  </nav>
+
+  <!-- Artículo del Blog -->
+  <main class="post-article">
+    
+    <!-- Link volver -->
+    <a href="../blog.html" class="post-back-link">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      Volver al Journal &amp; Artículos
+    </a>
+
+    <!-- Header del Post -->
+    <header class="post-header">
+      <div class="post-header-meta">
+        <span class="blog-tag">[Categoría]</span>
+        <span class="blog-date">
+          <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          [Fecha]
+        </span>
+        <span class="blog-readtime">
+          <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          [X min de lectura]
+        </span>
+      </div>
+
+      <h1 class="post-title">
+        [Título Principal del Artículo]
+      </h1>
+
+      <p class="post-lead">
+        [Bajada / Resumen Ejecutivo en tipografía destacada].
+      </p>
+
+      <!-- Autor y Compartir -->
+      <div class="post-author-bar">
+        <div class="blog-author">
+          <img src="../assets/img/foto_perfil.webp" alt="Joel Bastone Lopez" class="blog-author-avatar" />
+          <div class="blog-author-info">
+            <span class="blog-author-name">Joel Bastone Lopez</span>
+            <span class="blog-author-role">3D Artist &amp; WebGL Developer</span>
+          </div>
+        </div>
+
+        <div class="post-share-actions">
+          <button class="post-share-btn" onclick="copyPostLink()" title="Copiar enlace" aria-label="Copiar enlace">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Imagen de Portada Principal -->
+    <figure class="post-hero-figure">
+      <img src="../assets/img/[tu-imagen-portada].jpg" alt="[Descripción]" />
+      <figcaption class="post-figure-caption">
+        <span>[Epígrafe de la imagen].</span>
+        <span style="color:var(--gold);">[TAG / SOFTWARE]</span>
+      </figcaption>
+    </figure>
+
+    <!-- Cuerpo del Post -->
+    <div class="post-body">
+      
+      <!-- Párrafo inicial con Letra Capital -->
+      <p class="drop-cap">
+        [Primer párrafo del artículo que comenzará con letra capital elegante].
+      </p>
+
+      <p>
+        [Párrafo de desarrollo estándar].
+      </p>
+
+      <h2>[Subtítulo de Sección]</h2>
+      
+      <p>
+        [Texto de la sección].
+      </p>
+
+      <!-- Caja Destacada Callout -->
+      <aside class="post-callout">
+        <div class="post-callout-title">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="var(--gold)" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          [Clave técnica o consejo destacado]
+        </div>
+        <p>
+          [Texto explicativo del callout].
+        </p>
+      </aside>
+
+      <!-- Cita Editorial -->
+      <blockquote class="post-blockquote">
+        "[Frase destacada o cita relevante del proyecto]."
+        <span class="post-blockquote-cite">&mdash; [Autor o fuente]</span>
+      </blockquote>
+
+      <!-- Conclusiones -->
+      <div class="post-callout" style="background: rgba(18, 18, 24, 0.85); border-left-color: var(--gold-light);">
+        <div class="post-callout-title">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="var(--gold-light)" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Puntos Clave y Conclusiones
+        </div>
+        <ul style="margin: 0.75rem 0 0; padding-left: 1.25rem; font-size: 0.95rem; color: #d0ced8;">
+          <li><strong>Punto 1:</strong> [Resumen clave].</li>
+          <li><strong>Punto 2:</strong> [Resumen clave].</li>
+        </ul>
+      </div>
+
+      <!-- Tags -->
+      <div class="post-tags">
+        <span style="font-size:0.85rem; color:var(--txt-muted); margin-right:0.5rem;">Etiquetas:</span>
+        <a href="../blog.html" class="post-tag-item">#[Tag1]</a>
+        <a href="../blog.html" class="post-tag-item">#[Tag2]</a>
+      </div>
+
+    </div>
+
+    <!-- Bio del Autor -->
+    <section class="post-author-box" aria-label="Acerca del autor">
+      <img src="../assets/img/foto_perfil.webp" alt="Joel Bastone Lopez" class="post-author-box-avatar" />
+      <div class="post-author-box-content">
+        <h4>Joel Bastone Lopez</h4>
+        <span class="role">3D CGI Artist &amp; Real-time WebGL Developer</span>
+        <p>
+          Especializado en CGI para productos de alta gama, dirección de arte y desarrollo de experiencias interactivas 3D con Three.js para marcas internacionales.
+        </p>
+        <div class="post-author-box-links">
+          <a href="../index.html#contacto">Trabajemos juntos &rarr;</a>
+          <a href="../blog.html">Ver más artículos &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-col brand-col">
+          <a href="../index.html" class="footer-logo">JBL</a>
+          <p class="footer-tagline">3D Artist &amp; WebGL Developer. Transformando conceptos en experiencias visuales de alta precisión.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#proyectos">Proyectos</a></li>
+            <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="../blog.html">Blog &amp; Journal</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Joel Bastone Lopez. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="blog-toast" id="post-toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Navigation toggle for mobile
+    const burger = document.querySelector('.nav-burger');
+    const mobileMenu = document.querySelector('.nav-mobile');
+    if (burger && mobileMenu) {
+      burger.addEventListener('click', () => {
+        const isOpen = mobileMenu.style.display === 'flex';
+        mobileMenu.style.display = isOpen ? 'none' : 'flex';
+      });
+    }
+
+    // Scroll Navbar & Progress bar
+    const nav = document.getElementById('main-nav');
+    const progressBar = document.getElementById('reading-progress');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+
+      if (progressBar) {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (totalHeight > 0) {
+          const progress = (window.scrollY / totalHeight) * 100;
+          progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+          progressBar.setAttribute('aria-valuenow', Math.round(progress));
+        }
+      }
+    });
+
+    function showToast(message) {
+      const toast = document.getElementById('post-toast');
+      if (!toast) return;
+      toast.innerHTML = `<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="var(--gold)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> ${message}`;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
+    function copyPostLink() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast('¡Enlace copiado al portapapeles!');
+        }).catch(() => {
+          showToast('Enlace listo para compartir');
+        });
+      }
+    }
+  </script>
+</body>
+</html>

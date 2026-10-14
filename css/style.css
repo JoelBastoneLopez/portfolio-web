@@ -3627,4 +3627,79 @@ button {
   font-family: monospace;
 }
 
+/* ==========================================================================
+   BLOG EMPTY STATE (Coming Soon / Próximamente)
+   ========================================================================== */
+.blog-empty-hero {
+  max-width: 860px;
+  margin: 1rem auto 4.5rem;
+}
+
+.blog-empty-card {
+  background: radial-gradient(circle at 50% 0%, rgba(201, 169, 110, 0.12) 0%, rgba(16, 16, 22, 0.9) 70%);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  border-radius: 24px;
+  padding: 4.5rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 35px rgba(201, 169, 110, 0.06);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+
+.blog-empty-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.75rem;
+  border-radius: 50%;
+  background: rgba(201, 169, 110, 0.1);
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.blog-empty-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.blog-empty-title {
+  font-family: var(--font-d);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 1.25rem 0 1rem;
+  line-height: 1.2;
+}
+
+.blog-empty-desc {
+  font-family: var(--font-b);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--txt-secondary);
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+
+.blog-empty-topics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.blog-empty-topic {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gold-light);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+}
+
+
 
