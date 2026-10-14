@@ -157,17 +157,27 @@ button {
     border-bottom: 1px solid var(--border-sub);
   }
 
-  /* Primicia page only: dark translucent navbar with low opacity */
+  /* Primicia page only: smooth dark fade from top for contrast without harsh flat box */
   .nav.nav-primicia {
-    background-color: rgba(10, 10, 14, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(180deg, rgba(6, 6, 8, 0.75) 0%, rgba(6, 6, 8, 0.35) 60%, rgba(6, 6, 8, 0) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: none;
   }
 
   .nav.nav-primicia.scrolled {
     background-color: rgba(8, 8, 12, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-sub);
+  }
+
+  .nav.nav-primicia .nav-link {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .nav.nav-primicia .nav-link:hover {
+    color: var(--gold-light);
   }
   
   .nav-inner {
