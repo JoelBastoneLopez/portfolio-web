@@ -1,100 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/index-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/" />
+    <loc>https://joelbastonelopez.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/index-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/index-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/index-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/" />
+    <loc>https://joelbastonelopez.com/index-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/index-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/blog.html</loc>
+    <loc>https://joelbastonelopez.com/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-kaisar.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-kaisar.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-kaisar-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-kaisar.html" />
+    <loc>https://joelbastonelopez.com/project-kaisar.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-kaisar.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-kaisar-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-kaisar.html" />
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-kaisar-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-kaisar.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-kaisar-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-kaisar.html" />
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-lattafa.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-lattafa.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-lattafa-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-lattafa.html" />
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-lattafa-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-lattafa.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-lattafa-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-lattafa.html" />
+    <loc>https://joelbastonelopez.com/project-kaisar-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-kaisar.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-kaisar-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-kaisar.html" />
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-primicia.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-primicia.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-primicia-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-primicia.html" />
+    <loc>https://joelbastonelopez.com/project-lattafa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-lattafa.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-lattafa-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-lattafa.html" />
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-primicia-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-primicia.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-primicia-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-primicia.html" />
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-8bottle.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-8bottle.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-8bottle-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-8bottle.html" />
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-8bottle-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-8bottle.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-8bottle-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-8bottle.html" />
+    <loc>https://joelbastonelopez.com/project-lattafa-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-lattafa.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-lattafa-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-lattafa.html" />
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-ducharme.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-ducharme.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-ducharme-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-ducharme.html" />
+    <loc>https://joelbastonelopez.com/project-primicia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-primicia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-primicia-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-primicia.html" />
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joelbastonelopez.github.io/portfolio-web/project-ducharme-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/project-ducharme.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/project-ducharme-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/project-ducharme.html" />
+    <loc>https://joelbastonelopez.com/project-primicia-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-primicia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-primicia-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-primicia.html" />
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://joelbastonelopez.com/project-8bottle.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-8bottle.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-8bottle-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-8bottle.html" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joelbastonelopez.com/project-8bottle-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-8bottle.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-8bottle-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-8bottle.html" />
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://joelbastonelopez.com/project-ducharme.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-ducharme.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-ducharme-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-ducharme.html" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joelbastonelopez.com/project-ducharme-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/project-ducharme.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/project-ducharme-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/project-ducharme.html" />
     <priority>0.8</priority>
   </url>
 </urlset>

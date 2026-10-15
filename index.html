@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Intelligent Domain Auto-Redirect (GitHub Pages -> joelbastonelopez.com) -->
+  <script>
+    (function() {
+      if (window.location.hostname.includes('github.io')) {
+        var p = window.location.pathname.replace(/^\/portfolio-web\/?/, '');
+        window.location.replace('https://joelbastonelopez.com/' + p + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JBL — 3D Product CGI & Interactive WebGL</title>
@@ -9,9 +19,9 @@
   <meta name="author" content="JBL" />
 
   <!-- Hreflang for SEO (Multi-language) -->
-  <link rel="alternate" hreflang="es" href="https://joelbastonelopez.github.io/portfolio-web/index.html" />
-  <link rel="alternate" hreflang="en" href="https://joelbastonelopez.github.io/portfolio-web/index-en.html" />
-  <link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.github.io/portfolio-web/index.html" />
+  <link rel="alternate" hreflang="es" href="https://joelbastonelopez.com/index.html" />
+  <link rel="alternate" hreflang="en" href="https://joelbastonelopez.com/index-en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://joelbastonelopez.com/index.html" />
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
@@ -19,21 +29,21 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://joelbastonelopez.github.io/portfolio-web/" />
+  <meta property="og:url" content="https://joelbastonelopez.com/" />
   <meta property="og:title" content="JBL — 3D Product CGI & Interactive WebGL" />
   <meta property="og:description" content="Product visuals that scale, without the photo studio. 3D product CGI and interactive WebGL viewers for e-commerce brands and agencies." />
-  <meta property="og:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/portfolio_environment.webp" />
+  <meta property="og:image" content="https://joelbastonelopez.com/assets/img/portfolio_environment.webp" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://joelbastonelopez.github.io/portfolio-web/" />
+  <meta property="twitter:url" content="https://joelbastonelopez.com/" />
   <meta property="twitter:title" content="JBL — 3D Product CGI & Interactive WebGL" />
   <meta property="twitter:description" content="Product visuals that scale, without the photo studio. 3D product CGI and interactive WebGL viewers for e-commerce brands and agencies." />
-  <meta property="twitter:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/portfolio_environment.webp" />
+  <meta property="twitter:image" content="https://joelbastonelopez.com/assets/img/portfolio_environment.webp" />
   
   <!-- Canonical & SEO -->
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://joelbastonelopez.github.io/portfolio-web/" />
+  <link rel="canonical" href="https://joelbastonelopez.com/" />
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -42,11 +52,11 @@
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://joelbastonelopez.github.io/portfolio-web/#person",
+        "@id": "https://joelbastonelopez.com/#person",
         "name": "JBL",
         "jobTitle": "3D Product CGI & Interactive WebGL",
-        "url": "https://joelbastonelopez.github.io/portfolio-web/",
-        "image": "https://joelbastonelopez.github.io/portfolio-web/assets/img/foto_perfil.webp",
+        "url": "https://joelbastonelopez.com/",
+        "image": "https://joelbastonelopez.com/assets/img/foto_perfil.webp",
         "sameAs": [
           "https://www.linkedin.com/in/joel-bastone-lopez/",
           "https://www.behance.net/joelbastone1",
@@ -56,11 +66,11 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://joelbastonelopez.github.io/portfolio-web/#website",
-        "url": "https://joelbastonelopez.github.io/portfolio-web/",
+        "@id": "https://joelbastonelopez.com/#website",
+        "url": "https://joelbastonelopez.com/",
         "name": "Portfolio de JBL",
         "publisher": {
-          "@id": "https://joelbastonelopez.github.io/portfolio-web/#person"
+          "@id": "https://joelbastonelopez.com/#person"
         }
       }
     ]
