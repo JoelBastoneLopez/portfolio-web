@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Logo 3D Intro animation on page load / refresh
+    const navLogo = document.querySelector('.nav-logo');
+    if (navLogo) {
+        setTimeout(() => {
+            navLogo.classList.add('intro-loading');
+            setTimeout(() => {
+                navLogo.classList.remove('intro-loading');
+            }, 2500);
+        }, 500);
+    }
+
 
     // 1. SMOOTH SCROLL & 2. NAV SCROLL EFFECT
     const nav = document.querySelector('.nav');
