@@ -264,8 +264,14 @@ function initOptimizedScene() {
     const mobileMenu = document.querySelector('.nav-mobile');
     if (burger && mobileMenu) {
       burger.addEventListener('click', () => {
-        const isOpen = mobileMenu.style.display === 'flex';
-        mobileMenu.style.display = isOpen ? 'none' : 'flex';
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      });
+      document.querySelectorAll('.nav-mobile a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        });
       });
     }
 
