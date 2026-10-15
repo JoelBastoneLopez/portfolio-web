@@ -1,13 +1,1 @@
-[
-  {
-    "id": "custom-3d-shopify",
-    "title": "Development of a Custom 3D Furniture Configurator for Shopify",
-    "category": "3D E-commerce",
-    "date": "Oct 14, 2026",
-    "readTime": "5 min read",
-    "author": "Joel Bastone Lopez",
-    "image": "assets/img/primicia/long-primicia.jpg",
-    "url": "blog/Custom_3D_for_Shopify.html",
-    "excerpt": "Integration of WebGL and Three.js with the Shopify API to create real-time product customization experiences, increasing conversion and reducing returns."
-  }
-]
+[]
