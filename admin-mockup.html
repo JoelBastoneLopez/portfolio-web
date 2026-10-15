@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>JBL Studio CMS — Visual Block Builder [Mobile & Desktop]</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       CMS DESIGN SYSTEM (Apple & Linear Inspired Workspace)
+       ========================================================================== */
+    :root {
+      --bg: #09090b;
+      --bg-panel: #121216;
+      --bg-card: rgba(22, 22, 28, 0.7);
+      --bg-hover: rgba(255, 255, 255, 0.06);
+      --bg-input: #0e0e13;
+      
+      --gold: #c9a96e;
+      --gold-light: #e8cfa0;
+      --gold-glow: rgba(201, 169, 110, 0.15);
+      
+      --text-main: #f4f4f5;
+      --text-muted: #91919c;
+      --text-dim: #52525b;
+
+      --border: rgba(255, 255, 255, 0.08);
+      --border-active: rgba(201, 169, 110, 0.45);
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+
+      --font-display: 'Outfit', -apple-system, sans-serif;
+      --font-body: 'Space Grotesk', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+
+      --ease-spring: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Apple-style Instant Press Feedback */
+    button:active, .clickable:active {
+      transform: scale(0.97);
+      transition: transform 90ms ease-out;
+    }
+
+    /* Top Bar Header */
+    .cms-topbar {
+      background: rgba(14, 14, 18, 0.85);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar-desktop-row {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+    }
+
+    .cms-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .cms-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cms-badge {
+      font-size: 0.68rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-pill);
+      background: rgba(201, 169, 110, 0.1);
+      color: var(--gold-light);
+      border: 1px solid rgba(201, 169, 110, 0.25);
+    }
+
+    .cms-status {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .cms-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+    }
+
+    /* Apple iOS Segmented Control (Pill switcher) */
+    .cms-segmented-control {
+      display: flex;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 2px;
+    }
+
+    .segment-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.38rem 0.85rem;
+      font-size: 0.8rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s var(--ease-spring);
+    }
+
+    .segment-btn.active {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .cms-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .cms-btn {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.48rem 0.95rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s var(--ease-spring);
+      border: 1px solid transparent;
+      min-height: 38px;
+    }
+
+    .cms-btn-secondary {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text-main);
+    }
+
+    .cms-btn-secondary:hover {
+      background: var(--bg-hover);
+      border-color: var(--border-active);
+    }
+
+    .cms-btn-primary {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: #0b0b0e;
+      border: none;
+      box-shadow: 0 2px 12px rgba(201, 169, 110, 0.25);
+    }
+
+    .cms-btn-primary:hover {
+      filter: brightness(1.1);
+    }
+
+    /* Desktop View Mode Toggle (Split / Editor / Preview) */
+    .desktop-view-toggle {
+      display: flex;
+    }
+
+    /* Main Workspace Layout */
+    .cms-main {
+      flex: 1;
+      display: flex;
+      height: calc(100vh - 60px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Left Pane: Block Configurator */
+    .cms-editor-pane {
+      flex: 1;
+      overflow-y: auto;
+      padding: 2.2rem 2.5rem 7rem;
+      border-right: 1px solid var(--border);
+      max-width: 50%;
+    }
+
+    /* Right Pane: Live Editorial Preview */
+    .cms-preview-pane {
+      flex: 1;
+      overflow-y: auto;
+      padding: 2.5rem 3rem 7rem;
+      background: #000000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Form Fields */
+    .field-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .title-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      padding: 0.4rem 0;
+      border-bottom: 1px dashed var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .title-input:focus {
+      border-bottom-color: var(--gold);
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .cms-input, .cms-select {
+      width: 100%;
+      min-height: 44px;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .cms-input:focus, .cms-select:focus {
+      border-color: var(--gold);
+    }
+
+    /* Blocks Container */
+    .blocks-container {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .block-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.15rem 1.25rem;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .block-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .block-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .block-type {
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .block-tools {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .block-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      transition: all 0.15s;
+    }
+
+    .block-btn:hover {
+      color: var(--text-main);
+      background: var(--bg-hover);
+    }
+
+    .block-btn.delete:hover {
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.12);
+    }
+
+    .block-textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      resize: vertical;
+      min-height: 85px;
+    }
+
+    /* Add Block Toolbar */
+    .add-block-bar {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      background: var(--bg-card);
+      padding: 0.85rem;
+      border-radius: var(--radius-md);
+      border: 1px dashed var(--border);
+      justify-content: center;
+    }
+
+    .add-block-btn {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      min-height: 38px;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+
+    .add-block-btn:hover {
+      background: rgba(201, 169, 110, 0.12);
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* ==========================================================================
+       EDITORIAL LIVE PREVIEW (WARM & REFINED DESIGN)
+       ========================================================================== */
+    .preview-device {
+      width: 100%;
+      max-width: 680px;
+      background: transparent;
+    }
+
+    .preview-header-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.25rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+    }
+
+    .preview-editorial-eyebrow {
+      font-size: 0.8rem;
+      color: var(--gold);
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .preview-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .preview-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .preview-hero-img {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .preview-body p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #d4d4d8;
+      margin-bottom: 1.5rem;
+    }
+
+    .preview-body a, .preview-link {
+      color: var(--gold-light);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .preview-body a:hover, .preview-link:hover {
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(232, 207, 160, 0.4);
+    }
+
+    .preview-body p.dropcap::first-letter {
+      float: left;
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      line-height: 0.8;
+      padding-top: 4px;
+      padding-right: 10px;
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    .preview-image-single {
+      margin: 2rem 0;
+    }
+
+    .preview-image-single img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .preview-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .preview-grid-2x {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .preview-grid-2x img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .preview-callout {
+      background: rgba(201, 169, 110, 0.05);
+      border-left: 3px solid var(--gold);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 2rem 0;
+    }
+
+    .preview-callout h5 {
+      font-family: var(--font-display);
+      color: var(--gold-light);
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .preview-quote {
+      border-left: 2px solid rgba(255, 255, 255, 0.2);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #fafafa;
+      line-height: 1.5;
+    }
+
+    .preview-code {
+      background: #0d0d11;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: #a1a1aa;
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+
+    /* Manager View */
+    .manager-view {
+      display: none;
+      width: 100%;
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem 6rem;
+    }
+
+    .manager-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .post-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+    }
+
+    .post-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-panel);
+    }
+
+    .post-table th, .post-table td {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+
+    .post-table th {
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Toast */
+    .cms-toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: rgba(22, 22, 28, 0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--gold);
+      color: #ffffff;
+      padding: 0.85rem 1.35rem;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s var(--ease-spring);
+      z-index: 2000;
+      max-width: calc(100% - 3rem);
+    }
+
+    .cms-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       APPLE MOBILE REFINEMENTS (WWDC Fluid Interfaces Style)
+       ========================================================================== */
+    .mobile-glass-dock {
+      display: none;
+    }
+
+    /* DESKTOP VIEW MODES (Split vs Single) */
+    .mode-editor-only .cms-editor-pane {
+      max-width: 760px;
+      margin: 0 auto;
+      border-right: none;
+    }
+    .mode-editor-only .cms-preview-pane {
+      display: none;
+    }
+
+    .mode-preview-only .cms-preview-pane {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .mode-preview-only .cms-editor-pane {
+      display: none;
+    }
+
+    /* MOBILE BREAKPOINT (< 960px) */
+    @media (max-width: 960px) {
+      .topbar-desktop-row {
+        height: 54px;
+        padding: 0 1rem;
+      }
+
+      .cms-badge, .cms-status, .desktop-view-toggle, .cms-actions .cms-btn-secondary {
+        display: none; /* Keep clean on small screens */
+      }
+
+      .cms-segmented-control {
+        margin: 0 1rem 0.65rem;
+        width: calc(100% - 2rem);
+      }
+
+      .segment-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 0.5rem 0.4rem;
+        font-size: 0.82rem;
+      }
+
+      .cms-main {
+        display: block;
+        height: auto;
+        min-height: calc(100vh - 120px);
+        overflow: visible;
+      }
+
+      .cms-editor-pane {
+        max-width: 100% !important;
+        width: 100%;
+        padding: 1.25rem 1rem 7rem;
+        border-right: none;
+        overflow-y: visible;
+      }
+
+      .cms-preview-pane {
+        max-width: 100% !important;
+        width: 100%;
+        padding: 1.5rem 1rem 7rem;
+        overflow-y: visible;
+      }
+
+      /* In mobile: Hide or Show based on Active View */
+      body.mobile-view-editor .cms-preview-pane {
+        display: none !important;
+      }
+      body.mobile-view-editor .cms-editor-pane {
+        display: block !important;
+      }
+
+      body.mobile-view-preview .cms-editor-pane {
+        display: none !important;
+      }
+      body.mobile-view-preview .cms-preview-pane {
+        display: flex !important;
+      }
+
+      .meta-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .preview-grid-2x {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .preview-grid-2x img {
+        height: 220px;
+      }
+
+    }
+  </style>
+</head>
+<body class="mobile-view-editor">
+
+  <!-- Apple-inspired Navigation Chrome -->
+  <header class="cms-topbar">
+    <div class="topbar-desktop-row">
+      <div class="cms-brand">
+        <span class="cms-logo">JBL STUDIO</span>
+        <span class="cms-badge">CMS</span>
+        <div class="cms-status">
+          <span class="cms-status-dot"></span>
+          <span id="save-status">Cloud sync</span>
+        </div>
+      </div>
+
+      <!-- Desktop View Mode: Editor / Split / Preview -->
+      <div class="desktop-view-toggle">
+        <div class="cms-segmented-control">
+          <button class="segment-btn" id="d-btn-editor" onclick="setDesktopView('editor')">Editor</button>
+          <button class="segment-btn active" id="d-btn-split" onclick="setDesktopView('split')">Split View</button>
+          <button class="segment-btn" id="d-btn-preview" onclick="setDesktopView('preview')">Preview</button>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="cms-actions">
+        <button class="cms-btn cms-btn-secondary" onclick="simulateSaveDraft()">Save Draft</button>
+        <button class="cms-btn cms-btn-primary" onclick="simulatePublish()">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Publish
+        </button>
+      </div>
+    </div>
+
+    <!-- Apple iOS Segmented Control (Active for Mobile & Tablet) -->
+    <div class="cms-segmented-control">
+      <button class="segment-btn active" id="m-tab-editor" onclick="setAppView('editor')">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+        <span>Editor</span>
+      </button>
+      <button class="segment-btn" id="m-tab-preview" onclick="setAppView('preview')">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+        <span>Live Preview</span>
+      </button>
+      <button class="segment-btn" id="m-tab-manager" onclick="setAppView('manager')">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+        <span>All Posts</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- WORKSPACE: ARTICLE BUILDER -->
+  <main class="cms-main" id="builder-view">
+    
+    <!-- LEFT PANE: The Block Configurator -->
+    <section class="cms-editor-pane" id="editor-pane">
+      
+      <!-- Metadata -->
+      <div class="field-group">
+        <label class="field-label">Headline / Article Title</label>
+        <input type="text" id="post-title-input" class="title-input" value="Behind the Glass: Engineering Real-Time PBR Shaders for E-Commerce" oninput="updateLivePreview()" />
+      </div>
+
+      <div class="meta-row">
+        <div class="field-group">
+          <label class="field-label">Category</label>
+          <select id="post-cat-input" class="cms-select" onchange="updateLivePreview()">
+            <option value="Real-time WebGL">Real-time WebGL</option>
+            <option value="3D E-commerce" selected>3D E-commerce</option>
+            <option value="Product CGI">Product CGI</option>
+            <option value="Pipeline Optimization">Pipeline Optimization</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label class="field-label">Read Time</label>
+          <input type="text" id="post-readtime-input" class="cms-input" value="5 min read" oninput="updateLivePreview()" />
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label">Hero Cover Image (16:9 Aspect Ratio)</label>
+        <input type="text" id="post-cover-input" class="cms-input" value="assets/img/primicia/long-primicia.jpg" oninput="updateLivePreview()" />
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2rem;">
+        <span class="field-label" style="margin:0;">Article Blocks Layout</span>
+        <span style="font-size:0.75rem; color:var(--text-muted);">Drag or order visually</span>
+      </div>
+
+      <!-- Configurable Blocks -->
+      <div class="blocks-container" id="blocks-list">
+        
+        <!-- Block 1: Paragraph with Drop Cap & Clickable Link -->
+        <div class="block-card" data-type="paragraph">
+          <div class="block-header">
+            <span class="block-type">¶ Opening Paragraph (Drop Cap)</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <div style="font-size:0.75rem; color:var(--gold-light); margin-bottom:0.5rem; opacity:0.9;">
+            💡 Tip: Escribí <code>[Texto](https://...)</code> o pegá cualquier link directo y se convertirá en un enlace cliqueable automáticamente.
+          </div>
+          <textarea class="block-textarea" oninput="updateLivePreview()">When luxury brands transition from traditional studio photography to interactive 3D configurators with [Three.js](https://threejs.org) or [Shopify Storefront](https://shopify.dev), the primary bottleneck is never the 3D model itself—it is shader latency and texture memory allocation on mobile hardware.</textarea>
+        </div>
+
+        <!-- Block 2: 2-Column Comparison -->
+        <div class="block-card" data-type="comparison">
+          <div class="block-header">
+            <span class="block-type">⚏ 2-Image Comparison Grid</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:0.5rem;">
+            <input type="text" class="cms-input" placeholder="Image 1 URL" value="assets/img/primicia/long-primicia.jpg" oninput="updateLivePreview()" />
+            <input type="text" class="cms-input" placeholder="Image 2 URL" value="assets/img/foto_perfil.webp" oninput="updateLivePreview()" />
+          </div>
+          <input type="text" class="cms-input" placeholder="Comparison caption" value="Left: Raw geometry mesh • Right: Physically based anisotropic coat" oninput="updateLivePreview()" />
+        </div>
+
+        <!-- Block 3: Callout Tip -->
+        <div class="block-card" data-type="callout">
+          <div class="block-header">
+            <span class="block-type">★ Technical Takeaway / Callout</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <input type="text" class="cms-input" placeholder="Callout title" value="Draco Compression Benchmark" style="margin-bottom:0.5rem;" oninput="updateLivePreview()" />
+          <textarea class="block-textarea" oninput="updateLivePreview()">Applying Draco compression reduces file payloads by 76% with zero visual artifacting on browser canvas.</textarea>
+        </div>
+
+        <!-- Block 4: Pull-quote -->
+        <div class="block-card" data-type="quote">
+          <div class="block-header">
+            <span class="block-type">❞ Pull Quote</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <textarea class="block-textarea" oninput="updateLivePreview()">"Real-time 3D doesn't just display a product; it eliminates customer purchase hesitation before they reach the cart."</textarea>
+        </div>
+
+      </div>
+
+      <!-- Add New Block Toolbar -->
+      <div class="add-block-bar" id="add-block-section">
+        <button class="add-block-btn" onclick="addBlock('paragraph')">+ Paragraph</button>
+        <button class="add-block-btn" onclick="addBlock('image')">+ Single Image</button>
+        <button class="add-block-btn" onclick="addBlock('comparison')">+ 2-Image Comparison</button>
+        <button class="add-block-btn" onclick="addBlock('callout')">+ Callout Tip</button>
+        <button class="add-block-btn" onclick="addBlock('quote')">+ Pull Quote</button>
+        <button class="add-block-btn" onclick="addBlock('code')">+ Code Snippet</button>
+      </div>
+
+    </section>
+
+    <!-- RIGHT PANE: Real-Time Warm Editorial Live Preview -->
+    <section class="cms-preview-pane" id="preview-pane">
+      
+      <div class="preview-header-bar">
+        <span>READER'S VIEW</span>
+        <span>joelbastonelopez.com/blog/...</span>
+      </div>
+
+      <article class="preview-device">
+        
+        <div class="preview-editorial-eyebrow">
+          <span>✦</span>
+          <span id="preview-category">3D E-commerce</span>
+        </div>
+
+        <h1 class="preview-title" id="preview-title">
+          Behind the Glass: Engineering Real-Time PBR Shaders for E-Commerce
+        </h1>
+
+        <div class="preview-meta">
+          <span>By Joel Bastone Lopez</span>
+          <span>&bull;</span>
+          <span>Oct 15, 2026</span>
+          <span>&bull;</span>
+          <span id="preview-readtime">5 min read</span>
+        </div>
+
+        <img src="assets/img/primicia/long-primicia.jpg" id="preview-hero" class="preview-hero-img" alt="Cover" />
+
+        <!-- Rendered Blocks Output -->
+        <div class="preview-body" id="preview-body-content"></div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- WORKSPACE: ARTICLES MANAGER (LIST & DELETE) -->
+  <section class="manager-view" id="manager-view">
+    <div class="manager-header">
+      <div>
+        <h2 style="font-family:var(--font-display); font-size:1.6rem; color:#fff;">Published Articles</h2>
+        <p style="color:var(--text-muted); font-size:0.85rem;">Manage, edit, or instantly unpublish articles from your live web.</p>
+      </div>
+      <button class="cms-btn cms-btn-primary" onclick="setAppView('editor')">+ New Article</button>
+    </div>
+
+    <div class="post-table-wrap">
+      <table class="post-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="posts-table-body">
+          <tr>
+            <td style="font-weight:600; color:#fff;">Behind the Glass: Engineering Real-Time PBR Shaders</td>
+            <td><span class="cms-badge">3D E-commerce</span></td>
+            <td>Oct 15, 2026</td>
+            <td><span style="color:#10b981; font-size:0.8rem;">● Published</span></td>
+            <td>
+              <button class="block-btn" onclick="setAppView('editor')">Edit</button>
+              <button class="block-btn delete" onclick="deleteTableRow(this)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+
+  <!-- Notification Toast -->
+  <div class="cms-toast" id="cms-toast">
+    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="var(--gold)" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    <span id="toast-msg">Article updated successfully in live database!</span>
+  </div>
+
+  <script>
+    // State management
+    let currentAppView = 'editor'; // 'editor', 'preview', 'manager'
+    let currentDesktopView = 'split'; // 'split', 'editor', 'preview'
+
+    // Primary View Switching (Works universally across Mobile & Desktop)
+    function setAppView(viewName) {
+      currentAppView = viewName;
+      const builder = document.getElementById('builder-view');
+      const manager = document.getElementById('manager-view');
+
+      // Update segment button states
+      document.getElementById('m-tab-editor').classList.toggle('active', viewName === 'editor');
+      document.getElementById('m-tab-preview').classList.toggle('active', viewName === 'preview');
+      document.getElementById('m-tab-manager').classList.toggle('active', viewName === 'manager');
+
+      // Update body class for responsive CSS
+      document.body.classList.remove('mobile-view-editor', 'mobile-view-preview');
+      
+      if (viewName === 'manager') {
+        builder.style.display = 'none';
+        manager.style.display = 'block';
+      } else {
+        builder.style.display = 'flex';
+        manager.style.display = 'none';
+
+        if (viewName === 'editor') {
+          document.body.classList.add('mobile-view-editor');
+        } else if (viewName === 'preview') {
+          document.body.classList.add('mobile-view-preview');
+        }
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Desktop Specific View Toggle (Editor / Split / Preview)
+    function setDesktopView(mode) {
+      currentDesktopView = mode;
+      document.body.classList.remove('mode-editor-only', 'mode-preview-only');
+      
+      document.getElementById('d-btn-editor').classList.toggle('active', mode === 'editor');
+      document.getElementById('d-btn-split').classList.toggle('active', mode === 'split');
+      document.getElementById('d-btn-preview').classList.toggle('active', mode === 'preview');
+
+      if (mode === 'editor') {
+        document.body.classList.add('mode-editor-only');
+      } else if (mode === 'preview') {
+        document.body.classList.add('mode-preview-only');
+      }
+    }
+
+    // Live Preview Synchronizer
+    function updateLivePreview() {
+      // 1. Meta sync
+      const title = document.getElementById('post-title-input').value;
+      const cat = document.getElementById('post-cat-input').value;
+      const readTime = document.getElementById('post-readtime-input').value;
+      const cover = document.getElementById('post-cover-input').value;
+
+      document.getElementById('preview-title').innerText = title;
+      document.getElementById('preview-category').innerText = cat;
+      document.getElementById('preview-readtime').innerText = readTime;
+      document.getElementById('preview-hero').src = cover;
+
+      // 2. Blocks sync
+      const previewBody = document.getElementById('preview-body-content');
+      const blocks = document.querySelectorAll('#blocks-list .block-card');
+      let html = '';
+
+      blocks.forEach((block, index) => {
+        const type = block.dataset.type;
+
+        if (type === 'paragraph') {
+          const text = block.querySelector('textarea').value;
+          const isFirst = index === 0;
+          html += `<p class="${isFirst ? 'dropcap' : ''}">${renderRichText(text)}</p>`;
+        } 
+        else if (type === 'comparison') {
+          const inputs = block.querySelectorAll('input');
+          const img1 = inputs[0].value || 'assets/img/primicia/long-primicia.jpg';
+          const img2 = inputs[1].value || 'assets/img/foto_perfil.webp';
+          const caption = inputs[2].value || '';
+          html += `
+            <div class="preview-grid-2x">
+              <img src="${img1}" alt="Render 1" />
+              <img src="${img2}" alt="Render 2" />
+            </div>
+            ${caption ? `<div class="preview-caption">${renderRichText(caption)}</div>` : ''}
+          `;
+        }
+        else if (type === 'callout') {
+          const title = block.querySelector('input').value;
+          const text = block.querySelector('textarea').value;
+          html += `
+            <div class="preview-callout">
+              <h5>${renderRichText(title)}</h5>
+              <p style="margin:0; font-size:0.95rem; color:#d4d4d8;">${renderRichText(text)}</p>
+            </div>
+          `;
+        }
+        else if (type === 'quote') {
+          const text = block.querySelector('textarea').value;
+          html += `<div class="preview-quote">${renderRichText(text)}</div>`;
+        }
+        else if (type === 'code') {
+          const code = block.querySelector('textarea').value;
+          html += `<pre class="preview-code"><code>${escapeHtml(code)}</code></pre>`;
+        }
+        else if (type === 'image') {
+          const inputs = block.querySelectorAll('input');
+          const url = inputs[0].value || 'assets/img/primicia/long-primicia.jpg';
+          const caption = inputs[1].value || '';
+          html += `
+            <div class="preview-image-single">
+              <img src="${url}" alt="Article visual" />
+              ${caption ? `<div class="preview-caption">${renderRichText(caption)}</div>` : ''}
+            </div>
+          `;
+        }
+      });
+
+      previewBody.innerHTML = html;
+    }
+
+    // Rich Text Parser: Converts [Text](url) and raw https:// into real clickable links
+    function renderRichText(str) {
+      if (!str) return '';
+      
+      // 1. Sanitize raw HTML tags to prevent XSS
+      let safe = str.replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
+
+      // 2. Parse Markdown Links: [Anchor Text](https://example.com)
+      safe = safe.replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/|\.\.\/)[^\s)]+)\)/g, 
+        '<a href="$2" target="_blank" rel="noopener noreferrer" class="preview-link">$1 <span style="font-size:0.75em; opacity:0.8;">&nearr;</span></a>'
+      );
+
+      // 3. Autolink standalone URLs: https://... or http://... (not inside href)
+      safe = safe.replace(/(?<!href=")(https?:\/\/[^\s<)]+)/g, 
+        '<a href="$1" target="_blank" rel="noopener noreferrer" class="preview-link">$1 <span style="font-size:0.75em; opacity:0.8;">&nearr;</span></a>'
+      );
+
+      // 4. Bold: **text**
+      safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong style="color:#ffffff;">$1</strong>');
+
+      // 5. Italic: *text*
+      safe = safe.replace(/\*([^*]+)\*/g, '<em style="color:#e4e4e7;">$1</em>');
+
+      return safe;
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
+    }
+
+    // Add Block Logic
+    function addBlock(type) {
+      const container = document.getElementById('blocks-list');
+      const div = document.createElement('div');
+      div.className = 'block-card';
+      div.dataset.type = type;
+
+      let inner = '';
+      if (type === 'paragraph') {
+        inner = `
+          <div class="block-header">
+            <span class="block-type">¶ Paragraph</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <textarea class="block-textarea" oninput="updateLivePreview()" placeholder="Write your paragraph here..."></textarea>
+        `;
+      } else if (type === 'image') {
+        inner = `
+          <div class="block-header">
+            <span class="block-type">🖼 Single Full-Width Image</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <input type="text" class="cms-input" placeholder="Image URL (e.g. assets/img/...)" value="assets/img/primicia/long-primicia.jpg" style="margin-bottom:0.5rem;" oninput="updateLivePreview()" />
+          <input type="text" class="cms-input" placeholder="Caption / description" value="Production render detail" oninput="updateLivePreview()" />
+        `;
+      } else if (type === 'comparison') {
+        inner = `
+          <div class="block-header">
+            <span class="block-type">⚏ 2-Image Comparison Grid</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; margin-bottom:0.5rem;">
+            <input type="text" class="cms-input" placeholder="Image 1 URL" value="assets/img/primicia/long-primicia.jpg" oninput="updateLivePreview()" />
+            <input type="text" class="cms-input" placeholder="Image 2 URL" value="assets/img/foto_perfil.webp" oninput="updateLivePreview()" />
+          </div>
+          <input type="text" class="cms-input" placeholder="Comparison caption" value="Variant comparison" oninput="updateLivePreview()" />
+        `;
+      } else if (type === 'callout') {
+        inner = `
+          <div class="block-header">
+            <span class="block-type">★ Technical Takeaway / Callout</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <input type="text" class="cms-input" placeholder="Callout title" value="Key Takeaway" style="margin-bottom:0.5rem;" oninput="updateLivePreview()" />
+          <textarea class="block-textarea" oninput="updateLivePreview()" placeholder="Callout advice..."></textarea>
+        `;
+      } else if (type === 'quote') {
+        inner = `
+          <div class="block-header">
+            <span class="block-type">❞ Pull Quote</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <textarea class="block-textarea" oninput="updateLivePreview()" placeholder="Highlight quote..."></textarea>
+        `;
+      } else if (type === 'code') {
+        inner = `
+          <div class="block-header">
+            <span class="block-type">⌨ Code Snippet</span>
+            <div class="block-tools">
+              <button class="block-btn" onclick="moveBlock(this, -1)">▲</button>
+              <button class="block-btn" onclick="moveBlock(this, 1)">▼</button>
+              <button class="block-btn delete" onclick="removeBlock(this)">✕</button>
+            </div>
+          </div>
+          <textarea class="block-textarea" style="font-family:var(--font-mono); font-size:0.8rem;" oninput="updateLivePreview()">// Three.js Shader Setup&#10;const material = new THREE.MeshPhysicalMaterial({&#10;  roughness: 0.1,&#10;  transmission: 0.9&#10;});</textarea>
+        `;
+      }
+
+      div.innerHTML = inner;
+      container.appendChild(div);
+      updateLivePreview();
+      showToast('New block added!');
+    }
+
+    // Move & Remove block
+    function moveBlock(btn, direction) {
+      const card = btn.closest('.block-card');
+      const container = document.getElementById('blocks-list');
+      if (direction === -1 && card.previousElementSibling) {
+        container.insertBefore(card, card.previousElementSibling);
+      } else if (direction === 1 && card.nextElementSibling) {
+        container.insertBefore(card.nextElementSibling, card);
+      }
+      updateLivePreview();
+    }
+
+    function removeBlock(btn) {
+      btn.closest('.block-card').remove();
+      updateLivePreview();
+      showToast('Block removed');
+    }
+
+    function deleteTableRow(btn) {
+      if (confirm('Delete this article in real-time? It will instantly disappear from the blog.')) {
+        btn.closest('tr').remove();
+        showToast('Article deleted in real-time! (0 404 errors)');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('cms-toast');
+      document.getElementById('toast-msg').innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    function simulatePublish() {
+      showToast('Published live to Cloud Database! Visible on web in 0.3s');
+    }
+
+    function simulateSaveDraft() {
+      showToast('Draft saved securely in cloud.');
+    }
+
+    // Initialize
+    updateLivePreview();
+  </script>
+</body>
+</html>
