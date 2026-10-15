@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[Título del Post] | JBL Blog</title>
-  <meta name="description" content="[Descripción breve del artículo para Google]" />
+  <title>[Article Title] | JBL Journal</title>
+  <meta name="description" content="[Short description of the article for Google and social sharing]" />
   <meta name="author" content="Joel Bastone Lopez" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://joelbastonelopez.github.io/portfolio-web/blog/[nombre-archivo].html" />
+  <link rel="canonical" href="https://joelbastonelopez.github.io/portfolio-web/blog/[article-filename].html" />
 
-  <!-- Open Graph / Redes Sociales -->
+  <!-- Open Graph / Social Media -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="[Título del Post] | JBL Blog" />
-  <meta property="og:description" content="[Descripción breve del artículo]" />
+  <meta property="og:title" content="[Article Title] | JBL Journal" />
+  <meta property="og:description" content="[Short description of the article]" />
   <meta property="og:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/foto_perfil.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="[Article Title] | JBL Journal" />
+  <meta name="twitter:description" content="[Short description of the article]" />
+  <meta name="twitter:image" content="https://joelbastonelopez.github.io/portfolio-web/assets/img/foto_perfil.webp" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
@@ -32,12 +38,12 @@
 </head>
 
 <body>
-  <!-- Barra de lectura superior -->
+  <!-- Reading Progress Bar -->
   <div class="blog-progress-bar" id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0"
     aria-valuemax="100"></div>
 
-  <!-- Navegación -->
-  <nav class="nav" id="main-nav" aria-label="Navegación principal">
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav" aria-label="Main Navigation">
     <div class="nav-inner">
       <a href="../index.html" class="nav-logo" aria-label="JBL Homepage">JBL</a>
       <div class="nav-links">
@@ -50,11 +56,11 @@
       <div class="nav-actions">
         <a href="../index.html#contacto" class="nav-cta">Get a Quote</a>
       </div>
-      <button class="nav-burger" aria-label="Menú móvil">
+      <button class="nav-burger" aria-label="Toggle mobile menu">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <div class="nav-mobile" aria-label="Menú móvil de navegación">
+    <div class="nav-mobile" aria-label="Mobile Navigation">
       <a href="../index.html#proyectos" class="nav-link">Projects</a>
       <a href="../index.html#sobre-mi" class="nav-link">About</a>
       <a href="../blog.html" class="nav-link active">Blog</a>
@@ -64,46 +70,46 @@
     </div>
   </nav>
 
-  <!-- Artículo del Blog -->
+  <!-- Article Container -->
   <main class="post-article">
 
-    <!-- Link volver -->
+    <!-- Back to Journal link -->
     <a href="../blog.html" class="post-back-link">
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
       </svg>
-      Volver al Journal &amp; Artículos
+      Back to Journal &amp; Articles
     </a>
 
-    <!-- Header del Post -->
+    <!-- Post Header -->
     <header class="post-header">
       <div class="post-header-meta">
-        <span class="blog-tag">[Categoría]</span>
+        <span class="blog-tag">[Category]</span>
         <span class="blog-date">
           <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
-          [Fecha]
+          [Publication Date]
         </span>
         <span class="blog-readtime">
           <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          [X min de lectura]
+          [X min read]
         </span>
       </div>
 
       <h1 class="post-title">
-        [Título Principal del Artículo]
+        [Main Article Headline: Apple Editorial Style with High Impact]
       </h1>
 
       <p class="post-lead">
-        [Bajada / Resumen Ejecutivo en tipografía destacada].
+        [Executive Summary / Lede: Introductory paragraph in prominent typography synthesizing the core takeaways of the article].
       </p>
 
-      <!-- Autor y Compartir -->
+      <!-- Author and Share bar -->
       <div class="post-author-bar">
         <div class="blog-author">
           <img src="../assets/img/foto_perfil.webp" alt="Joel Bastone Lopez" class="blog-author-avatar" />
@@ -114,105 +120,142 @@
         </div>
 
         <div class="post-share-actions">
-          <button class="post-share-btn" onclick="copyPostLink()" title="Copiar enlace" aria-label="Copiar enlace">
+          <button class="post-share-btn" onclick="copyPostLink()" title="Copy link" aria-label="Copy link">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
           </button>
+          <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener noreferrer" class="post-share-btn" title="Share on X" aria-label="Share on X">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite" target="_blank" rel="noopener noreferrer" class="post-share-btn" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46V10.9M7.86 6.72a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </header>
 
-    <!-- Imagen de Portada Principal -->
+    <!-- Hero Cover Image -->
     <figure class="post-hero-figure">
-      <img src="../assets/img/[tu-imagen-portada].jpg" alt="[Descripción]" />
+      <img src="../assets/img/[your-cover-image].jpg" alt="[Image description]" />
       <figcaption class="post-figure-caption">
-        <span>[Epígrafe de la imagen].</span>
+        <span>[Figure caption with technical description or credits].</span>
         <span style="color:var(--gold);">[TAG / SOFTWARE]</span>
       </figcaption>
     </figure>
 
-    <!-- Cuerpo del Post -->
+    <!-- Post Body -->
     <div class="post-body">
 
-      <!-- Párrafo inicial con Letra Capital -->
+      <!-- Opening Drop Cap Paragraph -->
       <p class="drop-cap">
-        [Primer párrafo del artículo que comenzará con letra capital elegante].
+        [Opening paragraph of the article starting with an elegant drop cap. Introduce the project context, technical challenge, or key breakthrough here].
       </p>
 
       <p>
-        [Párrafo de desarrollo estándar].
+        [Standard body paragraph exploring the problem, methodology, or background context].
       </p>
 
-      <h2>[Subtítulo de Sección]</h2>
+      <h2>[Section Subheading: Key Focus Area]</h2>
 
       <p>
-        [Texto de la sección].
+        [Detailed section explanation with technical reasoning, workflow decisions, and implementation details].
       </p>
 
-      <!-- Caja Destacada Callout -->
+      <!-- Key Callout Box -->
       <aside class="post-callout">
         <div class="post-callout-title">
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="var(--gold)" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
-          [Clave técnica o consejo destacado]
+          [Key Technical Takeaway / Pro Tip]
         </div>
         <p>
-          [Texto explicativo del callout].
+          [Translucent glass callout highlighting critical architectural advice, performance warnings, or industry best practices].
         </p>
       </aside>
 
-      <!-- Cita Editorial -->
+      <!-- Editorial Quote -->
       <blockquote class="post-blockquote">
-        "[Frase destacada o cita relevante del proyecto]."
-        <span class="post-blockquote-cite">&mdash; [Autor o fuente]</span>
+        "[Compelling pull-quote or project takeaway that encapsulates the philosophy of the work]."
+        <span class="post-blockquote-cite">&mdash; [Author or Source Name]</span>
       </blockquote>
 
-      <!-- Conclusiones -->
+      <!-- Code Snippet Box (Optional) -->
+      <div class="post-code-block">
+        <div class="post-code-header">
+          <div class="post-code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="post-code-lang">
+            <span>[Language / Three.js / GLSL]</span>
+          </div>
+          <button class="post-code-copy-btn" onclick="copyCode(this)">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            Copy code
+          </button>
+        </div>
+        <pre class="post-code-content"><code>// Code snippet example
+function initOptimizedScene() {
+  const settings = {
+    antialias: true,
+    powerPreference: 'high-performance'
+  };
+  return settings;
+}</code></pre>
+      </div>
+
+      <!-- Key Takeaways & Summary Box -->
       <div class="post-callout" style="background: rgba(18, 18, 24, 0.85); border-left-color: var(--gold-light);">
         <div class="post-callout-title">
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="var(--gold-light)" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          Puntos Clave y Conclusiones
+          Key Takeaways &amp; Conclusions
         </div>
         <ul style="margin: 0.75rem 0 0; padding-left: 1.25rem; font-size: 0.95rem; color: #d0ced8;">
-          <li><strong>Punto 1:</strong> [Resumen clave].</li>
-          <li><strong>Punto 2:</strong> [Resumen clave].</li>
+          <li><strong>Point 1:</strong> [First concise takeaway].</li>
+          <li><strong>Point 2:</strong> [Second concise takeaway].</li>
+          <li><strong>Point 3:</strong> [Third concise takeaway].</li>
         </ul>
       </div>
 
       <!-- Tags -->
       <div class="post-tags">
-        <span style="font-size:0.85rem; color:var(--txt-muted); margin-right:0.5rem;">Etiquetas:</span>
+        <span style="font-size:0.85rem; color:var(--txt-muted); margin-right:0.5rem;">Tags:</span>
         <a href="../blog.html" class="post-tag-item">#[Tag1]</a>
         <a href="../blog.html" class="post-tag-item">#[Tag2]</a>
+        <a href="../blog.html" class="post-tag-item">#[Tag3]</a>
       </div>
 
     </div>
 
-    <!-- Bio del Autor -->
-    <section class="post-author-box" aria-label="Acerca del autor">
+    <!-- Author Bio Box -->
+    <section class="post-author-box" aria-label="About the author">
       <img src="../assets/img/foto_perfil.webp" alt="Joel Bastone Lopez" class="post-author-box-avatar" />
       <div class="post-author-box-content">
         <h4>Joel Bastone Lopez</h4>
         <span class="role">3D CGI Artist &amp; Real-time WebGL Developer</span>
         <p>
-          Especializado en CGI para productos de alta gama, dirección de arte y desarrollo de experiencias interactivas
-          3D con Three.js para marcas internacionales.
+          Specializing in luxury product CGI, art direction, and interactive 3D experiences with Three.js for international brands.
         </p>
         <div class="post-author-box-links">
-          <a href="../index.html#contacto">Trabajemos juntos &rarr;</a>
-          <a href="../blog.html">Ver más artículos &rarr;</a>
+          <a href="../index.html#contacto">Let's work together &rarr;</a>
+          <a href="../blog.html">Explore more articles &rarr;</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- Global Footer -->
   <footer class="footer">
     <div class="footer-inner">
       <span class="footer-text">Joel Bastone Lopez &mdash; 2026</span>
@@ -268,9 +311,24 @@
     function copyPostLink() {
       if (navigator.clipboard) {
         navigator.clipboard.writeText(window.location.href).then(() => {
-          showToast('¡Enlace copiado al portapapeles!');
+          showToast('Article link copied to clipboard!');
         }).catch(() => {
-          showToast('Enlace listo para compartir');
+          showToast('Link ready to share');
+        });
+      }
+    }
+
+    function copyCode(button) {
+      const pre = button.closest('.post-code-block').querySelector('code');
+      if (!pre) return;
+      const codeText = pre.innerText;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(codeText).then(() => {
+          const original = button.innerHTML;
+          button.innerHTML = `<span style="color:var(--gold);">✓ Copied!</span>`;
+          setTimeout(() => {
+            button.innerHTML = original;
+          }, 2500);
         });
       }
     }
