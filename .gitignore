@@ -1,0 +1,7 @@
+# Private admin mockup / drafts
+admin-mockup.html
+
+# OS and temp files
+.DS_Store
+Thumbs.db
+*.log
