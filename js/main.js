@@ -107,31 +107,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const bentoItems = document.querySelectorAll('.bento-item');
 
+    function applyFilter(filterValue) {
+        bentoItems.forEach(item => {
+            const itemCategory = item.getAttribute('data-category');
+            const shouldShow = filterValue === 'all' || filterValue === itemCategory;
+            if (shouldShow) {
+                item.classList.remove('hidden');
+                item.style.opacity = '1';
+            } else {
+                item.classList.add('hidden');
+            }
+        });
+    }
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Remove active class from all buttons
             filterBtns.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
             btn.classList.add('active');
 
             const filterValue = btn.getAttribute('data-filter');
-
-            bentoItems.forEach(item => {
-                // Add brief fade out inline or toggle a class that handles it
-                item.style.transition = 'opacity 0.3s ease';
-                item.style.opacity = '0';
-                
-                setTimeout(() => {
-                    const itemCategory = item.getAttribute('data-category');
-                    if (filterValue === 'all' || filterValue === itemCategory) {
-                        item.classList.remove('hidden');
-                        // Fade back in
-                        setTimeout(() => { item.style.opacity = '1'; }, 50);
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                }, 300); // match transition duration
-            });
+            if (document.startViewTransition) {
+                document.startViewTransition(() => {
+                    applyFilter(filterValue);
+                });
+            } else {
+                applyFilter(filterValue);
+            }
         });
     });
 
