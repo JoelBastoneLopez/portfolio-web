@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 3. MOBILE NAV
-    const burger = document.querySelector('.nav-burger');
+    const burger = document.querySelector('.nav-burger, .nav-toggle');
     const mobileNav = document.querySelector('.nav-mobile');
     const mobileNavLinks = document.querySelectorAll('.nav-mobile a');
 

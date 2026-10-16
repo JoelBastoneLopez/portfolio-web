@@ -367,7 +367,8 @@ button {
   color: var(--bg-primary);
 }
 
-.nav-burger {
+.nav-burger,
+.nav-toggle {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -387,15 +388,18 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-.nav-burger:hover {
-  background-color: rgba(255, 255, 255, 0.06);
+.nav-burger:hover,
+.nav-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
-.nav-burger:active {
-  transform: scale(0.9);
+.nav-burger:active,
+.nav-toggle:active {
+  transform: scale(0.92);
 }
 
-.nav-burger span {
+.nav-burger span,
+.nav-toggle span {
   display: block;
   width: 24px;
   height: 2px;
@@ -408,25 +412,34 @@ button {
 }
 
 /* Playful Morph to Cross (X) */
-.nav-burger.active {
+.nav-burger.active,
+.nav-toggle.active {
   transform: rotate(90deg);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(201, 169, 110, 0.12);
+  border-color: rgba(201, 169, 110, 0.35);
 }
 
-.nav-burger.active span:nth-child(1) {
+.nav-burger.active:active,
+.nav-toggle.active:active {
+  transform: rotate(90deg) scale(0.92);
+}
+
+.nav-burger.active span:nth-child(1),
+.nav-toggle.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
-  background-color: var(--gold);
+  background-color: var(--gold-light);
 }
 
-.nav-burger.active span:nth-child(2) {
+.nav-burger.active span:nth-child(2),
+.nav-toggle.active span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
 
-.nav-burger.active span:nth-child(3) {
+.nav-burger.active span:nth-child(3),
+.nav-toggle.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
-  background-color: var(--gold);
+  background-color: var(--gold-light);
 }
 
 .nav-mobile {
@@ -509,13 +522,14 @@ button {
 
 @media (prefers-reduced-motion: reduce) {
   .nav-burger,
+  .nav-toggle,
   .nav-burger span,
+  .nav-toggle span,
   .nav-mobile,
   .nav-mobile .nav-link,
   .nav-mobile .nav-cta {
-    transition: none !important;
-    animation: none !important;
-    transform: none !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
 
@@ -1921,7 +1935,8 @@ button {
   .nav-links, .nav-actions {
     display: none;
   }
-  .nav-burger {
+  .nav-burger,
+  .nav-toggle {
     display: flex;
   }
   .nav-mobile {
