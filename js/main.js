@@ -91,14 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (burger && mobileNav) {
         burger.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
-            burger.classList.toggle('active'); // Optional: for burger animation
+            const willOpen = !mobileNav.classList.contains('active');
+            mobileNav.classList.toggle('active', willOpen);
+            burger.classList.toggle('active', willOpen);
+            burger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            document.body.style.overflow = willOpen ? 'hidden' : '';
         });
 
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
                 burger.classList.remove('active');
+                burger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
             });
         });
     }
