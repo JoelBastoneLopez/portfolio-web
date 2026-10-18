@@ -4191,5 +4191,196 @@ button {
   border-radius: 999px;
 }
 
+/* ==========================================================================
+   BLOG SOCIAL SHARE WIDGET & MODAL POPUP
+   ========================================================================== */
+.post-share-widget {
+  margin: 2.75rem 0;
+  padding: 1.35rem 1.6rem;
+  background: rgba(22, 22, 28, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--r-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-share-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 3200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.social-share-card {
+  background: #111116;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--r-lg);
+  max-width: 520px;
+  width: 100%;
+  padding: 1.85rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(201, 169, 110, 0.12);
+  position: relative;
+  animation: shareModalAnimIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes shareModalAnimIn {
+  from { opacity: 0; transform: scale(0.95) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.social-share-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.social-share-title {
+  font-family: var(--font-d);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.social-share-sub {
+  font-size: 0.82rem;
+  color: var(--txt-muted);
+  margin: 0;
+}
+
+.social-share-close {
+  background: transparent;
+  border: none;
+  color: var(--txt-muted);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2rem;
+  transition: color 0.15s;
+}
+
+.social-share-close:hover {
+  color: #fff;
+}
+
+.social-share-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 500px) {
+  .social-share-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.share-btn-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-md);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--font-b);
+}
+
+.share-btn-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(201, 169, 110, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.share-btn-item:active {
+  transform: scale(0.97);
+}
+
+.share-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.share-btn-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: block;
+  line-height: 1.2;
+}
+
+.share-btn-desc {
+  font-size: 0.72rem;
+  color: var(--txt-muted);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.share-url-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-md);
+  padding: 0.4rem 0.5rem 0.4rem 0.85rem;
+}
+
+.share-url-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--txt-muted);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.share-url-copy-btn {
+  background: rgba(201, 169, 110, 0.15);
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  color: var(--gold-light);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.share-url-copy-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
 
 
