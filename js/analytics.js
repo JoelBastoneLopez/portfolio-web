@@ -13,7 +13,7 @@
   // Ejemplo: 'G-XXXXXXXXXX'. Si está con placeholder, opera en modo prueba (consola).
   const GA_MEASUREMENT_ID = 'G-93H86JMNXM';
 
-  const isConfigured = GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== 'G-93H86JMNXM';
+  const isConfigured = Boolean(GA_MEASUREMENT_ID && GA_MEASUREMENT_ID.startsWith('G-') && !GA_MEASUREMENT_ID.includes('XXX'));
 
   // 1. Inyectar dinámicamente el script de Google Tag Manager (gtag.js)
   if (isConfigured) {
