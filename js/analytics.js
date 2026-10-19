@@ -11,9 +11,9 @@
   // CONFIGURACIÓN: Ingresá tu Measurement ID de Google Analytics aquí
   // ==========================================================================
   // Ejemplo: 'G-XXXXXXXXXX'. Si está con placeholder, opera en modo prueba (consola).
-  const GA_MEASUREMENT_ID = 'G-W0G8MGLNKM';
+  const GA_MEASUREMENT_ID = 'G-93H86JMNXM';
 
-  const isConfigured = GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== 'G-W0G8MGLNKM';
+  const isConfigured = GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== 'G-93H86JMNXM';
 
   // 1. Inyectar dinámicamente el script de Google Tag Manager (gtag.js)
   if (isConfigured) {
