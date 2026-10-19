@@ -593,6 +593,8 @@ function buildArticleHTML(data) {
       </div>
     </div>
   </div>
+
+  <script src="../js/analytics.js" defer></script>
 </body>
 </html>`;
 }
