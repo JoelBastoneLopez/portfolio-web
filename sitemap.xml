@@ -36,4 +36,11 @@
     <loc>https://joelbastonelopez.com/project-ducharme.html</loc>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://joelbastonelopez.com/blog/gaussian-splatting-ecommerce-2026.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>

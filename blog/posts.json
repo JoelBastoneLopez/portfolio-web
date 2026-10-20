@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "id": "gaussian-splatting-ecommerce-2026",
+    "title": "Gaussian Splatting's Leap to E-commerce: We Finally Have a Standard",
+    "url": "blog/gaussian-splatting-ecommerce-2026.html",
+    "category": "3D E-commerce",
+    "date": "Oct 20, 2026",
+    "readTime": "4 min read",
+    "image": "assets/img/blog-gaussian-splatting.jpg",
+    "excerpt": "In 2026, the Khronos Group ratified KHR_gaussian_splatting for glTF. How 3DGS is revolutionizing real-time photorealistic e-commerce with Three.js and WebGPU.",
+    "author": "Joel Bastone Lopez"
+  }
+]

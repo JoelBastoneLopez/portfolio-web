@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaussian Splatting's Leap to E-commerce: We Finally Have a Standard | Joel Bastone Lopez</title>
+  <meta name="description"
+    content="In 2026, the Khronos Group ratified KHR_gaussian_splatting for glTF. How 3DGS is revolutionizing real-time photorealistic e-commerce with Three.js and WebGPU." />
+  <meta name="keywords"
+    content="Gaussian Splatting, 3DGS, glTF, KHR_gaussian_splatting, Khronos Group, Three.js, E-commerce 3D, WebGPU, WebGL, Diego Viegas, Joel Bastone Lopez" />
+  <meta name="author" content="Joel Bastone Lopez" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://joelbastonelopez.com/blog/gaussian-splatting-ecommerce-2026.html" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://joelbastonelopez.com/blog/gaussian-splatting-ecommerce-2026.html" />
+  <meta property="og:title" content="Gaussian Splatting's Leap to E-commerce: We Finally Have a Standard" />
+  <meta property="og:description"
+    content="In 2026, the Khronos Group ratified KHR_gaussian_splatting for glTF. How 3DGS is revolutionizing real-time photorealistic e-commerce." />
+  <meta property="og:image" content="https://joelbastonelopez.com/assets/img/blog-gaussian-splatting.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gaussian Splatting's Leap to E-commerce: We Finally Have a Standard" />
+  <meta name="twitter:description"
+    content="Khronos Group ratifies KHR_gaussian_splatting for glTF. The transition to photorealistic real-time 3D e-commerce." />
+  <meta name="twitter:image" content="https://joelbastonelopez.com/assets/img/blog-gaussian-splatting.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Model data for instant 0-CORS loading on both file:/// and web -->
+  <script src="../assets/models/camara-data.js"></script>
+
+  <!-- Import Map for Three.js & Gaussian Splatting -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+        "@mkkellogg/gaussian-splats-3d": "https://cdn.jsdelivr.net/npm/@mkkellogg/gaussian-splats-3d@0.4.7/build/gaussian-splats-3d.module.js"
+      }
+    }
+  </script>
+
+  <!-- Schema.org BlogPosting Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Gaussian Splatting's Leap to E-commerce: We Finally Have a Standard",
+    "description": "In 2026, the Khronos Group ratified KHR_gaussian_splatting for glTF. How 3DGS is revolutionizing real-time photorealistic e-commerce with Three.js and WebGPU.",
+    "image": "https://joelbastonelopez.com/assets/img/blog-gaussian-splatting.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Joel Bastone Lopez",
+      "url": "https://joelbastonelopez.com/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Joel Bastone Lopez"
+    },
+    "datePublished": "2026-10-20",
+    "dateModified": "2026-10-20",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://joelbastonelopez.com/blog/gaussian-splatting-ecommerce-2026.html"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="blog-progress-bar" id="reading-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+    aria-valuemax="100"></div>
+
+  <!-- Navigation -->
+  <nav class="nav nav-blog" id="main-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="JBL Homepage">
+        JBL
+        <span class="logo-badge-3d">3D</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#proyectos" class="nav-link">Projects</a>
+        <a href="../index.html#sobre-mi" class="nav-link">About</a>
+        <a href="../blog.html" class="nav-link active">Blog</a>
+        <a href="../index.html#reviews" class="nav-link">Reviews</a>
+        <a href="../index.html#contacto" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="blog-lang-btn" onclick="toggleBlogLanguage()"
+          aria-label="Cambiar idioma / Switch language" title="Traducir artículo al español">
+          <span class="lang-btn-icon" aria-hidden="true">
+            <svg class="globe-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+              <path d="M2 12h20"></path>
+            </svg>
+            <span class="lang-flag">🇪🇸</span>
+          </span>
+          <span class="lang-btn-label">Traducir a Español</span>
+          <span class="comic-sparkle" aria-hidden="true">✦</span>
+        </button>
+      </div>
+      <button class="nav-burger" aria-label="Toggle mobile menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" aria-label="Mobile Navigation">
+      <a href="../index.html#proyectos" class="nav-link">Projects</a>
+      <a href="../index.html#sobre-mi" class="nav-link">About</a>
+      <a href="../blog.html" class="nav-link active">Blog</a>
+      <a href="../index.html#reviews" class="nav-link">Reviews</a>
+      <a href="../index.html#contacto" class="nav-link">Contact</a>
+      <button type="button" class="blog-lang-btn blog-lang-btn-mobile" onclick="toggleBlogLanguage()"
+        aria-label="Cambiar idioma / Switch language" title="Traducir artículo al español">
+        <span class="lang-btn-icon" aria-hidden="true">
+          <svg class="globe-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <path d="M2 12h20"></path>
+          </svg>
+          <span class="lang-flag">🇪🇸</span>
+        </span>
+        <span class="lang-btn-label">Traducir a Español</span>
+        <span class="comic-sparkle" aria-hidden="true">✦</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Article Container -->
+  <main class="post-article">
+
+    <!-- Back to Journal link -->
+    <a href="../blog.html" class="post-back-link">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      Back to Journal &amp; Articles
+    </a>
+
+    <!-- Post Header -->
+    <header class="post-header">
+      <div class="post-header-meta">
+        <span class="blog-tag">3D E-commerce</span>
+        <span class="blog-date">
+          <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Oct 20, 2026
+        </span>
+        <span class="blog-readtime">
+          <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          4 min read
+        </span>
+      </div>
+
+      <h1 class="post-title">
+        Gaussian Splatting's Leap to E-commerce: We Finally Have a Standard
+      </h1>
+
+      <p class="post-lead">
+        Until very recently, implementing Gaussian Splatting <em>(3DGS)</em> on a website was a headache. Yes, the
+        visual quality
+        was mind-blowing, but the technical ecosystem was a mess: every viewer used a proprietary format, and building a
+        scalable production pipeline for e-commerce seemed almost impossible.
+      </p>
+
+      <!-- Author and Share bar -->
+      <div class="post-author-bar">
+        <div class="blog-author">
+          <img src="../assets/img/foto_perfil.webp" alt="Joel Bastone Lopez" class="blog-author-avatar" />
+          <div class="blog-author-info">
+            <span class="blog-author-name">Joel Bastone Lopez</span>
+            <span class="blog-author-role">3D CGI Artist &amp; Real-time WebGL Developer</span>
+          </div>
+        </div>
+
+        <div class="post-share-actions">
+          <button class="post-share-btn" onclick="copyPostLink()" title="Copy link" aria-label="Copy link">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+          </button>
+          <a href="https://twitter.com/intent/tweet?text=Gaussian%20Splatting%27s%20Leap%20to%20E-commerce%3A%20We%20Finally%20Have%20a%20Standard%20by%20%40JoelBastoneLopez&url=https%3A%2F%2Fjoelbastonelopez.com%2Fblog%2Fgaussian-splatting-ecommerce-2026.html"
+            target="_blank" rel="noopener noreferrer" class="post-share-btn" title="Share on X" aria-label="Share on X">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjoelbastonelopez.com%2Fblog%2Fgaussian-splatting-ecommerce-2026.html"
+            target="_blank" rel="noopener noreferrer" class="post-share-btn" title="Share on LinkedIn"
+            aria-label="Share on LinkedIn">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46V10.9M7.86 6.72a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Cover Image -->
+    <figure class="post-hero-figure">
+      <img src="../assets/img/blog-gaussian-splatting.jpg" alt="Gaussian Splatting 3D E-commerce Standard"
+        loading="eager" />
+    </figure>
+
+    <!-- Post Body -->
+    <div class="post-body">
+
+      <p>
+        But 2026 brought the news we were waiting for: the <a href="https://www.khronos.org/" target="_blank"
+          rel="noopener noreferrer">Khronos Group</a> has ratified the official <code>KHR_gaussian_splatting</code>
+        extension for the glTF format.
+      </p>
+
+      <p>
+        What does this mean in practice? Splats are now an official industry standard.
+      </p>
+
+      <h2>Pioneers in 3D Research</h2>
+
+      <p>
+        It's worth taking a pause to acknowledge that this leap didn't happen overnight. There are referents and artists
+        who have been researching, teaching masterclasses, and spreading this technology long before it went
+        "mainstream".
+      </p>
+
+      <p>
+        Personally, a big part of this technical vision comes from my former professor, <strong
+          style="color:#ffffff;">Diego Viegas</strong> <em>(known in the industry as <a
+            href="https://www.instagram.com/diegoev_1?rpxt=aW5rOG5keWk0ZjNu" target="_blank"
+            rel="noopener noreferrer">Diego EV</a>)</em>. He has been driving the use of advanced 3D and volumetric
+        scanning in the Hispanic community for a long time. If you want to understand the workflow from scratch and
+        generate captures on your own, I highly recommend watching <a href="https://www.youtube.com/watch?v=NQ851rPuryw"
+          target="_blank" rel="noopener noreferrer">his video tutorial on Gaussian Splatting</a> on his YouTube channel.
+      </p>
+
+      <img src="../assets/img/blogs/1/diego-ev-tuto.png" alt="Tutorial DiegoEV Gaussian Splatting" width="90%"
+        height="auto" style="margin: 6px auto; display: flex; justify-content: center; align-items: center;" />
+
+      <h2>The End of Format Chaos</h2>
+
+      <p>
+        For brands and agencies, relying on closed formats is a risk no one wants to take. The ratification of the glTF
+        standard for 3DGS means you can now package a photorealistic product capture as easily as you export a JPG.
+      </p>
+
+      <p>
+        The main WebGL libraries have already taken note. <a href="https://threejs.org/" target="_blank"
+          rel="noopener noreferrer">Three.js</a> integrated official native support in August of this year, and <a
+          href="https://www.babylonjs.com/" target="_blank" rel="noopener noreferrer">Babylon.js</a> did so a few months
+        earlier. The web workflow has finally been unified and democratized.
+      </p>
+
+      <!-- Interactive 3D Gaussian Splatting Visualizer -->
+      <div class="splat-viewer-container" id="splat-viewer-wrapper"
+        aria-label="Visualizador 3D interactivo Gaussian Splatting">
+        <div class="splat-viewer-header">
+          <span class="splat-header-title">Interactive 3D Gaussian Splat</span>
+          <span class="splat-model-info">Camara &bull; 209k Splats</span>
+          <div class="splat-header-actions">
+            <button type="button" class="splat-header-btn" id="splat-reset-view" title="Restablecer posición de cámara">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" />
+              </svg>
+              <span>Reset</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="splat-canvas-stage" id="splat-canvas-stage">
+          <!-- Loading Overlay -->
+          <div class="splat-loading-overlay" id="splat-loading-overlay">
+            <div class="splat-spinner"></div>
+            <div class="splat-loading-title">Cargando Gaussian Splat...</div>
+            <div class="splat-loading-sub" id="splat-progress-text">Inicializando WebGL y 209k splats</div>
+            <div class="splat-progress-track">
+              <div class="splat-progress-bar" id="splat-progress-bar"></div>
+            </div>
+          </div>
+
+          <!-- Interaction Helper Pill (Apple Design Frosted Glass + Dark Aesthetic) -->
+          <div class="splat-controls-pill" id="splat-controls-pill" aria-hidden="true">
+            <!-- Desktop variant -->
+            <div class="splat-pill-mode splat-pill-desktop">
+              <div class="splat-pill-action">
+                <svg width="24" height="26" viewBox="0 0 28 32" fill="none">
+                  <path d="M4 14C4 7.5 8.5 3 14 3C19.5 3 24 7.5 24 13" stroke="rgba(255,255,255,0.75)"
+                    stroke-width="1.7" stroke-linecap="round" />
+                  <path d="M21 13L24 16L27 13" stroke="rgba(255,255,255,0.75)" stroke-width="1.7" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <rect x="7" y="9" width="14" height="21" rx="7" stroke="rgba(255,255,255,0.75)" stroke-width="1.7"
+                    fill="rgba(255,255,255,0.06)" />
+                  <path d="M7 16H14V9C10.134 9 7 12.134 7 16Z" fill="#c9a96e" stroke="rgba(255,255,255,0.75)"
+                    stroke-width="1.5" />
+                  <line x1="14" y1="9" x2="14" y2="18" stroke="rgba(255,255,255,0.4)" stroke-width="1.3" />
+                  <rect x="12.5" y="11.5" width="3" height="4.5" rx="1.5" fill="rgba(255,255,255,0.85)" />
+                </svg>
+                <span>GIRAR</span>
+              </div>
+              <div class="splat-pill-sep"></div>
+              <div class="splat-pill-action">
+                <svg width="24" height="26" viewBox="0 0 28 32" fill="none">
+                  <path d="M14 2L16.5 4.5M14 2L11.5 4.5" stroke="rgba(255,255,255,0.75)" stroke-width="1.7"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M14 8.5L16.5 6M14 8.5L11.5 6" stroke="rgba(255,255,255,0.75)" stroke-width="1.7"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <rect x="7" y="10" width="14" height="20" rx="7" stroke="rgba(255,255,255,0.75)" stroke-width="1.7"
+                    fill="rgba(255,255,255,0.06)" />
+                  <line x1="7" y1="18" x2="21" y2="18" stroke="rgba(255,255,255,0.4)" stroke-width="1.3" />
+                  <line x1="14" y1="10" x2="14" y2="18" stroke="rgba(255,255,255,0.4)" stroke-width="1.3" />
+                  <rect x="12.5" y="12" width="3" height="5" rx="1.5" fill="#c9a96e" stroke="rgba(255,255,255,0.6)"
+                    stroke-width="1" />
+                </svg>
+                <span>ZOOM</span>
+              </div>
+            </div>
+
+            <!-- Mobile touch variant -->
+            <div class="splat-pill-mode splat-pill-touch">
+              <div class="splat-pill-action">
+                <svg width="24" height="26" viewBox="0 0 32 32" fill="none">
+                  <path d="M7 8C11 5 21 5 25 8" stroke="rgba(255,255,255,0.75)" stroke-width="1.7"
+                    stroke-linecap="round" />
+                  <path d="M9.5 6.5L7 8L9.5 9.5" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.5 6.5L25 8L22.5 9.5" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="16" cy="13" r="3.5" stroke="#c9a96e" stroke-width="1.5" stroke-dasharray="2 2"
+                    fill="rgba(201,169,110,0.25)" />
+                  <path d="M16 12V21C16 23 14.5 24.5 12.5 24.5C11 24.5 10 23.5 10 22V17" stroke="rgba(255,255,255,0.85)"
+                    stroke-width="1.7" stroke-linecap="round" />
+                  <path d="M16 16C16 14.5 17.5 14.5 18 16V20C18 23 22 22.5 22 19V17" stroke="rgba(255,255,255,0.85)"
+                    stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+                <span>GIRAR</span>
+              </div>
+              <div class="splat-pill-sep"></div>
+              <div class="splat-pill-action">
+                <svg width="24" height="26" viewBox="0 0 32 32" fill="none">
+                  <path d="M7 11L12 6M12 6H8.5M12 6V9.5" stroke="rgba(255,255,255,0.75)" stroke-width="1.7"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M25 11L20 6M20 6H23.5M20 6V9.5" stroke="rgba(255,255,255,0.75)" stroke-width="1.7"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M11 15V22C11 25 14 27 17 27C20 27 22 25 22 21V12C22 10.5 20.5 10.5 20.5 12V18"
+                    stroke="rgba(255,255,255,0.85)" stroke-width="1.7" stroke-linecap="round" />
+                  <path d="M11 15C11 13.5 12.5 13.5 13 15V19" stroke="rgba(255,255,255,0.85)" stroke-width="1.7"
+                    stroke-linecap="round" />
+                  <circle cx="11" cy="14" r="2.2" fill="#c9a96e" />
+                  <circle cx="21" cy="11" r="2.2" fill="#c9a96e" />
+                </svg>
+                <span>ZOOM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Why E-commerce Needs This NOW</h2>
+
+      <p>
+        Traditional photography has a limit to its visual impact, and classic 3D modeling <em>(polygonal)</em> usually
+        struggles when it comes to complex materials like transparencies, reflective plastics, liquids, or furry organic
+        textures—unless you use Ray Tracing <em>(which is unfeasible in real-time on the web without frying the user's
+          phone battery)</em>.
+      </p>
+
+      <p>
+        Gaussian Splatting solves this by replacing geometry with the rendering of millions of semi-transparent ellipses
+        generated from real photos. The final result is brutal:
+      </p>
+
+      <ul>
+        <li>
+          <strong style="color:#ffffff;">Absolute photorealism:</strong> It captures light, exact view-dependent
+          reflections, and textures exactly as they are in the real world.
+        </li>
+        <li>
+          <strong style="color:#ffffff;">Extreme web performance:</strong> It runs at 60-120 frames per second directly
+          in the mobile browser using WebGL and WebGPU. No external apps required.
+        </li>
+      </ul>
+
+      <h2>A Real and Mature Production Pipeline</h2>
+
+      <p>
+        Giant platforms, like <a href="https://www.zillow.com/" target="_blank" rel="noopener noreferrer">Zillow</a> in
+        the real estate sector, have already proven this year that 3DGS scales to enterprise-level production.
+      </p>
+
+      <p>
+        You can check out an interactive example at this link: <a
+          href="https://www.zillow.com/showcase/demo/bay-area?imxlb=s,0" target="_blank"
+          rel="noopener noreferrer">www.zillow.com/showcase/demo</a>.
+      </p>
+
+      <p>
+        Moreover, cloud tools like SuperSplat <em>(by PlayCanvas)</em> now allow you to clean, crop, and edit these
+        point cloud scenes directly in the browser in a super intuitive way.
+      </p>
+
+      <p>
+        We have officially moved from the "technological experiment" stage to the "massive commercial production" stage.
+      </p>
+
+      <p>
+        If your online store is still showcasing flagship products with a flat gallery of 4 photos and a compressed
+        video, you are giving away the wow factor to your competition. The integration of hyper-realistic interactive 3D
+        is no longer a technical luxury; it's the new standard that skyrockets conversions. And now that files finally
+        have a universal format, it's the exact moment to make the leap.
+      </p>
+
+      <!-- Tags -->
+      <div class="post-tags">
+        <span style="font-size:0.85rem; color:var(--txt-muted); margin-right:0.5rem;">Tags:</span>
+        <a href="../blog.html" class="post-tag-item">#GaussianSplatting</a>
+        <a href="../blog.html" class="post-tag-item">#3DCommerce</a>
+        <a href="../blog.html" class="post-tag-item">#glTF</a>
+        <a href="../blog.html" class="post-tag-item">#ThreeJS</a>
+        <a href="../blog.html" class="post-tag-item">#WebGPU</a>
+      </div>
+
+    </div>
+
+    <!-- Author Bio Box -->
+    <section class="post-author-box" aria-label="About the author">
+      <img src="../assets/img/foto_perfil.webp" alt="Joel Bastone Lopez" class="post-author-box-avatar" />
+      <div class="post-author-box-content">
+        <h4>Joel Bastone Lopez</h4>
+        <span class="role">3D CGI Artist &amp; Real-time WebGL Developer</span>
+        <p>
+          Specializing in luxury product CGI, art direction, and interactive 3D experiences with Three.js and real-time
+          volumetric pipelines for international brands.
+        </p>
+        <div class="post-author-box-links">
+          <a href="../index.html#contacto">Let's work together &rarr;</a>
+          <a href="../blog.html">Explore more articles &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-text">Joel Bastone Lopez &mdash; 2026</span>
+      <span class="footer-text">Buenos Aires, Argentina</span>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="blog-toast" id="post-toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Navigation toggle for mobile
+    const burger = document.querySelector('.nav-burger');
+    const mobileMenu = document.querySelector('.nav-mobile');
+    if (burger && mobileMenu) {
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      });
+      document.querySelectorAll('.nav-mobile a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        });
+      });
+    }
+
+    // Reading Progress Bar & Nav Glass Backdrop
+    const progressBar = document.getElementById('reading-progress');
+    const nav = document.getElementById('main-nav');
+    function handleScroll() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      if (progressBar) progressBar.style.width = scrolled + '%';
+      if (nav) {
+        if (winScroll > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    // Toast Utility
+    function showToast(message) {
+      const toast = document.getElementById('post-toast');
+      if (!toast) return;
+      toast.innerHTML = `<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="var(--gold)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> ${message}`;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
+    function copyPostLink() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast('Article link copied to clipboard!');
+        }).catch(() => {
+          showToast('Link ready to share');
+        });
+      }
+    }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import * as GaussianSplats3D from '@mkkellogg/gaussian-splats-3d';
+
+    (function () {
+      'use strict';
+
+      const INIT_CAMERA = {
+        pos: [-0.115, -0.11, -0.205],
+        lookAt: [-0.01, 0.025, -0.01],
+        up: [0, -1, 0]
+      };
+
+      async function init() {
+        const wrapper = document.getElementById('splat-viewer-wrapper');
+        const stage = document.getElementById('splat-canvas-stage');
+        const loadingOverlay = document.getElementById('splat-loading-overlay');
+        const progressBar = document.getElementById('splat-progress-bar');
+        const progressText = document.getElementById('splat-progress-text');
+        const controlsPill = document.getElementById('splat-controls-pill');
+        const resetBtn = document.getElementById('splat-reset-view');
+
+        if (!wrapper || !stage) return;
+
+        // Detect touch capability for instruction badges
+        const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        const desktopPill = controlsPill ? controlsPill.querySelector('.splat-pill-desktop') : null;
+        const touchPill = controlsPill ? controlsPill.querySelector('.splat-pill-touch') : null;
+
+        if (desktopPill && touchPill) {
+          if (isTouch) {
+            desktopPill.style.display = 'none';
+            touchPill.style.display = 'flex';
+          } else {
+            desktopPill.style.display = 'flex';
+            touchPill.style.display = 'none';
+          }
+        }
+
+        // Fade pill on user interaction
+        let idleTimer = null;
+        function handleInteractionStart() {
+          if (controlsPill) controlsPill.classList.add('is-interacting');
+          if (idleTimer) clearTimeout(idleTimer);
+        }
+        function handleInteractionEnd() {
+          if (idleTimer) clearTimeout(idleTimer);
+          idleTimer = setTimeout(() => {
+            if (controlsPill) controlsPill.classList.remove('is-interacting');
+          }, 1800);
+        }
+
+        stage.addEventListener('mousedown', handleInteractionStart);
+        stage.addEventListener('touchstart', handleInteractionStart, { passive: true });
+        window.addEventListener('mouseup', handleInteractionEnd);
+        window.addEventListener('touchend', handleInteractionEnd);
+
+        let viewer = null;
+
+        try {
+          if (progressText) progressText.textContent = 'Inicializando renderizador 3DGS...';
+          if (progressBar) progressBar.style.width = '20%';
+
+          viewer = new GaussianSplats3D.Viewer({
+            rootElement: stage,
+            cameraUp: INIT_CAMERA.up,
+            initialCameraPosition: INIT_CAMERA.pos,
+            initialCameraLookAt: INIT_CAMERA.lookAt,
+            sharedMemoryForWorkers: false,
+            gpuAcceleratedSort: false,
+            selfDrivenMode: true,
+            useBuiltInControls: true,
+            showLoadingUI: false
+          });
+          window.__splatViewer = viewer;
+
+          if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+              if (viewer && viewer.camera) {
+                viewer.camera.position.set(...INIT_CAMERA.pos);
+                viewer.camera.up.set(...INIT_CAMERA.up);
+                if (viewer.controls && viewer.controls.target) {
+                  viewer.controls.target.set(...INIT_CAMERA.lookAt);
+                }
+                if (viewer.controls && typeof viewer.controls.update === 'function') {
+                  viewer.controls.update();
+                }
+              }
+            });
+          }
+
+          if (progressText) progressText.textContent = 'Cargando 209k Gaussian Splats...';
+          if (progressBar) progressBar.style.width = '45%';
+
+          viewer.addSplatScene('../assets/models/conesa-1942.splat', {
+            splatAlphaRemovalThreshold: 0,
+            showLoadingUI: false,
+            position: [0, 0, 0],
+            rotation: [0, 0, 0, 1],
+            scale: [1, 1, 1],
+            onProgress: (percent, percentText) => {
+              const p = Math.min(95, Math.max(30, Math.round(percent)));
+              if (progressBar) progressBar.style.width = p + '%';
+              if (progressText) progressText.textContent = `Descargando splats: ${percentText || p + '%'}`;
+            }
+          }).then(() => {
+            if (progressBar) progressBar.style.width = '100%';
+            if (progressText) progressText.textContent = '¡Renderizado Gaussian Splat listo!';
+            if (viewer.controls) {
+              viewer.controls.autoRotate = false;
+            }
+            setTimeout(() => {
+              if (loadingOverlay) loadingOverlay.classList.add('is-hidden');
+              viewer.start();
+            }, 300);
+          }).catch(err => {
+            console.warn('Error loading splat binary scene, falling back:', err);
+            initPointsFallback();
+          });
+        } catch (e) {
+          console.warn('GaussianSplats3D initialization error, using Three.js points fallback:', e);
+          initPointsFallback();
+        }
+
+        // Graceful fallback for file:/// protocol or environments without full WebGL splat extension
+        function initPointsFallback() {
+          const scene = new THREE.Scene();
+          scene.background = new THREE.Color(0x0c0b11);
+
+          const width = stage.clientWidth || 600;
+          const height = stage.clientHeight || 500;
+          const camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 100);
+          camera.position.set(0, 0.06, 0.36);
+
+          const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+          renderer.setSize(width, height);
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+          stage.appendChild(renderer.domElement);
+
+          const controls = new OrbitControls(camera, renderer.domElement);
+          controls.enableDamping = true;
+          controls.dampingFactor = 0.05;
+          controls.autoRotate = true;
+          controls.autoRotateSpeed = 1.2;
+          controls.target.set(0, 0, 0);
+
+          if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+              camera.position.set(0, 0.06, 0.36);
+              controls.target.set(0, 0, 0);
+              controls.update();
+            });
+          }
+
+          function createGaussianCircleTexture() {
+            const cv = document.createElement('canvas');
+            cv.width = 64;
+            cv.height = 64;
+            const ctx = cv.getContext('2d');
+            const g = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+            g.addColorStop(0, 'rgba(255,255,255,1.0)');
+            g.addColorStop(0.35, 'rgba(255,255,255,0.7)');
+            g.addColorStop(1.0, 'rgba(255,255,255,0.0)');
+            ctx.fillStyle = g;
+            ctx.fillRect(0, 0, 64, 64);
+            const tex = new THREE.CanvasTexture(cv);
+            tex.needsUpdate = true;
+            return tex;
+          }
+
+          function renderBuffer(buffer) {
+            const data = new Float32Array(buffer);
+            const count = data.length / 6;
+            const positions = new Float32Array(count * 3);
+            const colors = new Float32Array(count * 3);
+
+            for (let i = 0; i < count; i++) {
+              positions[i * 3] = data[i * 6];
+              positions[i * 3 + 1] = data[i * 6 + 1];
+              positions[i * 3 + 2] = data[i * 6 + 2];
+              colors[i * 3] = data[i * 6 + 3];
+              colors[i * 3 + 1] = data[i * 6 + 4];
+              colors[i * 3 + 2] = data[i * 6 + 5];
+            }
+
+            const geometry = new THREE.BufferGeometry();
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+            const material = new THREE.PointsMaterial({
+              size: 0.004,
+              vertexColors: true,
+              map: createGaussianCircleTexture(),
+              transparent: true,
+              opacity: 0.98,
+              depthWrite: false
+            });
+
+            const points = new THREE.Points(geometry, material);
+            scene.add(points);
+
+            if (progressBar) progressBar.style.width = '100%';
+            if (progressText) progressText.textContent = '¡Renderizado listo!';
+            setTimeout(() => {
+              if (loadingOverlay) loadingOverlay.classList.add('is-hidden');
+            }, 250);
+          }
+
+          if (window.__CAMARA_MODEL_DATA__) {
+            try {
+              const binStr = atob(window.__CAMARA_MODEL_DATA__);
+              const bytes = new Uint8Array(binStr.length);
+              for (let i = 0; i < binStr.length; i++) bytes[i] = binStr.charCodeAt(i);
+              renderBuffer(bytes.buffer);
+            } catch (err) {
+              console.error(err);
+            }
+          }
+
+          function anim() {
+            requestAnimationFrame(anim);
+            controls.update();
+            renderer.render(scene, camera);
+          }
+          anim();
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+  <script src="../js/analytics.js" defer></script>
+</body>
+
+</html>

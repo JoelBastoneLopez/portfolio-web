@@ -23,10 +23,10 @@ function renderRichText(str) {
   if (!str) return '';
   let safe = escapeHtml(str);
   safe = safe.replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/|\.\.\/)[^\s)]+)\)/g, 
-    '<a href="$2" target="_blank" rel="noopener noreferrer" class="preview-link">$1 <span style="font-size:0.75em; opacity:0.8;">&nearr;</span></a>'
+    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
   );
   safe = safe.replace(/(?<!href=")(https?:\/\/[^\s<)]+)/g, 
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="preview-link">$1 <span style="font-size:0.75em; opacity:0.8;">&nearr;</span></a>'
+    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
   );
   safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong style="color:#ffffff;">$1</strong>');
   safe = safe.replace(/\*([^*]+)\*/g, '<em style="color:#e4e4e7;">$1</em>');
@@ -79,8 +79,7 @@ function buildArticleHTML(data) {
     }
     else if (type === 'paragraph') {
       const text = block.querySelector('textarea').value;
-      const isFirst = index === 0;
-      bodyHtml += `\n      <p class="${isFirst ? 'drop-cap' : ''}">\n        ${renderRichText(text)}\n      </p>\n`;
+      bodyHtml += `\n      <p>\n        ${renderRichText(text)}\n      </p>\n`;
     }
     else if (type === 'comparison') {
       const inputs = block.querySelectorAll('input');
@@ -259,7 +258,18 @@ function buildArticleHTML(data) {
         <a href="../index.html#contacto" class="nav-link">Contact</a>
       </div>
       <div class="nav-actions">
-        <a href="../index.html#contacto" class="nav-cta">Get a Quote</a>
+        <button type="button" class="blog-lang-btn" onclick="toggleBlogLanguage()" aria-label="Cambiar idioma / Switch language" title="Traducir artículo al español">
+          <span class="lang-btn-icon" aria-hidden="true">
+            <svg class="globe-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+            <span class="lang-flag">🇪🇸</span>
+          </span>
+          <span class="lang-btn-label">Traducir a Español</span>
+          <span class="comic-sparkle" aria-hidden="true">✦</span>
+        </button>
       </div>
       <button class="nav-burger" aria-label="Toggle mobile menu">
         <span></span><span></span><span></span>
@@ -271,7 +281,18 @@ function buildArticleHTML(data) {
       <a href="../blog.html" class="nav-link active">Blog</a>
       <a href="../index.html#reviews" class="nav-link">Reviews</a>
       <a href="../index.html#contacto" class="nav-link">Contact</a>
-      <a href="../index.html#contacto" class="nav-cta">Get a Quote</a>
+      <button type="button" class="blog-lang-btn blog-lang-btn-mobile" onclick="toggleBlogLanguage()" aria-label="Cambiar idioma / Switch language" title="Traducir artículo al español">
+        <span class="lang-btn-icon" aria-hidden="true">
+          <svg class="globe-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <path d="M2 12h20"></path>
+          </svg>
+          <span class="lang-flag">🇪🇸</span>
+        </span>
+        <span class="lang-btn-label">Traducir a Español</span>
+        <span class="comic-sparkle" aria-hidden="true">✦</span>
+      </button>
     </div>
   </nav>
 
@@ -594,6 +615,7 @@ function buildArticleHTML(data) {
     </div>
   </div>
 
+  <script src="../js/blog-i18n.js" defer></script>
   <script src="../js/analytics.js" defer></script>
 </body>
 </html>`;
