@@ -104,7 +104,18 @@
       </div>
 
       <div class="nav-actions">
-        <a href="#contacto" class="nav-cta">Get a Quote</a>
+        <button type="button" class="blog-lang-btn" onclick="toggleBlogLanguage()" aria-label="Cambiar idioma / Switch language" title="Traducir al español">
+          <span class="lang-btn-icon" aria-hidden="true">
+            <svg class="globe-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+            <span class="lang-flag">🇪🇸</span>
+          </span>
+          <span class="lang-btn-label">Traducir a Español</span>
+          <span class="comic-sparkle" aria-hidden="true">✦</span>
+        </button>
       </div>
 
       <button class="nav-burger" aria-label="Menu">
@@ -119,6 +130,18 @@
       <a href="blog.html" class="nav-link">Blog</a>
       <a href="#reviews" class="nav-link">Reviews</a>
       <a href="#contacto" class="nav-link">Contact</a>
+      <button type="button" class="blog-lang-btn blog-lang-btn-mobile" onclick="toggleBlogLanguage()" aria-label="Cambiar idioma / Switch language" title="Traducir al español">
+        <span class="lang-btn-icon" aria-hidden="true">
+          <svg class="globe-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <path d="M2 12h20"></path>
+          </svg>
+          <span class="lang-flag">🇪🇸</span>
+        </span>
+        <span class="lang-btn-label">Traducir a Español</span>
+        <span class="comic-sparkle" aria-hidden="true">✦</span>
+      </button>
     </div>
   </nav>
 
@@ -652,6 +675,7 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/blog-i18n.js" defer></script>
   <script src="js/analytics.js" defer></script>
 </body>
 </html>
