@@ -3,28 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaisar - 3D Modeling & Animation | JBL</title>
-  <meta name="description" content="Case study: Hard-Surface Modeling, Shading, and Animation of the Kaisar Watch." />
-  <meta name="keywords" content="Kaisar, Reloj 3D, Render Hard Surface, LookDev, Product Animation, Unreal Engine 5, JBL, Joel Bastone Lopez" />
+  <title>KAISAR — Luxury Horology LookDev & Real-Time Visualization | JBL</title>
+  <meta name="description" content="Case study: High-precision hard-surface modeling, procedural PBR shader engineering, and real-time Unreal Engine 5 visualization for the Kaisar luxury automatic timepiece." />
+  <meta name="keywords" content="Kaisar, Luxury Watch CGI, Horology 3D, Hard-Surface Modeling, Unreal Engine 5, Redshift, LookDev, JBL, Joel Bastone Lopez" />
   <meta name="author" content="JBL" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" />
 
-  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://joelbastonelopez.com/project-kaisar.html" />
-  <meta property="og:title" content="Kaisar - 3D Modeling & Animation | JBL" />
-  <meta property="og:description" content="Case study: Hard-Surface Modeling, Shading, and Animation of the Kaisar Watch." />
+  <meta property="og:title" content="KAISAR — Luxury Horology LookDev & Real-Time Visualization | JBL" />
+  <meta property="og:description" content="High-precision hard-surface modeling, procedural PBR shader engineering, and real-time Unreal Engine 5 visualization for the Kaisar luxury automatic timepiece." />
   <meta property="og:image" content="https://joelbastonelopez.com/assets/img/kaisar.webp" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://joelbastonelopez.com/project-kaisar.html" />
-  <meta property="twitter:title" content="Kaisar - 3D Modeling & Animation | JBL" />
-  <meta property="twitter:description" content="Hard-Surface Modeling, Shading, and Animation of the Kaisar Watch." />
+  <meta property="twitter:title" content="KAISAR — Luxury Horology LookDev & Real-Time Visualization | JBL" />
+  <meta property="twitter:description" content="High-precision hard-surface modeling, procedural PBR shader engineering, and real-time Unreal Engine 5 visualization for the Kaisar luxury automatic timepiece." />
   <meta property="twitter:image" content="https://joelbastonelopez.com/assets/img/kaisar.webp" />
 
   <!-- Canonical & SEO -->
@@ -35,32 +34,36 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": "Kaisar - 3D Modeling & Animation | JBL",
+    "@type": "TechArticle",
+    "headline": "KAISAR — Luxury Horology LookDev & Real-Time Visualization",
+    "name": "KAISAR Watch Case Study",
     "author": {
       "@type": "Person",
       "name": "JBL"
     },
-    "description": "Case study: Hard-Surface Modeling, Shading, and Animation of the Kaisar Watch.",
+    "description": "High-precision hard-surface modeling, procedural PBR shader engineering, and real-time Unreal Engine 5 visualization for the Kaisar luxury automatic timepiece.",
     "image": "https://joelbastonelopez.com/assets/img/kaisar.webp",
-    "genre": "3D CGI Rendering",
-    "keywords": "Kaisar, Reloj 3D, Render Hard Surface, LookDev, Product Animation, Unreal Engine 5, JBL, Joel Bastone Lopez"
+    "genre": "Luxury Product CGI & Real-Time Visualization",
+    "keywords": "Kaisar, Luxury Horology, Unreal Engine 5, Hard-Surface Modeling, Redshift, LookDev"
   }
   </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Outfit:wght@300;400;500;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Styles -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Skip link for keyboard & assistive technology accessibility -->
+  <a href="#main-case" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
-    <nav class="nav">
+  <nav class="nav" aria-label="Main Navigation">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
+      <a href="index.html" class="nav-logo" aria-label="JBL Homepage">
         JBL
         <span class="logo-badge-3d">3D</span>
       </a>
@@ -68,135 +71,360 @@
         <a href="index.html#proyectos" class="nav-link">Projects</a>
         <a href="index.html#sobre-mi" class="nav-link">About</a>
         <a href="blog.html" class="nav-link">Blog</a>
+        <a href="index.html#reviews" class="nav-link">Reviews</a>
         <a href="index.html#contacto" class="nav-link">Contact</a>
       </div>
       <div class="nav-actions">
         <a href="index.html#contacto" class="nav-cta">Get a Quote</a>
       </div>
-      <button class="nav-burger" aria-label="Menu">
+      <button class="nav-burger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <div class="nav-mobile">
+    <div class="nav-mobile" aria-label="Mobile Navigation">
       <a href="index.html#proyectos" class="nav-link">Projects</a>
       <a href="index.html#sobre-mi" class="nav-link">About</a>
       <a href="blog.html" class="nav-link">Blog</a>
+      <a href="index.html#reviews" class="nav-link">Reviews</a>
       <a href="index.html#contacto" class="nav-link">Contact</a>
       <a href="index.html#contacto" class="nav-cta">Get a Quote</a>
     </div>
   </nav>
 
-  <main class="project-page">
+  <main class="project-page" id="main-case">
     
-    <!-- HEADER -->
-    <header class="project-hero">
+    <!-- HERO / COVER -->
+    <header class="project-hero" aria-labelledby="case-title">
       <div class="project-hero-bg">
-        <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; object-position: center;" fetchpriority="high">
           <source src="assets/video/kaisar-header.webm" type="video/webm">
         </video>
       </div>
       <div class="project-hero-content">
         <div class="project-meta">
-          <span class="project-badge">Hard-Surface</span>
-          <span class="project-badge">LookDev</span>
-          <span class="project-badge">Animation</span>
+          <span class="project-badge">Luxury Horology CGI</span>
+          <span class="project-badge">Hard-Surface Modeling</span>
+          <span class="project-badge">Unreal Engine 5 Real-Time</span>
         </div>
-        <h1 class="project-title">KAISAR</h1>
-        <h2 class="project-subtitle">3D Modeling & Animation</h2>
-        <p class="project-brief">High-precision technical modeling, complex PBR shader exploration, and photorealistic product visualization.</p>
+        <h1 class="project-title" id="case-title">KAISAR</h1>
+        <h2 class="project-subtitle">Luxury Horology — LookDev &amp; Real-Time Visualization</h2>
+        <p class="project-brief">High-precision micro-mechanical modeling, procedural PBR shader engineering, and real-time Unreal Engine 5 visualization for a luxury automatic timepiece — where surface finish, bevel tolerance, and light play are design decisions.</p>
       </div>
     </header>
 
-    <!-- PROCESO DE MODELADO -->
-    <section class="project-section project-gallery">
-      <div class="project-section-inner">
-        <div class="project-text-block">
-          <h3 class="section-title">Modeling &amp; Topology</h3>
-          <p class="section-subtitle">Hard-surface geometry construction, clean quad topology, and wireframe development prior to texturing.</p>
-        </div>
-        <div class="gallery-grid-2">
-          <img src="assets/img/kaisar/preview1.webp" alt="Kaisar Preview 1" class="img-fluid reveal-img" loading="lazy" />
-          <img src="assets/img/kaisar/preview2.webp" alt="Kaisar Preview 2" class="img-fluid reveal-img" loading="lazy" />
-          <img src="assets/img/kaisar/render-view11.webp" alt="Kaisar Render View 11" class="img-fluid reveal-img" loading="lazy" />
-          <img src="assets/img/kaisar/render-view10.webp" alt="Kaisar Render View 10" class="img-fluid reveal-img" loading="lazy" />
-        </div>
-        
-        <!-- DESPIECES ANIMADOS -->
-        <div class="gallery-grid-2 mt-2">
-          <video class="img-fluid reveal-img" autoplay loop muted playsinline>
-            <source src="assets/video/preview.webm" type="video/webm">
-          </video>
-          <video class="img-fluid reveal-img" autoplay loop muted playsinline>
-            <source src="assets/video/preview1.webm" type="video/webm">
-          </video>
-        </div>
-      </div>
-    </section>
+    <article class="case-study-container">
 
-    <!-- SHADERS & LOOKDEV -->
-    <section class="project-section bg-secondary">
-      <div class="project-section-inner">
-        <div class="project-text-block">
-          <h3 class="section-title">LookDev &amp; Shader Development</h3>
-          <p class="section-subtitle">Physical PBR shader engineering to simulate brushed stainless steel, sapphire crystals, and mechanical movements.</p>
-        </div>
-        
-        <div class="gallery-grid-1">
-          <video class="img-fluid reveal-img" autoplay loop muted playsinline style="max-height: 80vh; object-fit: cover;">
-            <source src="assets/video/shader.webm" type="video/webm">
-          </video>
-        </div>
-        
-        <div class="gallery-grid-3 mt-2">
-          <img src="assets/img/kaisar/render-view7.webp" alt="Macro Detail 7" class="img-fluid reveal-img" loading="lazy" style="background: linear-gradient(to bottom, #080808, #181a20);" />
-          <img src="assets/img/kaisar/render-view9.webp" alt="Macro Detail 9" class="img-fluid reveal-img" loading="lazy" style="background: linear-gradient(to bottom, #080808, #181a20);" />
-          <img src="assets/img/kaisar/render-view-3.webp" alt="Macro Detail 3" class="img-fluid reveal-img" loading="lazy" style="background: linear-gradient(to bottom, #080808, #181a20);" />
-        </div>
-      </div>
-    </section>
+      <!-- COVER MEDIA (Video: Macro commercial sequence of Kaisar watch) -->
+      <section class="case-media-section" id="case-video" aria-label="Cover Media">
+        <figure class="case-media-figure">
+          <video src="assets/video/Final.webm" autoplay loop muted playsinline preload="metadata" class="case-media-video" aria-label="Macro commercial animation sequence of Kaisar luxury timepiece"></video>
+          <figcaption class="case-media-caption">
+            <span class="case-media-caption-text">
+              <strong class="case-media-caption-title">Commercial Kinematics:</strong> Macro sequence revealing the brushed 316L stainless steel case, faceted Roman indices, and anti-reflective sapphire crystal refraction.
+            </span>
+            <span class="case-media-caption-tag">Cinematic Motion · 4K</span>
+          </figcaption>
+        </figure>
+      </section>
 
-    <!-- RENDER FINAL & VARIANTES -->
-    <section class="project-section">
-      <div class="project-section-inner">
-        <div class="project-text-block">
-          <h3 class="section-title">Final Renders &amp; Real-Time Integration</h3>
-          <p class="section-subtitle">Commercial studio lighting setups, colorway variants, and real-time viewport testing inside Unreal Engine 5.</p>
+      <!-- META ROW -->
+      <section class="case-meta-grid" aria-label="Project Metadata">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-val">Lead 3D Hard-Surface &amp; LookDev Artist</span>
         </div>
-        
-        <div class="gallery-grid-1">
-          <img src="assets/img/kaisar/variantes-copy.webp" alt="Kaisar Variantes" class="img-fluid reveal-img" loading="lazy" />
+        <div class="case-meta-item">
+          <span class="case-meta-label">Client</span>
+          <span class="case-meta-val">Kaisar Horology</span>
         </div>
-        
-        <div class="gallery-grid-2 mt-2">
-          <img src="assets/img/kaisar/render-view13.webp" alt="Render View 13" class="img-fluid reveal-img" loading="lazy" />
-          <img src="assets/img/kaisar/render-view5.webp" alt="Render View 5" class="img-fluid reveal-img" loading="lazy" />
+        <div class="case-meta-item">
+          <span class="case-meta-label">Sector</span>
+          <span class="case-meta-val">Luxury Horology &amp; Micro-Engineering</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Year</span>
+          <span class="case-meta-val">2024</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Duration</span>
+          <span class="case-meta-val">6&nbsp;weeks</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Stack</span>
+          <span class="case-meta-val">Blender · Substance 3D · Unreal Engine 5 · Redshift</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Deliverables</span>
+          <span class="case-meta-val">Sub-D quad master model, procedural steel/sapphire shaders, dial colorways, real-time UE5 showcase, 4K commercial motion</span>
+        </div>
+      </section>
+
+      <!-- 01 — CONTEXT -->
+      <section class="case-section" id="context" aria-labelledby="heading-context">
+        <div class="case-section-head">
+          <span class="case-step-num">01</span>
+          <h2 class="case-step-title" id="heading-context">CONTEXT</h2>
+        </div>
+        <p class="case-body-text">In haute horlogerie, value lives in fractions of a millimeter. Kaisar was designed as a contemporary automatic luxury timepiece combining an architectural fluted bezel, faceted Roman numeral indices, a brushed stainless-steel bracelet, and an exhibition caseback. Luxury watch brands cannot rely on standard CGI: horology collectors and luxury buyers scrutinize light falloff across hand-polished chamfers, the anisotropy of brushed steel links, and the anti-reflective double-coating of sapphire crystals.</p>
+
+        <!-- Media 01: Hero Portada Watch Render -->
+        <figure class="case-media-figure">
+          <img src="assets/img/kaisar/portada.webp" alt="Kaisar Luxury Automatic Timepiece Hero Studio Perspective" loading="lazy" class="case-media-img" />
+          <figcaption class="case-media-caption">
+            <span class="case-media-caption-text">
+              <strong class="case-media-caption-title">Haute Horlogerie Staging:</strong> Studio light sweep highlighting radial brushing, fluted bezel facets, and physical reflections.
+            </span>
+            <span class="case-media-caption-tag">Hero Staging Pass</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- 02 — THE PROBLEM -->
+      <section class="case-section" id="problem" aria-labelledby="heading-problem">
+        <div class="case-section-head">
+          <span class="case-step-num">02</span>
+          <h2 class="case-step-title" id="heading-problem">THE PROBLEM</h2>
+        </div>
+        <p class="case-lead-text">Standard commercial photography cannot capture micro-mechanical tolerances without days of focus stacking and dust retouching.</p>
+        <p class="case-body-text">Traditional macro lens photography flattens depth and struggles with high-contrast specular reflections on polished steel. Furthermore, producing physical prototypes for every dial colorway and metallurgical finish creates weeks of manufacturing delays. Kaisar required a digital twin capable of two opposing extremes: delivering offline raytraced 8K catalog stills with microscopic material truth, while running interactively at 60 fps inside Unreal Engine 5 for real-time client reviews and virtual product showcases.</p>
+
+        <!-- Media 02: Macro Studio Detail -->
+        <figure class="case-media-figure">
+          <img src="assets/img/kaisar/render-view-3.webp" alt="Kaisar Watch Macro Dial and Hands Specular Lighting Detail" loading="lazy" class="case-media-img" />
+          <figcaption class="case-media-caption">
+            <span class="case-media-caption-text">
+              <strong class="case-media-caption-title">Micro-Specular Definition:</strong> Eliminating photographic lens distortion while maintaining natural light falloff across faceted watch hands.
+            </span>
+            <span class="case-media-caption-tag">Macro Specular Pass</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- 03 — OBJECTIVES -->
+      <section class="case-section" id="objectives" aria-labelledby="heading-objectives">
+        <div class="case-section-head">
+          <span class="case-step-num">03</span>
+          <h2 class="case-step-title" id="heading-objectives">OBJECTIVES</h2>
+        </div>
+        <p class="case-body-text">Three exacting standards defined the horological visualization architecture:</p>
+
+        <div class="case-targets-grid">
+          <div class="case-metric-card">
+            <span class="case-metric-val">0.02&nbsp;mm</span>
+            <span class="case-metric-label">Micro-mechanical tolerance on edge bevels, indices, and bezel fluting</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">60&nbsp;fps</span>
+            <span class="case-metric-label">Real-time interactive viewport inspection inside Unreal Engine 5 with dynamic raytraced GI</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">100%&nbsp;Quad</span>
+            <span class="case-metric-label">Subdivision-ready topology with zero pinching, poles, or shading artifacts</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 — CONSTRAINTS -->
+      <section class="case-section" id="constraints" aria-labelledby="heading-constraints">
+        <div class="case-section-head">
+          <span class="case-step-num">04</span>
+          <h2 class="case-step-title" id="heading-constraints">CONSTRAINTS</h2>
         </div>
 
-        <div class="gallery-grid-2 mt-2">
-          <img src="assets/img/kaisar/render-view3-copy.webp" alt="Render View 3 Copy" class="img-fluid reveal-img" loading="lazy" />
-          <img src="assets/img/kaisar/render-view-1---copia.webp" alt="Render View 1 Copia" class="img-fluid reveal-img" loading="lazy" />
+        <div class="case-cards-grid-2">
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Anisotropic Light Directionality</h3>
+            <p class="case-feature-desc">Brushed stainless steel scatters light along directional grain lines. Radial brush patterns on the bezel and linear brushing on bracelet links required tangent-space micro-normal controls.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Internal Glass Dispersion &amp; Fresnel</h3>
+            <p class="case-feature-desc">The synthetic sapphire crystal features dual anti-reflective (AR) coatings with a subtle blue/magenta chromatic tint and an exact refractive index (n = 1.77).</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Mechanical Kinematics &amp; Sub-Assemblies</h3>
+            <p class="case-feature-desc">The watch consists of 48 individual micro-components (bezel, crystal, dial, hands, winding stem, crown, screw-down caseback, bracelet links) that must articulate without mesh intersection.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Dual-Engine Asset Optimization</h3>
+            <p class="case-feature-desc">Geometry had to support high-density subdivision for offline raytracing while maintaining optimized LODs for smooth 60 fps playback in Unreal Engine 5.</p>
+          </div>
         </div>
-        
-        <div class="gallery-grid-1 mt-2">
-          <video class="img-fluid reveal-img" autoplay loop muted playsinline>
-            <source src="assets/video/screenrecord_reloj_UE5.webm" type="video/webm">
-          </video>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- EPIC FINALE -->
-    <section class="project-section bg-secondary" style="padding-bottom: 0;">
-      <video class="img-fluid reveal-img" autoplay loop muted playsinline style="border-radius: 0; border: none; max-height: 95vh; object-fit: cover;">
-        <source src="assets/video/Final.webm" type="video/webm">
-      </video>
-    </section>
+      <!-- 05 — PROCESS -->
+      <section class="case-section" id="process" aria-labelledby="heading-process">
+        <div class="case-section-head">
+          <span class="case-step-num">05</span>
+          <h2 class="case-step-title" id="heading-process">PROCESS</h2>
+        </div>
+
+        <div class="case-cards-grid-2">
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Sub-D Hard-Surface Modeling</h3>
+            <p class="case-feature-desc">Constructed all case and bracelet components using pure quad topology, edge weighting, and support loops to guarantee artifact-free curvature under macro lighting.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Procedural Horology PBR Shaders</h3>
+            <p class="case-feature-desc">Engineered custom roughness-metallicity networks in Substance 3D and Redshift simulating 316L surgical-grade stainless steel with micro-scratches and chamfered polish.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Dial Variation &amp; Micro-Pattern Exploration</h3>
+            <p class="case-feature-desc">Modeled and shaded multiple dial finishes (guilloché texture, meteorite sunburst, and deep matte anthracite) with applied faceted indices.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Unreal Engine 5 Lumen &amp; Nanite Staging</h3>
+            <p class="case-feature-desc">Migrated assets into Unreal Engine 5, establishing calibrated real-time studio lighting, depth of field, and interactive orbit cameras.</p>
+          </div>
+        </div>
+
+        <!-- Media 05: Grilla comparativa (Malla Quad Wireframe vs Despiece Mecánico Animado) -->
+        <div class="case-media-grid-2">
+          <figure class="case-media-figure">
+            <img src="assets/img/kaisar/modelado-completo-copy.webp" alt="Kaisar Watch Pure Quad Topology Wireframe Modeling" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Pure Quad Topology:</strong> Zero triangles or n-gons across high-curvature transitional surfaces to prevent shading artifacts under grazing light.
+              </span>
+              <span class="case-media-caption-tag">Topology Wireframe Pass</span>
+            </figcaption>
+          </figure>
+          <figure class="case-media-figure">
+            <video src="assets/video/preview.webm" autoplay loop muted playsinline preload="metadata" class="case-media-video" aria-label="Exploded mechanical teardown animation of watch assembly"></video>
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Exploded Mechanical Assembly:</strong> Component-by-component alignment validating bezel seating, crystal gasket, dial spacer, and caseback threading.
+              </span>
+              <span class="case-media-caption-tag">Mechanical Teardown</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 06 — KEY DECISIONS -->
+      <section class="case-section" id="decisions" aria-labelledby="heading-decisions">
+        <div class="case-section-head">
+          <span class="case-step-num">06</span>
+          <h2 class="case-step-title" id="heading-decisions">KEY DECISIONS</h2>
+        </div>
+
+        <div class="case-cards-grid-2">
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Micro-Bevels over Smooth Shading</h3>
+            <p class="case-feature-desc">Modeled physical micro-chamfers on every edge rather than relying on bump maps, ensuring specular highlights realistically catch light at steep viewing angles.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Decoupled Dial &amp; Bezel Material System</h3>
+            <p class="case-feature-desc">Segmented the watch into modular material channels, enabling instant swaps between dial colorways, bezel finishes, and strap combinations without re-rendering the chassis.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Hybrid Pipeline: Offline Redshift + Real-Time UE5</h3>
+            <p class="case-feature-desc">Provided the client with offline 8K hero plates for print advertising alongside an interactive Unreal Engine 5 scene for virtual showroom presentations.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Optical Macro Sensor Calibration</h3>
+            <p class="case-feature-desc">Tuned virtual focal lengths to 85mm and 100mm macro equivalents with physical aperture blades to produce authentic lens bokeh and horological scale perception.</p>
+          </div>
+        </div>
+
+        <!-- Media 06: Grilla interactiva (Grabación UE5 Viewport vs Variantes de Dial) -->
+        <div class="case-media-grid-2">
+          <figure class="case-media-figure">
+            <video src="assets/video/screenrecord_reloj_UE5.webm" autoplay loop muted playsinline preload="metadata" class="case-media-video" aria-label="Real-time Unreal Engine 5 interactive watch viewport recording"></video>
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Unreal Engine 5 Real-Time Viewport:</strong> Real-time raytraced reflections, dynamic exposure, and 60 fps camera orbit for client design reviews.
+              </span>
+              <span class="case-media-caption-tag">UE5 Real-Time · 60fps</span>
+            </figcaption>
+          </figure>
+          <figure class="case-media-figure">
+            <img src="assets/img/kaisar/variantes-copy.webp" alt="Kaisar Watch Dial Colorway and Material Variations" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Dial Colorway Matrix:</strong> Exploring guilloché, sunburst, and matte finishes with matching date discs and index metallics.
+              </span>
+              <span class="case-media-caption-tag">Dial Colorway Study</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 07 — RESULTS -->
+      <section class="case-section" id="results" aria-labelledby="heading-results">
+        <div class="case-section-head">
+          <span class="case-step-num">07</span>
+          <h2 class="case-step-title" id="heading-results">RESULTS</h2>
+        </div>
+
+        <div class="case-results-grid">
+          <div class="case-metric-card">
+            <span class="case-metric-val">14+</span>
+            <span class="case-metric-label">Production-ready 4K and 8K commercial hero stills delivered</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">100%</span>
+            <span class="case-metric-label">Pure quad topology verified across all 48 mechanical components</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">60&nbsp;fps</span>
+            <span class="case-metric-label">Interactive viewport performance inside Unreal Engine 5</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">4</span>
+            <span class="case-metric-label">Cinematic motion sequences &amp; exploded component animations</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">0</span>
+            <span class="case-metric-label">Physical prototypes required before dial design sign-off</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">3</span>
+            <span class="case-metric-label">Signature dial variations finalized (Matte Anthracite, Sunburst, Guilloché)</span>
+          </div>
+        </div>
+
+        <!-- Media 07: 2 Renders Macro de Cierre -->
+        <div class="case-media-grid-2">
+          <figure class="case-media-figure">
+            <img src="assets/img/kaisar/render-view7.webp" alt="Kaisar Macro Detail of Crown Fluting and Bezel Facets" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Fluted Bezel &amp; Crown Chamfers:</strong> Raytraced grazing light revealing sharp metallurgical bevels and knurled crown relief.
+              </span>
+              <span class="case-media-caption-tag">Macro Bevel Detail</span>
+            </figcaption>
+          </figure>
+          <figure class="case-media-figure">
+            <img src="assets/img/kaisar/render-view9.webp" alt="Kaisar Macro Detail of Dial Texture, Hands and Roman Indices" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Faceted Hands &amp; Dial Texture:</strong> Precise specular highlights along faceted indices and anti-reflective sapphire reflection.
+              </span>
+              <span class="case-media-caption-tag">Horology Macro Pass</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 08 — LEARNINGS -->
+      <section class="case-section" id="learnings" aria-labelledby="heading-learnings">
+        <div class="case-section-head">
+          <span class="case-step-num">08</span>
+          <h2 class="case-step-title" id="heading-learnings">LEARNINGS</h2>
+        </div>
+
+        <div class="case-quote-card">
+          <blockquote>“In luxury horology, lighting is not about illumination — it is about revealing geometry. The breakthrough came when we stopped lighting the watch like a product and started lighting it like a set of polished mirrors. Once each chamfer had its own dedicated highlight card, the craftsmanship instantly jumped from ‘good 3D’ to genuine Swiss luxury.”</blockquote>
+        </div>
+      </section>
+
+    </article>
 
     <!-- B2B CONVERSION CTA -->
     <section id="contacto" class="section contact" style="border-top: 1px solid var(--border); padding: 5rem 0 4rem;">
       <div class="section-inner" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 0 2rem;">
-        <h2 class="contact-title" style="font-size: clamp(2rem, 4vw, 3rem); font-family: var(--font-d); color: var(--gold-light); margin-bottom: 1rem;">Ready to bring your hardware to life?</h2>
-        <p class="contact-subtitle" style="color: var(--txt-secondary); font-size: 1.1rem; line-height: 1.6; max-width: 600px; margin: 0 auto 2rem;">Let's build photorealistic 3D assets, exploded views, and animations for your next product launch. Book a 15-min intro call or request a quote.</p>
+        <h2 class="contact-title" style="font-size: clamp(2rem, 4vw, 3rem); font-family: var(--font-d); color: var(--gold-light); margin-bottom: 1rem;">Looking for luxury horology &amp; precision hard-surface CGI?</h2>
+        <p class="contact-subtitle" style="color: var(--txt-secondary); font-size: 1.1rem; line-height: 1.6; max-width: 600px; margin: 0 auto 2rem;">Let's elevate your timepiece, jewelry, or precision engineering product with museum-grade 3D modeling, PBR shaders, and real-time Unreal Engine 5 experiences. Book a 15-min intro call or request a quote.</p>
 
         <div class="b2b-cta-actions">
           <a href="https://calendar.app.google/RBKw6fTPh1y5PajF9" target="_blank" rel="noopener noreferrer" class="btn-cta-primary">
@@ -204,7 +432,7 @@
             Book a Discovery Call
           </a>
 
-          <a href="mailto:joel.bastonelopez@gmail.com?subject=Product%20Animation%20Quote%20Request&body=Brand%20%2F%20Company%3A%0ADeliverables%3A%0ATarget%20Deadline%3A%0ABudget%20Range%3A%0A%0AProject%20Details%3A" class="btn-cta-secondary">
+          <a href="mailto:joel.bastonelopez@gmail.com?subject=Horology%20CGI%20Quote%20Request&body=Brand%20%2F%20Company%3A%0AProduct%20Type%3A%0ATarget%20Deadline%3A%0ABudget%20Range%3A%0A%0AProject%20Details%3A" class="btn-cta-secondary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             Request a Quote
           </a>
@@ -225,46 +453,46 @@
       </div>
       <div class="footer-slider-container">
         <div class="footer-slider">
-        <!-- PRIMICIA -->
-        <a href="project-primicia.html" class="slider-item">
-          <img loading="lazy" src="assets/img/primicia/armado2.webp" alt="PRIMICIA Case Study" class="slider-img">
-          <div class="slider-overlay">
-            <div>
-              <h4 class="slider-title">PRIMICIA</h4>
-              <span class="slider-cat">3D Web Viewer &amp; Configurator</span>
+          <!-- PRIMICIA -->
+          <a href="project-primicia.html" class="slider-item">
+            <img loading="lazy" src="assets/img/primicia/armado2.webp" alt="PRIMICIA Case Study" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">PRIMICIA</h4>
+                <span class="slider-cat">Real-Time 3D Configurator</span>
+              </div>
             </div>
-          </div>
-        </a>
-        <!-- 8BOTTLE -->
-        <a href="project-8bottle.html" class="slider-item">
-          <img loading="lazy" src="assets/img/8bottle.webp" alt="8BOTTLE Case Study" class="slider-img">
-          <div class="slider-overlay">
-            <div>
-              <h4 class="slider-title">8BOTTLE</h4>
-              <span class="slider-cat">Product CGI 3D</span>
+          </a>
+          <!-- DUCHARME SEATING -->
+          <a href="project-ducharme.html" class="slider-item">
+            <img loading="lazy" src="assets/img/ducharme.webp" alt="Ducharme Seating Case Study" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">DUCHARME SEATING</h4>
+                <span class="slider-cat">Large-Scale Venue ArchViz</span>
+              </div>
             </div>
-          </div>
-        </a>
-        <!-- DUCHARME SEATING -->
-        <a href="project-ducharme.html" class="slider-item">
-          <img loading="lazy" src="assets/img/ducharme.webp" alt="DUCHARME SEATING Case Study" class="slider-img">
-          <div class="slider-overlay">
-            <div>
-              <h4 class="slider-title">DUCHARME SEATING</h4>
-              <span class="slider-cat">3D ArchViz &amp; CGI</span>
+          </a>
+          <!-- 8BOTTLE -->
+          <a href="project-8bottle.html" class="slider-item">
+            <img loading="lazy" src="assets/img/8bottle.webp" alt="8Bottle Case Study" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">8BOTTLE</h4>
+                <span class="slider-cat">Connected IoT Hardware CGI</span>
+              </div>
             </div>
-          </div>
-        </a>
-        <!-- LATTAFA PERFUMES -->
-        <a href="project-lattafa.html" class="slider-item">
-          <img loading="lazy" src="assets/img/lattafa_perfumes.webp" alt="LATTAFA PERFUMES Case Study" class="slider-img">
-          <div class="slider-overlay">
-            <div>
-              <h4 class="slider-title">LATTAFA PERFUMES</h4>
-              <span class="slider-cat">AI Concept Art</span>
+          </a>
+          <!-- LATTAFA PERFUMES -->
+          <a href="project-lattafa.html" class="slider-item">
+            <img loading="lazy" src="assets/img/lattafa_perfumes.webp" alt="Lattafa Perfumes Case Study" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">LATTAFA PERFUMES</h4>
+                <span class="slider-cat">AI Concept Art</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
         </div>
       </div>
     </section>
