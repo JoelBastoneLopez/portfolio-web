@@ -142,35 +142,122 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 5. MODAL/LIGHTBOX
-    const modal = document.querySelector('.modal');
-    const modalImg = document.querySelector('.modal-img');
-    const modalTitle = document.querySelector('.modal-title');
-    const modalCat = document.querySelector('.modal-cat');
-    const modalDesc = document.querySelector('.modal-desc');
-    const modalClose = document.querySelector('.modal-close');
-    const modalOverlay = document.querySelector('.modal-overlay');
+    // 5. MODAL/LIGHTBOX
+    let modal = document.querySelector('.modal');
+    let modalImg = document.querySelector('.modal-img');
+    let modalTitle = document.querySelector('.modal-title');
+    let modalCat = document.querySelector('.modal-cat');
+    let modalDesc = document.querySelector('.modal-desc');
+    let modalClose = document.querySelector('.modal-close');
+    let modalOverlay = document.querySelector('.modal-overlay');
 
-    // Generic Lightbox Triggers (Reviews, delivery images, etc.)
-    const lightboxTriggers = document.querySelectorAll('[data-lightbox-img]');
-    lightboxTriggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
+    function ensureModal() {
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.id = 'modal';
+            modal.innerHTML = `
+                <div class="modal-overlay" aria-label="Cerrar modal"></div>
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+                    <img loading="lazy" src="" alt="" class="modal-img" id="modal-img" />
+                    <div class="modal-info">
+                        <p class="modal-cat" id="modal-cat"></p>
+                        <h3 class="modal-title" id="modal-title"></h3>
+                        <p class="modal-desc" id="modal-desc"></p>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            modalImg = modal.querySelector('.modal-img');
+            modalTitle = modal.querySelector('.modal-title');
+            modalCat = modal.querySelector('.modal-cat');
+            modalDesc = modal.querySelector('.modal-desc');
+            modalClose = modal.querySelector('.modal-close');
+            modalOverlay = modal.querySelector('.modal-overlay');
+
+            modalClose.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', closeModal);
+        }
+    }
+
+    function openModal(imgSrc, title, cat, desc) {
+        if (!imgSrc) return;
+        ensureModal();
+        if (modalImg) {
+            modalImg.src = imgSrc;
+            modalImg.alt = title || '';
+        }
+        if (modalTitle) modalTitle.textContent = title || '';
+        if (modalCat) modalCat.textContent = cat || '';
+        if (modalDesc) modalDesc.textContent = desc || '';
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (modal) {
+        if (modalClose) modalClose.addEventListener('click', closeModal);
+        if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Delegated Lightbox Triggers (Gallery Items, Media Figures, Reviews)
+    document.addEventListener('click', (e) => {
+        // Explicit [data-lightbox-img] elements
+        const trigger = e.target.closest('[data-lightbox-img]');
+        if (trigger) {
             e.preventDefault();
             e.stopPropagation();
-            if (modal) {
-                const imgSrc = trigger.getAttribute('data-lightbox-img');
-                const title = trigger.getAttribute('data-title') || 'Client Review';
-                const desc = trigger.getAttribute('data-desc') || '';
-                const cat = trigger.getAttribute('data-category') || 'Verified Review';
-                
-                if (modalImg) modalImg.src = imgSrc;
-                if (modalTitle) modalTitle.textContent = title;
-                if (modalDesc) modalDesc.textContent = desc;
-                if (modalCat) modalCat.textContent = cat;
+            const imgSrc = trigger.getAttribute('data-lightbox-img') || trigger.querySelector('img')?.getAttribute('src');
+            const title = trigger.getAttribute('data-title') || trigger.querySelector('.case-gallery-title')?.textContent || 'Asset Detail';
+            const desc = trigger.getAttribute('data-desc') || trigger.querySelector('.case-gallery-desc')?.textContent || '';
+            const cat = trigger.getAttribute('data-category') || trigger.querySelector('.case-gallery-tag')?.textContent || '3D Render';
+            openModal(imgSrc, title, cat, desc);
+            return;
+        }
 
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
+        // Case gallery items (e.g., MWO trait showcase cards)
+        const galleryItem = e.target.closest('.case-gallery-item');
+        if (galleryItem) {
+            e.preventDefault();
+            e.stopPropagation();
+            const img = galleryItem.querySelector('img');
+            const imgSrc = galleryItem.getAttribute('data-lightbox-img') || (img ? img.getAttribute('src') : '');
+            const title = galleryItem.getAttribute('data-title') || galleryItem.querySelector('.case-gallery-title')?.textContent || 'Modular Trait';
+            const desc = galleryItem.getAttribute('data-desc') || galleryItem.querySelector('.case-gallery-desc')?.textContent || '';
+            const cat = galleryItem.getAttribute('data-category') || galleryItem.querySelector('.case-gallery-tag')?.textContent || 'Character Asset';
+            openModal(imgSrc, title, cat, desc);
+            return;
+        }
+
+        // Case media figures with images (excluding video figures and hero backgrounds)
+        const mediaFig = e.target.closest('.case-media-figure');
+        if (mediaFig && !e.target.closest('video') && !mediaFig.querySelector('video') && !mediaFig.closest('.project-hero-bg')) {
+            const img = mediaFig.querySelector('img');
+            if (img) {
+                e.preventDefault();
+                e.stopPropagation();
+                const imgSrc = img.getAttribute('src');
+                const title = mediaFig.querySelector('.case-media-caption-title')?.textContent.replace(/:\s*$/, '') || img.getAttribute('alt') || '3D Asset Viewport';
+                const desc = mediaFig.querySelector('.case-media-caption-text')?.textContent || '';
+                const cat = mediaFig.querySelector('.case-media-caption-tag')?.textContent || 'Technical Breakdown';
+                openModal(imgSrc, title, cat, desc);
+                return;
             }
-        });
+        }
     });
 
     bentoItems.forEach(item => {
@@ -180,47 +267,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-
             const projectUrl = item.getAttribute('data-url');
             if (projectUrl) {
                 window.location.href = projectUrl;
                 return;
             }
 
-            if (modal) {
-                const title = item.getAttribute('data-title') || 'Project Title';
-                const desc = item.getAttribute('data-desc') || 'Project Description';
-                const cat = item.getAttribute('data-category') || 'Category';
-                
-                const imgEl = item.querySelector('.bento-img');
-                const imgSrc = imgEl ? imgEl.getAttribute('src') : '';
+            const title = item.getAttribute('data-title') || 'Project Title';
+            const desc = item.getAttribute('data-desc') || 'Project Description';
+            const cat = item.getAttribute('data-category') || 'Category';
+            
+            const imgEl = item.querySelector('.bento-img');
+            const imgSrc = imgEl ? imgEl.getAttribute('src') : '';
 
-                if (modalImg) modalImg.src = imgSrc;
-                if (modalTitle) modalTitle.textContent = title;
-                if (modalDesc) modalDesc.textContent = desc;
-                if (modalCat) modalCat.textContent = cat;
-
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
+            openModal(imgSrc, title, cat, desc);
         });
     });
-
-    if (modal) {
-        const closeModal = () => {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        };
-
-        if (modalClose) modalClose.addEventListener('click', closeModal);
-        if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                closeModal();
-            }
-        });
-    }
 
     // 6. SCROLL ANIMATIONS
     const animateElements = document.querySelectorAll('.animate-on-scroll');

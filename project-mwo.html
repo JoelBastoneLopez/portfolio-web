@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MWO — Modular 3D Character Asset Pipeline & LookDev | JBL</title>
+  <meta name="description" content="Case study: Production of a high-fidelity modular 3D character asset ecosystem for multi-faction avatars. From 2D briefs and ZBrush sculpting to hard-surface modeling in Cinema 4D/Blender and delivery in OBJ/GLB." />
+  <meta name="keywords" content="MWO, 3D Character Assets, Modular 3D Pipeline, ZBrush Sculpting, Blender, Cinema 4D, Digital Collectibles, Hard-Surface Modeling, PBR Shaders, GLB, OBJ, JBL, Joel Bastone Lopez" />
+  <meta name="author" content="JBL" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://joelbastonelopez.com/project-mwo.html" />
+  <meta property="og:title" content="MWO — Modular 3D Character Asset Pipeline & LookDev | JBL" />
+  <meta property="og:description" content="Production of a high-fidelity modular 3D character asset ecosystem for multi-faction avatars. From 2D briefs and ZBrush sculpting to hard-surface modeling in Cinema 4D/Blender and delivery in OBJ/GLB." />
+  <meta property="og:image" content="https://joelbastonelopez.com/assets/img/mwo/banner.webp" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://joelbastonelopez.com/project-mwo.html" />
+  <meta property="twitter:title" content="MWO — Modular 3D Character Asset Pipeline & LookDev | JBL" />
+  <meta property="twitter:description" content="Production of a high-fidelity modular 3D character asset ecosystem for multi-faction avatars. From 2D briefs and ZBrush sculpting to hard-surface modeling in Cinema 4D/Blender and delivery in OBJ/GLB." />
+  <meta property="twitter:image" content="https://joelbastonelopez.com/assets/img/mwo/banner.webp" />
+
+  <!-- Canonical & SEO -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://joelbastonelopez.com/project-mwo.html" />
+
+  <!-- Schema Markup (Structured Data) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "MWO — Modular 3D Character Asset Pipeline & LookDev",
+    "name": "MWO Modular 3D Asset Pipeline Case Study",
+    "author": {
+      "@type": "Person",
+      "name": "JBL"
+    },
+    "description": "Production of a high-fidelity modular 3D character asset ecosystem for multi-faction avatars. From 2D briefs and ZBrush sculpting to hard-surface modeling in Cinema 4D/Blender and delivery in OBJ/GLB.",
+    "image": "https://joelbastonelopez.com/assets/img/mwo/banner.webp",
+    "genre": "Modular 3D Character Pipeline & Hard-Surface CGI",
+    "keywords": "MWO, Character 3D Assets, ZBrush, Cinema 4D, Blender, Modular Traits, Hard-Surface Modeling, PBR Texturing, GLB, OBJ"
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Skip link for keyboard & assistive technology accessibility -->
+  <a href="#main-case" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav nav-primicia" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="JBL Homepage">
+        JBL
+        <span class="logo-badge-3d">3D</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#proyectos" class="nav-link">Projects</a>
+        <a href="index.html#sobre-mi" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="index.html#reviews" class="nav-link">Reviews</a>
+        <a href="index.html#contacto" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="blog-lang-btn" onclick="toggleBlogLanguage()" aria-label="Cambiar idioma / Switch language" title="Traducir al español">
+          <span class="lang-btn-icon" aria-hidden="true">
+            <svg class="globe-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+            <span class="lang-flag">🇪🇸</span>
+          </span>
+          <span class="lang-btn-label">Traducir a Español</span>
+          <span class="comic-sparkle" aria-hidden="true">✦</span>
+        </button>
+      </div>
+      <button class="nav-burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" aria-label="Mobile Navigation">
+      <a href="index.html#proyectos" class="nav-link">Projects</a>
+      <a href="index.html#sobre-mi" class="nav-link">About</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="index.html#reviews" class="nav-link">Reviews</a>
+      <a href="index.html#contacto" class="nav-link">Contact</a>
+      <button type="button" class="blog-lang-btn blog-lang-btn-mobile" onclick="toggleBlogLanguage()" aria-label="Cambiar idioma / Switch language" title="Traducir al español">
+        <span class="lang-btn-icon" aria-hidden="true">
+          <svg class="globe-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <path d="M2 12h20"></path>
+          </svg>
+          <span class="lang-flag">🇪🇸</span>
+        </span>
+        <span class="lang-btn-label">Traducir a Español</span>
+        <span class="comic-sparkle" aria-hidden="true">✦</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="project-page" id="main-case">
+    
+    <!-- HERO / COVER -->
+    <header class="project-hero" aria-labelledby="case-title">
+      <div class="project-hero-bg">
+        <img src="assets/img/mwo/banner.webp" alt="MWO 3D Modular Character Trait Ecosystem Banner" fetchpriority="high" />
+      </div>
+      <div class="project-hero-content">
+        <div class="project-meta">
+          <span class="project-badge">Modular 3D Pipeline</span>
+          <span class="project-badge">ZBrush Sculpting</span>
+          <span class="project-badge">Hard-Surface CGI</span>
+          <span class="project-badge">Digital Collectibles</span>
+        </div>
+        <h1 class="project-title" id="case-title">MWO</h1>
+        <h2 class="project-subtitle">Modular Character Asset Pipeline &amp; Faction LookDev</h2>
+        <p class="project-brief">Development of a high-fidelity modular 3D character asset ecosystem for multi-faction avatar generation. From initial 2D conceptual briefs to digital sculpting in ZBrush, hard-surface modeling in Cinema 4D and Blender, and procedural LookDev delivered in engine-ready OBJ and GLB formats.</p>
+        <div class="project-hero-action">
+          <a href="#renders-gallery" class="live-experience-btn" aria-label="Jump to trait showcase gallery">
+            <span>Explore 3D Trait Showcase</span>
+            <span class="live-pill-tag">30+ Modular Assets</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <article class="case-study-container">
+
+      <!-- COVER MEDIA FIGURE -->
+      <section class="case-media-section" aria-label="Cover Media">
+        <figure class="case-media-figure">
+          <img src="assets/img/mwo/banner.webp" alt="Hero staging of MWO modular 3D character traits including cybernetic helmet, articulated robotic arm, tactical goggles, and energy capsules" class="case-media-img" />
+          <figcaption class="case-media-caption">
+            <span class="case-media-caption-text">
+              <strong class="case-media-caption-title">Modular Faction Ecosystem:</strong> Multi-category asset staging exhibiting material contrast across polished polymers, tactical leather, hydraulic joints, and emissive elements.
+            </span>
+            <span class="case-media-caption-tag">Hero Staging Pass</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- META ROW -->
+      <section class="case-meta-grid" aria-label="Project Metadata">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-val">Lead 3D Hard-Surface Artist &amp; Sculptor</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Client</span>
+          <span class="case-meta-val">MWO (Meta World Order)</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Sector</span>
+          <span class="case-meta-val">Digital Collectibles / Character Asset Pipeline</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Year</span>
+          <span class="case-meta-val">2022 &ndash; 2023</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Duration</span>
+          <span class="case-meta-val">8&nbsp;weeks</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Stack</span>
+          <span class="case-meta-val">ZBrush &middot; Cinema 4D &middot; Blender &middot; PBR LookDev &middot; OBJ / GLB Pipeline</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Deliverables</span>
+          <span class="case-meta-val">Modular asset library across factions, clean subdivision meshes, PBR texture maps, presentation renders</span>
+        </div>
+      </section>
+
+      <!-- 01 — CONTEXT & BRIEF -->
+      <section class="case-section" id="context" aria-labelledby="heading-context">
+        <div class="case-section-head">
+          <span class="case-step-num">01</span>
+          <h2 class="case-step-title" id="heading-context">CONTEXT &amp; THE BRIEF</h2>
+        </div>
+        <p class="case-lead-text">Building a tactile, believable 3D universe for faction-based digital collectibles.</p>
+        <p class="case-body-text">During the peak of the digital collectibles and avatar generation era, MWO contacted me to lead the 3D asset production for their universe. Characters were categorized into distinct narrative factions&mdash;ranging from high-tech cybernetic operatives and underground scavengers to alchemical engineers. The client provided initial 2D concept sketches and broad art direction notes. My mission was to translate flat line drawings into volumetric, high-fidelity 3D assets that would feel tangible, functional, and seamlessly swappable across all character base bodies without clipping.</p>
+
+        <!-- Media 01: Concept & Moodboard -->
+        <figure class="case-media-figure">
+          <img src="assets/img/mwo/captura-de-pantalla-2026-10-27-111838.webp" alt="MWO master visual reference board and 2D concept briefs categorized by gear type and faction" loading="lazy" class="case-media-img" />
+          <figcaption class="case-media-caption">
+            <span class="case-media-caption-text">
+              <strong class="case-media-caption-title">Visual Brief &amp; Category Mapping:</strong> The master moodboard grouping 2D character sketches and asset categories: robotic arms, tactical masks, gloves, eyewear, bags, and props.
+            </span>
+            <span class="case-media-caption-tag">Art Direction &amp; Moodboard</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- 02 — RESEARCH & REFERENCE CURATION -->
+      <section class="case-section" id="research" aria-labelledby="heading-research">
+        <div class="case-section-head">
+          <span class="case-step-num">02</span>
+          <h2 class="case-step-title" id="heading-research">RESEARCH &amp; REFERENCE CURATION</h2>
+        </div>
+        <p class="case-lead-text">Grounding stylized concepts in real-world engineering and tactile materiality.</p>
+        <p class="case-body-text">2D sketches communicate silhouette and mood, but they often leave mechanical joints, rear angles, and fabric construction unresolved. Before opening 3D software, I spearheaded an extensive visual research phase. I curated dedicated reference sheets for each asset type, drawing from real industrial hydraulics for cybernetic limbs, military webbing and Cordura leather for utility belts, vintage aviator goggles for ocular gear, and technical glassware for energy capsules. This step ensured that every faction had an authentic design language that resonated with collectors.</p>
+
+        <!-- Media 02: 2 Curated Reference Boards -->
+        <div class="case-media-grid-2">
+          <figure class="case-media-figure">
+            <img src="assets/img/mwo/refes-brazos-roboticos.webp" alt="Industrial hydraulic and mechanical robotics reference sheet" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Mechanical Joints:</strong> Hydraulic pistons, ball-and-socket knuckles, and industrial clamping mechanisms researched for robotic limbs.
+              </span>
+              <span class="case-media-caption-tag">Hard-Surface References</span>
+            </figcaption>
+          </figure>
+          <figure class="case-media-figure">
+            <img src="assets/img/mwo/refes-googles.webp" alt="Vintage aviator and tactical cyberpunk goggles reference sheet" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Tactical Eyewear:</strong> Investigating leather stitching, brass buckles, and slotted protective lenses for scavenger factions.
+              </span>
+              <span class="case-media-caption-tag">Materiality References</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 03 — OBJECTIVES -->
+      <section class="case-section" id="objectives" aria-labelledby="heading-objectives">
+        <div class="case-section-head">
+          <span class="case-step-num">03</span>
+          <h2 class="case-step-title" id="heading-objectives">PRODUCTION OBJECTIVES</h2>
+        </div>
+        <p class="case-body-text">Four architectural principles governed the modeling and asset delivery pipeline:</p>
+
+        <div class="case-targets-grid">
+          <div class="case-metric-card">
+            <span class="case-metric-val">100%</span>
+            <span class="case-metric-label">Modular interoperability across all base body archetypes</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">0&nbsp;Clipping</span>
+            <span class="case-metric-label">Zero mesh penetration between multi-layered accessories</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">SubD&nbsp;Clean</span>
+            <span class="case-metric-label">All-quad subdivision-ready geometry for high-res marketing renders</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">Dual&nbsp;Format</span>
+            <span class="case-metric-label">Master high-poly OBJ files alongside lightweight GLB for web pipelines</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 — SCULPTING & HARD-SURFACE PIPELINE -->
+      <section class="case-section" id="modeling" aria-labelledby="heading-modeling">
+        <div class="case-section-head">
+          <span class="case-step-num">04</span>
+          <h2 class="case-step-title" id="heading-modeling">SCULPTING &amp; HARD-SURFACE PIPELINE</h2>
+        </div>
+        <p class="case-lead-text">A hybrid workflow blending ZBrush digital sculpting with precision Cinema 4D and Blender modeling.</p>
+        <p class="case-body-text">Character assets require two fundamentally different skill sets: organic drapery that responds to gravity, and rigid mechanical parts that look industrially manufactured. To achieve both, I deployed a hybrid software pipeline:</p>
+
+        <div class="case-cards-grid-2">
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Digital Sculpting in ZBrush</h3>
+            <p class="case-feature-desc">Used for cloth wrinkles, tactical sling bags, tension folds along strap seams, and leather pouch elasticity over anatomical mannequins. Panel loops and dynamic sub-divisions ensured crisp seam definitions.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Precision Hard-Surface in C4D &amp; Blender</h3>
+            <p class="case-feature-desc">Used for robotic limbs, Kunai blades, tactical eye gear, and modular helmets. Prioritized clean edge flow, weighted bevels, and mechanical pivot alignment for realistic joint articulation.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Standardized Coordinate Origins</h3>
+            <p class="case-feature-desc">Every trait was authored around identical world pivots (neck socket, belt waistline, shoulder anchor) allowing programmatic assembly scripts to compose avatars automatically.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Topology &amp; Polygroup Discipline</h3>
+            <p class="case-feature-desc">Meshes were organized with clear polygroups and material IDs, making secondary colorway iterations and texture map assignments effortless.</p>
+          </div>
+        </div>
+
+        <!-- Media 04A: ZBrush Viewports -->
+        <div class="case-media-grid-2">
+          <figure class="case-media-figure">
+            <img src="assets/img/mwo/zbrush-bandana2.webp" alt="ZBrush high-poly digital sculpting of tactical cross-chest bag with realistic folds and seams" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">ZBrush Organic Sculpting:</strong> Tactical chest sling sculpted on a character mannequin showing dynamic cloth folds and zipper detailing.
+              </span>
+              <span class="case-media-caption-tag">ZBrush Viewport</span>
+            </figcaption>
+          </figure>
+          <figure class="case-media-figure">
+            <img src="assets/img/mwo/zbrush-cinturon1.webp" alt="ZBrush clay viewport of tactical utility belt and pouch detailing" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Belt &amp; Pouch Sculpting:</strong> Heavy leather belt with eyelets and modular pouch volume crafted for scavenger factions.
+              </span>
+              <span class="case-media-caption-tag">ZBrush Viewport</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Media 04B: Blender & Headgear Viewports -->
+        <div class="case-media-grid-2">
+          <figure class="case-media-figure">
+            <img src="assets/img/mwo/blender-guantes.webp" alt="Blender viewport displaying modular tactical combat gloves modeling and material ID segmentation" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Blender Hand-Gear Modeling:</strong> Subdivision surface modeling and color-coded material ID layout for tactical combat gloves, knuckle armor, and wrist closures across factions.
+              </span>
+              <span class="case-media-caption-tag">Blender Viewport</span>
+            </figcaption>
+          </figure>
+          <figure class="case-media-figure">
+            <img src="assets/img/mwo/cabeza-2(notiene-render)-1.webp" alt="Modular cybernetic pilot helmet with color-coded material IDs and neck armor" loading="lazy" class="case-media-img" />
+            <figcaption class="case-media-caption">
+              <span class="case-media-caption-text">
+                <strong class="case-media-caption-title">Helmet Material IDs:</strong> Color-coded polygroup separation on a futuristic pilot helmet ready for multi-layer PBR shading.
+              </span>
+              <span class="case-media-caption-tag">C4D / Blender Viewport</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 05 — TEXTURING & LOOKDEV IN BLENDER -->
+      <section class="case-section" id="lookdev" aria-labelledby="heading-lookdev">
+        <div class="case-section-head">
+          <span class="case-step-num">05</span>
+          <h2 class="case-step-title" id="heading-lookdev">TEXTURING &amp; LOOKDEV IN BLENDER</h2>
+        </div>
+        <p class="case-lead-text">Crafting tactile PBR shader networks that celebrate every scratch, reflection, and glow.</p>
+        <p class="case-body-text">Once high-poly modeling and retopology were locked, texturing and LookDev were developed inside Blender. To make each asset pop on digital marketplace cards and full-screen renders, I authored nuanced physical shader networks:</p>
+
+        <div class="case-cards-grid-2">
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Weathered Leather &amp; Fabrics</h3>
+            <p class="case-feature-desc">Micro-roughness variations, subtle surface creasing, and edge wear highlighting the handmade quality of scavenger faction gear.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Industrial Metals &amp; Machining</h3>
+            <p class="case-feature-desc">Anodized coatings with faint hairline scratches, radial brush marks on cylinder ends, and realistic metallic reflection falloff.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Glass Refraction &amp; Energy Volumes</h3>
+            <p class="case-feature-desc">Full transmission glass shaders with internal electric filament geometry and emissive bloom for alchemical power capsules.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Studio Presentation Lighting</h3>
+            <p class="case-feature-desc">Clean 3-point rim and key lighting setups against neutral deep-space dark backdrops, ensuring asset silhouettes read immediately.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 — TRAIT SHOWCASE GALLERY -->
+      <section class="case-section" id="renders-gallery" aria-labelledby="heading-gallery">
+        <div class="case-section-head">
+          <span class="case-step-num">06</span>
+          <h2 class="case-step-title" id="heading-gallery">MODULAR ASSET SHOWCASE</h2>
+        </div>
+        <p class="case-lead-text">Curated gallery of production-ready 3D traits rendered across factions.</p>
+        <p class="case-body-text">The final asset library encompassed dozens of modular pieces ready for generative deployment. Below is a comprehensive exhibition of the final beauty renders delivered to the MWO team, showcasing the balance between high-end hard-surface precision and rich material storytelling:</p>
+
+        <!-- Gallery Grid -->
+        <div class="case-gallery-grid">
+
+          <!-- Item 1: Helmet -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/cabeza.webp" alt="Cybernetic helmet trait with white panels and gold audio earplates" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Headgear &middot; High-Tech</span>
+              <h3 class="case-gallery-title">Cybernetic Sentry Helm</h3>
+              <p class="case-gallery-desc">Beveled polymer plating with articulated neck hydraulics and emissive lower visor.</p>
+            </div>
+          </article>
+
+          <!-- Item 2: Robotic Arm 1 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/brazo-robotico-1.webp" alt="Hydraulic industrial robotic arm with dual-head gripper and torch" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Cybernetics &middot; Mechanical</span>
+              <h3 class="case-gallery-title">Heavy Hydraulic Arm Mk.I</h3>
+              <p class="case-gallery-desc">Segmented ball-joint linkages, pneumatic cabling, and precision utility claw.</p>
+            </div>
+          </article>
+
+          <!-- Item 3: Robotic Arm 1-2 Alternate -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/brazo-robotico-1-2.webp" alt="Secondary angle of heavy hydraulic arm showing shoulder bracket" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Cybernetics &middot; Articulation</span>
+              <h3 class="case-gallery-title">Hydraulic Arm (Profile)</h3>
+              <p class="case-gallery-desc">Carbon-reinforced shoulder mounting plate designed for zero clipping with body armor.</p>
+            </div>
+          </article>
+
+          <!-- Item 4: Robotic Arm 2 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/brazo-robotico-2.webp" alt="Heavy-duty bionic servo arm variant" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Cybernetics &middot; Heavy Industrial</span>
+              <h3 class="case-gallery-title">Bionic Servo Arm Mk.II</h3>
+              <p class="case-gallery-desc">Reinforced hydraulic pistons and modular wrist interface for auxiliary tool attachments.</p>
+            </div>
+          </article>
+
+          <!-- Item 5: Robotic Arm 2-2 Alternate -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/brazo-robotico-2-2.webp" alt="Alternative angle of bionic servo arm" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Cybernetics &middot; LookDev</span>
+              <h3 class="case-gallery-title">Servo Arm (Isometric)</h3>
+              <p class="case-gallery-desc">Anodized dark alloy sleeves with brushed steel knuckle joints and pressure lines.</p>
+            </div>
+          </article>
+
+          <!-- Item 6: Tactical Goggles 1 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/google-1.webp" alt="Leather tactical goggles with brass ring fasteners and slotted lenses" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Eyewear &middot; Scavenger</span>
+              <h3 class="case-gallery-title">Slotted Aviator Goggles</h3>
+              <p class="case-gallery-desc">Aged leather mask with double-stitched strap, brass buckle rings, and steel eye slits.</p>
+            </div>
+          </article>
+
+          <!-- Item 7: Tactical Goggles 2 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/google-2.webp" alt="Alternative studio perspective of leather tactical goggles" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Eyewear &middot; Tactical Detail</span>
+              <h3 class="case-gallery-title">Aviator Goggles (Rear View)</h3>
+              <p class="case-gallery-desc">Highlighting strap elasticity, inner leather padding, and metallic rivet fasteners.</p>
+            </div>
+          </article>
+
+          <!-- Item 8: Energy Potion 1 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/pocion1.webp" alt="Glass potion flask with electric filament and brass cap" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Relics &middot; Alchemist</span>
+              <h3 class="case-gallery-title">Electro-Plasma Potion</h3>
+              <p class="case-gallery-desc">Conical blown-glass vessel with illuminated filament wire and machined brass sealing cap.</p>
+            </div>
+          </article>
+
+          <!-- Item 9: Energy Potion 2 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/pocion2.webp" alt="Alternative energy potion capsule with glowing chemical core" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Relics &middot; Energy Cell</span>
+              <h3 class="case-gallery-title">Plasma Cell Variant B</h3>
+              <p class="case-gallery-desc">Surface refraction highlights and volumetric emissive core engineered in Blender cycles.</p>
+            </div>
+          </article>
+
+          <!-- Item 10: Energy Potion 3 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/pocion3.webp" alt="Vertical perspective of potion cell with brushed brass tip" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Relics &middot; Chemical Flask</span>
+              <h3 class="case-gallery-title">Plasma Capsule Mk.III</h3>
+              <p class="case-gallery-desc">Threaded brass bottom spike allowing integration into modular utility belts and rigs.</p>
+            </div>
+          </article>
+
+          <!-- Item 11: Belt 1 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/cinturon1.webp" alt="Heavy tactical leather belt with double grommets and side pouch" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Waist Gear &middot; Tactical</span>
+              <h3 class="case-gallery-title">Modular Leather Rig 01</h3>
+              <p class="case-gallery-desc">Reinforced saddle leather waist belt with dual ventilation grommets and sculpted field bag.</p>
+            </div>
+          </article>
+
+          <!-- Item 12: Belt 2 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/cinturon2.webp" alt="Alternative configuration of modular utility belt" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Waist Gear &middot; Utility</span>
+              <h3 class="case-gallery-title">Scavenger Belt Rig 02</h3>
+              <p class="case-gallery-desc">Compact belt variant with streamlined utility buckle and fast-access pouch placement.</p>
+            </div>
+          </article>
+
+          <!-- Item 13: Belt 3 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/cinturon3.webp" alt="Heavy gear belt with twin equipment loops" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Waist Gear &middot; Field Gear</span>
+              <h3 class="case-gallery-title">Tactical Utility Harness 03</h3>
+              <p class="case-gallery-desc">Multi-pocket equipment arrangement optimized for survivalist character archetypes.</p>
+            </div>
+          </article>
+
+          <!-- Item 14: Belt 4 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/cinturon4.webp" alt="Tactical equipment belt with brass canister mounts" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Waist Gear &middot; Heavy Ammo</span>
+              <h3 class="case-gallery-title">Artillery Belt Rig 04</h3>
+              <p class="case-gallery-desc">Featuring specialized cylindrical holster clips designed to house potion canisters and ammo.</p>
+            </div>
+          </article>
+
+          <!-- Item 15: Bandana 1 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/bandana1.webp" alt="Tactical face bandana mask with textured cotton fabric" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Masks &middot; Faction Cloth</span>
+              <h3 class="case-gallery-title">Rebel Face Bandana 01</h3>
+              <p class="case-gallery-desc">Subdivision sculpted face drape with micro-fiber weave and back-knot tension folds.</p>
+            </div>
+          </article>
+
+          <!-- Item 16: Bandana 2 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/bandana2.webp" alt="Alternate face bandana variant with camo texture" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Masks &middot; Infiltration</span>
+              <h3 class="case-gallery-title">Ghost Cover Bandana 02</h3>
+              <p class="case-gallery-desc">Dark fabric pass with edge fraying details and nose bridge contouring.</p>
+            </div>
+          </article>
+
+          <!-- Item 17: Bandana 3 -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/bandana3.webp" alt="Crest pattern faction bandana" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Masks &middot; Insignia</span>
+              <h3 class="case-gallery-title">Faction Insignia Bandana 03</h3>
+              <p class="case-gallery-desc">Embossed faction sigil across the fabric surface with high-contrast edge highlights.</p>
+            </div>
+          </article>
+
+          <!-- Item 18: Maceta -->
+          <article class="case-gallery-item">
+            <div class="case-gallery-img-wrap">
+              <img src="assets/img/mwo/maceta.webp" alt="Brutalist concrete geometric planter prop" loading="lazy" />
+            </div>
+            <div class="case-gallery-info">
+              <span class="case-gallery-tag">Environment &middot; Habitat</span>
+              <h3 class="case-gallery-title">Brutalist Botanical Planter</h3>
+              <p class="case-gallery-desc">Faceted concrete planter asset symbolizing the fragile resurgence of nature in a cyberpunk world.</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 07 — INTEROPERABILITY & ENGINE INTEGRATION -->
+      <section class="case-section" id="delivery" aria-labelledby="heading-delivery">
+        <div class="case-section-head">
+          <span class="case-step-num">07</span>
+          <h2 class="case-step-title" id="heading-delivery">INTEROPERABILITY &amp; DELIVERY</h2>
+        </div>
+        <p class="case-lead-text">Ensuring smooth ingestion into procedural generation engines and web viewers.</p>
+        <p class="case-body-text">Creating 30+ standalone 3D models is only half the battle in a modular character ecosystem; the real technical challenge is guaranteed interoperability. Every single model was audited against the project&rsquo;s master mannequin rig to confirm consistent scale, rotation axes, and zero penetration across overlapping accessories (e.g. wearing a bandana underneath goggles while carrying a robotic arm over a heavy leather belt).</p>
+
+        <div class="case-cards-grid-2">
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Universal OBJ Geometry</h3>
+            <p class="case-feature-desc">Preserving high-density quad topology and explicit smoothing groups for offline marketing renders and print collateral.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Real-Time GLB &amp; WebGL Ready</h3>
+            <p class="case-feature-desc">Exported with packed PBR textures (BaseColor, Metallic-Roughness, Normal, Emissive) for real-time web viewers and metaverse avatar compositors.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Non-Destructive Layering</h3>
+            <p class="case-feature-desc">Every piece designed with strict clearance envelopes, ensuring that an avatar generated with 5 simultaneous traits never suffers clipping.</p>
+          </div>
+          <div class="case-feature-card">
+            <h3 class="case-feature-title">Turnkey Asset Hand-off</h3>
+            <p class="case-feature-desc">Comprehensive naming convention and folder structure delivered to the dev team for automated batch rendering scripts.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 — RESULTS -->
+      <section class="case-section" id="results" aria-labelledby="heading-results">
+        <div class="case-section-head">
+          <span class="case-step-num">08</span>
+          <h2 class="case-step-title" id="heading-results">RESULTS &amp; IMPACT</h2>
+        </div>
+
+        <div class="case-results-grid">
+          <div class="case-metric-card">
+            <span class="case-metric-val">30+</span>
+            <span class="case-metric-label">Modular 3D traits created, sculpted, and textured</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">100%</span>
+            <span class="case-metric-label">Zero-clipping tolerance achieved across modular combinations</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">8&nbsp;Weeks</span>
+            <span class="case-metric-label">From initial 2D sketches to final production hand-off</span>
+          </div>
+          <div class="case-metric-card">
+            <span class="case-metric-val">Dual&nbsp;Pipelines</span>
+            <span class="case-metric-label">SubD high-res stills alongside real-time GLB assets</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 — LEARNINGS -->
+      <section class="case-section" id="learnings" aria-labelledby="heading-learnings">
+        <div class="case-section-head">
+          <span class="case-step-num">09</span>
+          <h2 class="case-step-title" id="heading-learnings">LEARNINGS</h2>
+        </div>
+
+        <div class="case-quote-card">
+          <blockquote>&ldquo;When building a modular character system, you aren&rsquo;t just designing individual 3D objects&mdash;you are designing the invisible clearance tolerances between them. Establishing the coordinate origins and bounding boxes before sculpting a single fold is what prevents weeks of rework.&rdquo;</blockquote>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- B2B CONVERSION CTA -->
+    <section id="contacto" class="section contact" style="border-top: 1px solid var(--border); padding: 5rem 0 4rem;">
+      <div class="section-inner" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 0 2rem;">
+        <h2 class="contact-title" style="font-size: clamp(2rem, 4vw, 3rem); font-family: var(--font-d); color: var(--gold-light); margin-bottom: 1rem;">Need a modular 3D asset pipeline for your game or project?</h2>
+        <p class="contact-subtitle" style="color: var(--txt-secondary); font-size: 1.1rem; line-height: 1.6; max-width: 600px; margin: 0 auto 2rem;">From hard-surface modeling and digital sculpting to real-time engine integration and marketing CGI. Let&rsquo;s discuss how to bring your character and product universes to life.</p>
+
+        <div class="b2b-cta-actions">
+          <a href="https://calendar.app.google/RBKw6fTPh1y5PajF9" target="_blank" rel="noopener noreferrer" class="btn-cta-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Book a Discovery Call
+          </a>
+
+          <a href="mailto:joel.bastonelopez@gmail.com?subject=Modular%203D%20Pipeline%20Quote%20Request&body=Brand%20%2F%20Project%3A%0AAsset%20Scope%3A%0ATarget%20Delivery%20Date%3A%0ABudget%20Range%3A%0A%0AProject%20Details%3A" class="btn-cta-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Request a Quote
+          </a>
+        </div>
+
+        <div class="b2b-social-row">
+          <a href="https://www.linkedin.com/in/joel-bastone-lopez/" target="_blank" rel="noopener" class="b2b-social-link">LinkedIn</a>
+          <a href="https://www.behance.net/joelbastone1" target="_blank" rel="noopener" class="b2b-social-link">Behance</a>
+          <a href="mailto:joel.bastonelopez@gmail.com" class="b2b-social-link">joel.bastonelopez@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER NAV SLIDER / OTHER PROJECTS -->
+    <section class="project-footer" aria-label="More Projects">
+      <div class="footer-slider-header">
+        <h3>Other Projects</h3>
+      </div>
+      <div class="footer-slider-container">
+        <div class="footer-slider">
+          <!-- PRIMICIA -->
+          <a href="project-primicia.html" class="slider-item">
+            <img loading="lazy" src="assets/img/primicia/primicia-1.jpg" alt="Primicia 3D Configurator Case Study" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">PRIMICIA</h4>
+                <span class="slider-cat">Real-Time WebGL 3D Configurator</span>
+              </div>
+            </div>
+          </a>
+          <!-- 8BOTTLE -->
+          <a href="project-8bottle.html" class="slider-item">
+            <img loading="lazy" src="assets/img/8bottle.webp" alt="8Bottle Case Study" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">8BOTTLE</h4>
+                <span class="slider-cat">Connected IoT Hardware CGI</span>
+              </div>
+            </div>
+          </a>
+          <!-- KAISAR -->
+          <a href="project-kaisar.html" class="slider-item">
+            <img loading="lazy" src="assets/img/kaisar.webp" alt="Kaisar Case Study" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">KAISAR</h4>
+                <span class="slider-cat">Luxury Horology LookDev</span>
+              </div>
+            </div>
+          </a>
+          <!-- DUCHARME SEATING -->
+          <a href="project-ducharme.html" class="slider-item">
+            <img loading="lazy" src="assets/img/ducharme.webp" alt="Ducharme Seating Case Study" class="slider-img">
+            <div class="slider-overlay">
+              <div>
+                <h4 class="slider-title">DUCHARME SEATING</h4>
+                <span class="slider-cat">Large-Scale Venue ArchViz</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL / LIGHTBOX -->
+  <div class="modal" id="modal">
+    <div class="modal-overlay" aria-label="Cerrar modal"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <img loading="lazy" src="" alt="" class="modal-img" id="modal-img" />
+      <div class="modal-info">
+        <p class="modal-cat" id="modal-cat"></p>
+        <h3 class="modal-title" id="modal-title"></h3>
+        <p class="modal-desc" id="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="ft">Joel Bastone Lopez &mdash; 2026</span>
+      <span class="ft">Buenos Aires, Argentina</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/blog-i18n.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+</body>
+</html>

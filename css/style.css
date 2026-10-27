@@ -1565,7 +1565,7 @@ button {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.35s ease;
 }
 
 .modal.active {
@@ -1576,23 +1576,25 @@ button {
 .modal-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(4, 5, 8, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  cursor: pointer;
 }
 
 .modal-content {
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  width: 90%;
-  max-height: 90vh;
-  background-color: var(--bg-card);
+  max-width: 1080px;
+  width: 92%;
+  max-height: 92vh;
+  background-color: #0a0b0f;
   border-radius: var(--r-lg);
   overflow-y: auto;
-  border: 1px solid var(--border);
-  transform: scale(0.95);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(201, 169, 111, 0.35);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 50px rgba(201, 169, 111, 0.12);
+  transform: scale(0.94);
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.2);
 }
 
 .modal.active .modal-content {
@@ -1601,52 +1603,59 @@ button {
 
 .modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 36px;
-  height: 36px;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: var(--bg-accent);
-  border: 1px solid var(--border);
-  color: var(--txt-secondary);
+  background-color: rgba(18, 18, 24, 0.85);
+  border: 1px solid var(--border-hi);
+  color: #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: all 0.3s ease;
-  z-index: 3;
+  z-index: 5;
+  backdrop-filter: blur(8px);
 }
 
 .modal-close:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  transform: rotate(90deg);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+  transform: rotate(90deg) scale(1.1);
+  background-color: rgba(28, 28, 36, 0.95);
 }
 
 .modal-img {
   width: 100%;
-  max-height: 520px;
+  max-height: 65vh;
   object-fit: contain;
-  background: #08080a;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, #06070a 85%);
   display: block;
+  padding: 2.2rem 2rem 1.5rem;
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.85));
 }
 
 .modal-info {
-  padding: 1.5rem 2rem;
+  padding: 1.4rem 2.2rem 1.8rem;
+  background: rgba(14, 15, 20, 0.98);
+  border-top: 1px solid var(--border-sub);
 }
 
 .modal-title {
   font-family: var(--font-d);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: var(--txt-primary);
-  margin-bottom: 0.3rem;
+  color: #fff;
+  margin-bottom: 0.35rem;
 }
 
 .modal-cat {
-  color: var(--gold);
-  font-size: 0.7rem;
+  color: var(--gold-light);
+  font-family: var(--font-m);
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
@@ -1654,9 +1663,9 @@ button {
 
 .modal-desc {
   color: var(--txt-secondary);
-  font-size: 0.85rem;
-  line-height: 1.7;
-  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 0.6rem;
 }
 
 /* ==========================================================================
@@ -2959,6 +2968,112 @@ button {
   border-radius: 999px;
   white-space: nowrap;
 }
+
+/* Trait & Render Showcase Gallery Grid */
+.case-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+.case-gallery-item {
+  background: #09090c;
+  border: 1px solid var(--border-sub);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: transform var(--tr-fast), border-color var(--tr-fast), box-shadow var(--tr-fast);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+.case-gallery-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-light);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(201, 169, 111, 0.12);
+}
+.case-gallery-item .case-gallery-img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04) 0%, rgba(10, 10, 14, 0.95) 85%);
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  cursor: zoom-in;
+}
+.case-gallery-item .case-gallery-img-wrap::after {
+  content: "⤢ Click to enlarge";
+  position: absolute;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  background: rgba(10, 10, 14, 0.85);
+  border: 1px solid rgba(201, 169, 111, 0.45);
+  color: var(--gold-light);
+  font-family: var(--font-m);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--tr-fast), transform var(--tr-fast);
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.case-gallery-item:hover .case-gallery-img-wrap::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.case-gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.7));
+  transition: transform 0.4s ease;
+}
+.case-gallery-item:hover img {
+  transform: scale(1.05);
+}
+.case-media-figure:has(img) {
+  cursor: zoom-in;
+}
+.case-gallery-info {
+  padding: 1.2rem 1.4rem;
+  background: rgba(14, 14, 18, 0.95);
+  border-top: 1px solid var(--border-sub);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex-grow: 1;
+}
+.case-gallery-tag {
+  font-family: var(--font-m);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+.case-gallery-title {
+  font-family: var(--font-d);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+.case-gallery-desc {
+  font-family: var(--font-b);
+  font-size: 0.85rem;
+  color: var(--txt-secondary);
+  line-height: 1.4;
+}
+
 
 @media (max-width: 768px) {
   .case-study-container {

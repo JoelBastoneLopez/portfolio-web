@@ -84,6 +84,167 @@
   "Horology & Real-Time UE5": "Relojería & UE5 en Tiempo Real",
   "KAISAR — Luxury Horology & Real-Time LookDev": "KAISAR — Relojería de Lujo & LookDev en Tiempo Real",
   "High-precision hard-surface modeling, procedural PBR shader engineering, and real-time Unreal Engine 5 visualization.": "Modelado hard-surface de alta precisión, ingeniería de shaders PBR procedurales y visualización en tiempo real en Unreal Engine 5.",
+  "MWO": "MWO",
+  "Modular 3D Pipeline & Sculpting": "Pipeline 3D Modular & Escultura",
+  "MWO — Modular 3D Character Pipeline": "MWO — Pipeline Modular de Personajes 3D",
+  "High-fidelity modular 3D character asset ecosystem, ZBrush digital sculpting, and hard-surface LookDev for digital collectibles.": "Ecosistema de assets 3D modulares de alta fidelidad para personajes, escultura digital en ZBrush y LookDev hard-surface para coleccionables digitales.",
+  "MWO — Modular 3D Character Asset Pipeline & LookDev": "MWO — Pipeline de Assets 3D Modulares & LookDev",
+  "Modular Character Asset Pipeline & Faction LookDev": "Pipeline de Assets Modulares para Personajes & LookDev de Facciones",
+  "Development of a high-fidelity modular 3D character asset ecosystem for multi-faction avatar generation. From initial 2D conceptual briefs to digital sculpting in ZBrush, hard-surface modeling in Cinema 4D and Blender, and procedural LookDev delivered in engine-ready OBJ and GLB formats.": "Desarrollo de un ecosistema de assets 3D modulares de alta fidelidad para generación de avatares multifacción. Desde bocetos conceptuales 2D hasta escultura digital en ZBrush, modelado hard-surface en Cinema 4D y Blender, y LookDev procedural entregado en formatos OBJ y GLB listos para motor gráfico.",
+  "Explore 3D Trait Showcase": "Explorar Galería de Traits 3D",
+  "30+ Modular Assets": "+30 Assets Modulares",
+  "Lead 3D Hard-Surface Artist & Sculptor": "Artista Lead 3D Hard-Surface & Escultor",
+  "MWO (Meta World Order)": "MWO (Meta World Order)",
+  "Digital Collectibles / Character Asset Pipeline": "Coleccionables Digitales / Pipeline de Assets para Personajes",
+  "Modular asset library across factions, clean subdivision meshes, PBR texture maps, presentation renders": "Librería de assets modulares por facciones, mallas de subdivisión limpias, mapas de textura PBR y renders de presentación",
+  "Modular 3D Pipeline": "Pipeline 3D Modular",
+  "ZBrush Sculpting": "Escultura en ZBrush",
+  "Hard-Surface CGI": "CGI Hard-Surface",
+  "Digital Collectibles": "Coleccionables Digitales",
+  "Modular Faction Ecosystem:": "Ecosistema Modular de Facciones:",
+  "Multi-category asset staging exhibiting material contrast across polished polymers, tactical leather, hydraulic joints, and emissive elements.": "Composición de assets multicategoría exhibiendo contraste de materiales entre polímeros pulidos, cuero táctico, uniones hidráulicas y elementos emisivos.",
+  "Hero Staging Pass": "Pase de Composición Hero",
+  "CONTEXT & THE BRIEF": "CONTEXTO & EL BRIEF",
+  "Building a tactile, believable 3D universe for faction-based digital collectibles.": "Construyendo un universo 3D táctil y creíble para coleccionables digitales basados en facciones.",
+  "During the peak of the digital collectibles and avatar generation era, MWO contacted me to lead the 3D asset production for their universe. Characters were categorized into distinct narrative factions—ranging from high-tech cybernetic operatives and underground scavengers to alchemical engineers. The client provided initial 2D concept sketches and broad art direction notes. My mission was to translate flat line drawings into volumetric, high-fidelity 3D assets that would feel tangible, functional, and seamlessly swappable across all character base bodies without clipping.": "Durante el auge de los coleccionables digitales y la generación de avatares, MWO me contactó para liderar la producción de assets 3D de su universo. Los personajes estaban divididos en facciones narrativas bien diferenciadas: desde operativos cibernéticos de alta tecnología y recolectores clandestinos hasta ingenieros alquímicos. El cliente entregó bocetos conceptuales 2D iniciales y directrices generales de arte. Mi misión fue traducir esos dibujos lineales planos en assets 3D volumétricos de alta fidelidad que se sintieran tangibles, funcionales y perfectamente intercambiables entre los diferentes cuerpos base de los personajes sin colisiones de malla.",
+  "Visual Brief & Category Mapping:": "Brief Visual & Mapeo de Categorías:",
+  "The master moodboard grouping 2D character sketches and asset categories: robotic arms, tactical masks, gloves, eyewear, bags, and props.": "El moodboard principal agrupando bocetos 2D de personajes y categorías de accesorios: brazos robóticos, máscaras tácticas, guantes, antiparras, mochilas y props.",
+  "Art Direction & Moodboard": "Dirección de Arte & Moodboard",
+  "RESEARCH & REFERENCE CURATION": "INVESTIGACIÓN & CURADURÍA DE REFERENCIAS",
+  "Grounding stylized concepts in real-world engineering and tactile materiality.": "Anclando conceptos estilizados en ingeniería del mundo real y materialidad táctil.",
+  "2D sketches communicate silhouette and mood, but they often leave mechanical joints, rear angles, and fabric construction unresolved. Before opening 3D software, I spearheaded an extensive visual research phase. I curated dedicated reference sheets for each asset type, drawing from real industrial hydraulics for cybernetic limbs, military webbing and Cordura leather for utility belts, vintage aviator goggles for ocular gear, and technical glassware for energy capsules. This step ensured that every faction had an authentic design language that resonated with collectors.": "Los bocetos 2D comunican silueta y atmósfera, pero suelen dejar sin resolver las articulaciones mecánicas, los ángulos posteriores y la confección de telas. Antes de abrir el software 3D, lideré una exhaustiva fase de investigación visual. Curé paneles de referencia dedicados para cada tipo de asset, basándome en sistemas hidráulicos industriales reales para extremidades cibernéticas, correas militares y cuero cordura para cinturones tácticos, antiparras de aviador vintage para visores ópticos y cristalería técnica para cápsulas energéticas. Este paso garantizó que cada facción tuviera un lenguaje de diseño auténtico con alto impacto para los coleccionistas.",
+  "Mechanical Joints:": "Articulaciones Mecánicas:",
+  "Hydraulic pistons, ball-and-socket knuckles, and industrial clamping mechanisms researched for robotic limbs.": "Pistones hidráulicos, rótulas esféricas y mecanismos de fijación industrial investigados para extremidades robóticas.",
+  "Hard-Surface References": "Referencias Hard-Surface",
+  "Tactical Eyewear:": "Óptica Táctica:",
+  "Investigating leather stitching, brass buckles, and slotted protective lenses for scavenger factions.": "Investigación de costuras en cuero, hebillas de latón y lentes ranurados de protección para facciones recolectoras.",
+  "Materiality References": "Referencias de Materialidad",
+  "PRODUCTION OBJECTIVES": "OBJETIVOS DE PRODUCCIÓN",
+  "Four architectural principles governed the modeling and asset delivery pipeline:": "Cuatro principios rectores gobernaron el pipeline de modelado y entrega de assets:",
+  "Modular interoperability across all base body archetypes": "Interoperabilidad modular entre todos los arquetipos de cuerpo base",
+  "0 Clipping": "0 Colisiones",
+  "0 Clipping": "0 Colisiones",
+  "Zero mesh penetration between multi-layered accessories": "Cero penetración de malla entre accesorios superpuestos en capas",
+  "SubD Clean": "SubD Limpia",
+  "SubD Clean": "SubD Limpia",
+  "All-quad subdivision-ready geometry for high-res marketing renders": "Geometría all-quad lista para subdivisión en renders de marketing de alta resolución",
+  "Dual Format": "Formato Dual",
+  "Dual Format": "Formato Dual",
+  "Master high-poly OBJ files alongside lightweight GLB for web pipelines": "Archivos maestros OBJ high-poly junto a GLB livianos para pipelines web",
+  "SCULPTING & HARD-SURFACE PIPELINE": "PIPELINE DE ESCULTURA & HARD-SURFACE",
+  "A hybrid workflow blending ZBrush digital sculpting with precision Cinema 4D and Blender modeling.": "Un flujo de trabajo híbrido combinando escultura digital en ZBrush con modelado de precisión en Cinema 4D y Blender.",
+  "Character assets require two fundamentally different skill sets: organic drapery that responds to gravity, and rigid mechanical parts that look industrially manufactured. To achieve both, I deployed a hybrid software pipeline:": "Los accesorios para personajes requieren dos disciplinas fundamentales: telas orgánicas con caída natural que responden a la gravedad y componentes mecánicos rígidos con acabado industrial. Para lograr ambos, implementé un pipeline híbrido de software:",
+  "Digital Sculpting in ZBrush": "Escultura Digital en ZBrush",
+  "Used for cloth wrinkles, tactical sling bags, tension folds along strap seams, and leather pouch elasticity over anatomical mannequins. Panel loops and dynamic sub-divisions ensured crisp seam definitions.": "Utilizado para arrugas de telas, pecheras tácticas, pliegues de tensión en costuras de correas y elasticidad de cartucheras de cuero sobre maniquíes anatómicos. Panel loops y subdivisiones dinámicas aseguraron costuras sumamente nítidas.",
+  "Precision Hard-Surface in C4D & Blender": "Hard-Surface de Precisión en C4D & Blender",
+  "Used for robotic limbs, Kunai blades, tactical eye gear, and modular helmets. Prioritized clean edge flow, weighted bevels, and mechanical pivot alignment for realistic joint articulation.": "Utilizado para extremidades robóticas, dagas Kunai, visores tácticos y cascos modulares. Se priorizó un edge flow limpio, biseles ponderados y alineación de pivotes mecánicos para articulaciones realistas.",
+  "Standardized Coordinate Origins": "Orígenes de Coordenadas Estandarizados",
+  "Every trait was authored around identical world pivots (neck socket, belt waistline, shoulder anchor) allowing programmatic assembly scripts to compose avatars automatically.": "Cada trait fue creado alrededor de pivotes espaciales idénticos (anclaje de cuello, línea de cintura, hombros), permitiendo a los scripts de composición ensamblar avatares programáticamente.",
+  "Topology & Polygroup Discipline": "Disciplina de Topología & Polygroups",
+  "Meshes were organized with clear polygroups and material IDs, making secondary colorway iterations and texture map assignments effortless.": "Las mallas se estructuraron con polygroups e IDs de material claros, agilizando las iteraciones de color secundarias y la asignación de mapas de texturas.",
+  "ZBrush Organic Sculpting:": "Escultura Orgánica en ZBrush:",
+  "Tactical chest sling sculpted on a character mannequin showing dynamic cloth folds and zipper detailing.": "Pechera táctica cruzada esculpida sobre maniquí anatómico mostrando pliegues dinámicos de tela y detalles de cremallera.",
+  "ZBrush Viewport": "Viewport de ZBrush",
+  "Belt & Pouch Sculpting:": "Escultura de Cinturones & Bolsillos:",
+  "Heavy leather belt with eyelets and modular pouch volume crafted for scavenger factions.": "Cinturón de cuero pesado con ojales y bolsillos modulares confeccionados para facciones recolectoras.",
+  "Blender Hand-Gear Modeling:": "Modelado de Guantes en Blender:",
+  "Subdivision surface modeling and color-coded material ID layout for tactical combat gloves, knuckle armor, and wrist closures across factions.": "Modelado de superficies de subdivisión y separación por IDs de material para guantes tácticos de combate, nudillos y cierres de muñeca entre facciones.",
+  "Blender Viewport": "Viewport de Blender",
+  "Helmet Material IDs:": "IDs de Material en Casco:",
+  "Color-coded polygroup separation on a futuristic pilot helmet ready for multi-layer PBR shading.": "Separación de polygroups por color en casco de piloto futurista listo para sombreado PBR multicapa.",
+  "C4D / Blender Viewport": "Viewport C4D / Blender",
+  "TEXTURING & LOOKDEV IN BLENDER": "TEXTURIZADO & LOOKDEV EN BLENDER",
+  "Crafting tactile PBR shader networks that celebrate every scratch, reflection, and glow.": "Creación de redes de shaders PBR táctiles que destacan cada rasguño, reflejo y emisión lumínica.",
+  "Once high-poly modeling and retopology were locked, texturing and LookDev were developed inside Blender. To make each asset pop on digital marketplace cards and full-screen renders, I authored nuanced physical shader networks:": "Una vez cerrados el modelado high-poly y la retopología, el texturizado y LookDev se desarrollaron en Blender. Para que cada asset destacara tanto en fichas comerciales como en renders a pantalla completa, creé redes de shaders físicos con gran riqueza de matices:",
+  "Weathered Leather & Fabrics": "Cueros y Telas Envejecidas",
+  "Micro-roughness variations, subtle surface creasing, and edge wear highlighting the handmade quality of scavenger faction gear.": "Variaciones de microrrugosidad, sutiles arrugas superficiales y desgaste en bordes que resaltan la estética artesanal de los recolectores.",
+  "Industrial Metals & Machining": "Metales Industriales & Mecanizado",
+  "Anodized coatings with faint hairline scratches, radial brush marks on cylinder ends, and realistic metallic reflection falloff.": "Recubrimientos anodizados con microarañazos, marcas radiales de cepillado en extremos cilíndricos y decaimiento realista de reflejos metálicos.",
+  "Glass Refraction & Energy Volumes": "Refracción de Cristal & Volúmenes de Energía",
+  "Full transmission glass shaders with internal electric filament geometry and emissive bloom for alchemical power capsules.": "Shaders de cristal con transmisión completa, filamentos eléctricos internos y resplandor emisivo para cápsulas de energía alquímica.",
+  "Studio Presentation Lighting": "Iluminación de Presentación en Estudio",
+  "Clean 3-point rim and key lighting setups against neutral deep-space dark backdrops, ensuring asset silhouettes read immediately.": "Esquemas limpios de luz clave y contraluz (rim light) de 3 puntos sobre fondos oscuros neutros, garantizando lectura instantánea de cada silueta.",
+  "MODULAR ASSET SHOWCASE": "SHOWCASE DE ASSETS MODULARES",
+  "Curated gallery of production-ready 3D traits rendered across factions.": "Galería curada de traits 3D listos para producción renderizados por facción.",
+  "The final asset library encompassed dozens of modular pieces ready for generative deployment. Below is a comprehensive exhibition of the final beauty renders delivered to the MWO team, showcasing the balance between high-end hard-surface precision and rich material storytelling:": "La librería final abarcó decenas de piezas modulares listas para integración generativa. A continuación se presenta una exhibición completa de los renders de presentación entregados al equipo de MWO, demostrando el equilibrio entre precisión hard-surface de alta gama y narrativa visual de materiales:",
+  "Headgear · High-Tech": "Cascos · Alta Tecnología",
+  "Cybernetic Sentry Helm": "Casco Centinela Cibernético",
+  "Beveled polymer plating with articulated neck hydraulics and emissive lower visor.": "Placas de polímero biseladas con articulación hidráulica en cuello y visor inferior emisivo.",
+  "Cybernetics · Mechanical": "Cibernética · Mecánica",
+  "Heavy Hydraulic Arm Mk.I": "Brazo Hidráulico Pesado Mk.I",
+  "Segmented ball-joint linkages, pneumatic cabling, and precision utility claw.": "Eslabones con rótulas segmentadas, cableado neumático y pinza utilitaria de precisión.",
+  "Cybernetics · Articulation": "Cibernética · Articulación",
+  "Hydraulic Arm (Profile)": "Brazo Hidráulico (Perfil)",
+  "Carbon-reinforced shoulder mounting plate designed for zero clipping with body armor.": "Placa de montaje en hombro reforzada en carbono diseñada para evitar colisiones con pecheras.",
+  "Cybernetics · Heavy Industrial": "Cibernética · Industrial Pesado",
+  "Bionic Servo Arm Mk.II": "Brazo Biónico Servo Mk.II",
+  "Reinforced hydraulic pistons and modular wrist interface for auxiliary tool attachments.": "Pistones hidráulicos reforzados e interfaz de muñeca modular para acople de herramientas auxiliares.",
+  "Cybernetics · LookDev": "Cibernética · LookDev",
+  "Servo Arm (Isometric)": "Brazo Servo (Isométrico)",
+  "Anodized dark alloy sleeves with brushed steel knuckle joints and pressure lines.": "Fundas de aleación oscura anodizada con articulaciones de acero cepillado y líneas de presión.",
+  "Eyewear · Scavenger": "Visores · Recolector",
+  "Slotted Aviator Goggles": "Antiparras Aviador Ranuradas",
+  "Aged leather mask with double-stitched strap, brass buckle rings, and steel eye slits.": "Montura de cuero envejecido con correa de doble costura, anillas de latón y rendijas de acero.",
+  "Eyewear · Tactical Detail": "Visores · Detalle Táctico",
+  "Aviator Goggles (Rear View)": "Antiparras Aviador (Vista Posterior)",
+  "Highlighting strap elasticity, inner leather padding, and metallic rivet fasteners.": "Destacando la elasticidad de la correa, el acolchado interior de cuero y los remaches metálicos.",
+  "Relics · Alchemist": "Reliquias · Alquimista",
+  "Electro-Plasma Potion": "Poción Electro-Plasma",
+  "Conical blown-glass vessel with illuminated filament wire and machined brass sealing cap.": "Recipiente cónico de vidrio soplado con filamento interno iluminado y tapón de latón mecanizado.",
+  "Relics · Energy Cell": "Reliquias · Celda de Energía",
+  "Plasma Cell Variant B": "Celda de Plasma Variante B",
+  "Surface refraction highlights and volumetric emissive core engineered in Blender cycles.": "Reflejos de refracción superficial y núcleo emisivo volumétrico creado en Blender Cycles.",
+  "Relics · Chemical Flask": "Reliquias · Matraz Químico",
+  "Plasma Capsule Mk.III": "Cápsula de Plasma Mk.III",
+  "Threaded brass bottom spike allowing integration into modular utility belts and rigs.": "Punta inferior roscada de latón para acople directo en cinturones y arneses tácticos.",
+  "Waist Gear · Tactical": "Cinturones · Táctico",
+  "Modular Leather Rig 01": "Arnés Modular de Cuero 01",
+  "Reinforced saddle leather waist belt with dual ventilation grommets and sculpted field bag.": "Cinturón de vaqueta reforzado con ojales de ventilación y cartuchera de campo esculpida.",
+  "Waist Gear · Utility": "Cinturones · Utilitario",
+  "Scavenger Belt Rig 02": "Cinturón Recolector 02",
+  "Compact belt variant with streamlined utility buckle and fast-access pouch placement.": "Variante compacta con hebilla utilitaria aerodinámica y disposición de bolsillos de acceso rápido.",
+  "Waist Gear · Field Gear": "Cinturones · Equipo de Campo",
+  "Tactical Utility Harness 03": "Arnés Utilitario Táctico 03",
+  "Multi-pocket equipment arrangement optimized for survivalist character archetypes.": "Distribución multipocket optimizada para arquetipos de personajes de supervivencia.",
+  "Waist Gear · Heavy Ammo": "Cinturones · Munición Pesada",
+  "Artillery Belt Rig 04": "Cinturón de Artillería 04",
+  "Featuring specialized cylindrical holster clips designed to house potion canisters and ammo.": "Con clips cilíndricos especializados diseñados para alojar frascos de pociones y munición.",
+  "Masks · Faction Cloth": "Máscaras · Tela de Facción",
+  "Rebel Face Bandana 01": "Bandana Facial Rebelde 01",
+  "Subdivision sculpted face drape with micro-fiber weave and back-knot tension folds.": "Cubreboca esculpido con trama de microfibra y pliegues de tensión con nudo posterior.",
+  "Masks · Infiltration": "Máscaras · Infiltración",
+  "Ghost Cover Bandana 02": "Bandana Ghost Cover 02",
+  "Dark fabric pass with edge fraying details and nose bridge contouring.": "Variante de tela oscura con detalles de deshilachado y contorno anatómico nasal.",
+  "Masks · Insignia": "Máscaras · Insignia",
+  "Faction Insignia Bandana 03": "Bandana Insignia de Facción 03",
+  "Embossed faction sigil across the fabric surface with high-contrast edge highlights.": "Emblema de facción en relieve sobre la superficie de tela con realces de borde en alto contraste.",
+  "Environment · Habitat": "Entorno · Hábitat",
+  "Brutalist Botanical Planter": "Maceta Botánica Brutalista",
+  "Faceted concrete planter asset symbolizing the fragile resurgence of nature in a cyberpunk world.": "Maceta facetada de concreto que simboliza el frágil resurgimiento de la naturaleza en un mundo cyberpunk.",
+  "INTEROPERABILITY & DELIVERY": "INTEROPERABILIDAD & ENTREGA",
+  "Ensuring smooth ingestion into procedural generation engines and web viewers.": "Garantizando una integración fluida en motores de generación procedural y visores web.",
+  "Creating 30+ standalone 3D models is only half the battle in a modular character ecosystem; the real technical challenge is guaranteed interoperability. Every single model was audited against the project’s master mannequin rig to confirm consistent scale, rotation axes, and zero penetration across overlapping accessories (e.g. wearing a bandana underneath goggles while carrying a robotic arm over a heavy leather belt).": "Crear más de 30 modelos 3D independientes es solo la mitad del desafío en un ecosistema de personajes modulares; el verdadero reto técnico radica en garantizar la interoperabilidad. Cada modelo individual fue auditado contra el maniquí maestro del proyecto para confirmar escala consistente, ejes de rotación alineados y cero penetración entre accesorios superpuestos (por ejemplo, llevar una bandana debajo de las antiparras mientras se porta un brazo robótico sobre un cinturón de cuero grueso).",
+  "Universal OBJ Geometry": "Geometría OBJ Universal",
+  "Preserving high-density quad topology and explicit smoothing groups for offline marketing renders and print collateral.": "Preservación de topología quad de alta densidad y smoothing groups explícitos para renders de marketing y piezas gráficas.",
+  "Real-Time GLB & WebGL Ready": "GLB en Tiempo Real & Listo para WebGL",
+  "Exported with packed PBR textures (BaseColor, Metallic-Roughness, Normal, Emissive) for real-time web viewers and metaverse avatar compositors.": "Exportación con texturas PBR empaquetadas (BaseColor, Metallic-Roughness, Normal, Emissive) para visores web en tiempo real y componedores de avatares.",
+  "Non-Destructive Layering": "Capas No Destructivas",
+  "Every piece designed with strict clearance envelopes, ensuring that an avatar generated with 5 simultaneous traits never suffers clipping.": "Cada pieza fue diseñada con tolerancias estrictas de holgura, asegurando que un avatar generado con 5 traits simultáneos nunca sufra colisiones de malla.",
+  "Turnkey Asset Hand-off": "Entrega Llave en Mano",
+  "Comprehensive naming convention and folder structure delivered to the dev team for automated batch rendering scripts.": "Convención integral de nombres y estructura de carpetas entregada al equipo de desarrollo para scripts de renderizado por lotes.",
+  "RESULTS & IMPACT": "RESULTADOS & IMPACTO",
+  "Modular 3D traits created, sculpted, and textured": "Traits 3D modulares creados, esculpidos y texturizados",
+  "Zero-clipping tolerance achieved across modular combinations": "Tolerancia cero colisiones lograda entre combinaciones modulares",
+  "From initial 2D sketches to final production hand-off": "Desde bocetos 2D iniciales hasta entrega final de producción",
+  "Dual Pipelines": "Pipelines Duales",
+  "Dual Pipelines": "Pipelines Duales",
+  "SubD high-res stills alongside real-time GLB assets": "Renders high-res SubD junto con assets GLB en tiempo real",
+  "“When building a modular character system, you aren’t just designing individual 3D objects—you are designing the invisible clearance tolerances between them. Establishing the coordinate origins and bounding boxes before sculpting a single fold is what prevents weeks of rework.”": "“Al construir un sistema de personajes modulares, no estás diseñando simplemente objetos 3D individuales: estás diseñando las tolerancias de holgura invisibles entre ellos. Establecer los orígenes de coordenadas y los bounding boxes antes de esculpir el primer pliegue es lo que ahorra semanas de retrabajo.”",
+  "Need a modular 3D asset pipeline for your game or project?": "¿Necesitas un pipeline de assets 3D modulares para tu juego o proyecto?",
+  "From hard-surface modeling and digital sculpting to real-time engine integration and marketing CGI. Let’s discuss how to bring your character and product universes to life.": "Desde modelado hard-surface y escultura digital hasta integración en tiempo real y CGI de marketing. Hablemos de cómo dar vida al universo de tus personajes y productos.",
+  "Real-Time WebGL 3D Configurator": "Configurador 3D WebGL en Tiempo Real",
+  "Connected IoT Hardware CGI": "CGI para Hardware IoT Conectado",
+  "Luxury Horology LookDev": "LookDev de Relojería de Lujo",
   "Ducharme Seating": "Ducharme Seating",
   "Large-Scale Venue ArchViz": "ArchViz de Espacios a Gran Escala",
   "Ducharme Seating — Large-Scale Venue ArchViz": "Ducharme Seating — ArchViz de Espacios a Gran Escala",
@@ -564,8 +725,29 @@
     REVERSE_DICT[es] = en;
   }
 
+  function safeGetStorage(key, fallback) {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        return window.localStorage.getItem(key) || fallback;
+      }
+    } catch (e) {
+      // LocalStorage access denied or restricted on file://
+    }
+    return fallback;
+  }
+
+  function safeSetStorage(key, val) {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem(key, val);
+      }
+    } catch (e) {
+      // Storage access blocked or quota exceeded
+    }
+  }
+
   // Current language state
-  let currentLang = localStorage.getItem('jbl_blog_lang') || 'en';
+  let currentLang = safeGetStorage('jbl_blog_lang', 'en');
 
   /**
    * Particle Confetti Burst
@@ -675,6 +857,13 @@
     return (str || '')
       .replace(/\s+/g, ' ')
       .replace(/&nbsp;/g, ' ')
+      .replace(/&mdash;/g, '—')
+      .replace(/&ndash;/g, '–')
+      .replace(/&amp;/g, '&')
+      .replace(/&middot;/g, '·')
+      .replace(/&rsquo;/g, "'")
+      .replace(/&ldquo;/g, '"')
+      .replace(/&rdquo;/g, '"')
       .replace(/[""]/g, '"')
       .replace(/['']/g, "'")
       .trim();
@@ -887,11 +1076,17 @@
     });
   }
 
+  let isToggling = false;
+
   /**
    * Main Toggle Function
    * Triggered on clicking the Translate button
    */
   window.toggleBlogLanguage = function () {
+    if (isToggling) return;
+    isToggling = true;
+    setTimeout(() => { isToggling = false; }, 250);
+
     const nextLang = currentLang === 'en' ? 'es' : 'en';
     const activeBtn = document.querySelector('.blog-lang-btn');
 
@@ -913,7 +1108,7 @@
 
     setTimeout(() => {
       currentLang = nextLang;
-      localStorage.setItem('jbl_blog_lang', currentLang);
+      safeSetStorage('jbl_blog_lang', currentLang);
       document.documentElement.lang = currentLang;
 
       // 3. Perform DOM text swap
@@ -929,6 +1124,17 @@
    * Auto-initialize on DOM ready
    */
   function init() {
+    // Bind explicit click event listeners to all translation buttons
+    document.querySelectorAll('.blog-lang-btn').forEach(btn => {
+      if (!btn.hasAttribute('data-i18n-bound')) {
+        btn.setAttribute('data-i18n-bound', 'true');
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.toggleBlogLanguage();
+        });
+      }
+    });
+
     if (currentLang === 'es') {
       updateButtons(true);
       translateDOM('es');
