@@ -1,0 +1,20 @@
+# Joel Bastone Lopez (JBL) — 3D Product CGI & Interactive WebGL Artist
+
+> Photorealistic 3D product CGI, procedural LookDev, and interactive WebGL experiences (Three.js, WebGPU, Gaussian Splatting) for e-commerce brands, industrial manufacturers, and global creative agencies.
+
+- Base: Buenos Aires, Argentina (GMT-3)
+- Website: https://joelbastonelopez.com/
+- Contact: joel.bastonelopez@gmail.com
+- Core Specialization: 3D Product CGI, E-Commerce WebGL 3D Configurators, Hard-Surface Modeling, ZBrush Sculpting, Procedural PBR Shading, Unreal Engine 5 Real-Time Visualization.
+
+## Commercial Case Studies
+- [Primicia — Línea Lab](https://joelbastonelopez.com/project-primicia.html): Interactive real-time 3D luggage configurator built with Three.js.
+- [8Bottle — Connected IoT Hardware Launch](https://joelbastonelopez.com/project-8bottle.html): Global crowdfunding launch visual ecosystem, procedural Cinema 4D blueprints, and photorealistic PBR liquid/droplet simulations.
+- [MWO — Modular 3D Character Asset Pipeline](https://joelbastonelopez.com/project-mwo.html): High-fidelity modular character trait ecosystem, ZBrush organic sculpting, hard-surface Blender/C4D modeling, and turnkey GLB/OBJ deliverables.
+- [KAISAR — Luxury Horology & Real-Time LookDev](https://joelbastonelopez.com/project-kaisar.html): High-precision luxury watch hard-surface CGI and Unreal Engine 5 real-time visualization.
+- [Ducharme Seating — Large-Scale Venue ArchViz](https://joelbastonelopez.com/project-ducharme.html): Architectural photorealism, instanced raytracing, and kinematic rigging for international auditoriums.
+- [Lattafa Perfumes — AI Concept Art](https://joelbastonelopez.com/project-lattafa.html): High-end perfume concept generation using generative AI and digital CGI post-production.
+
+## Technical Writing & Journal
+- [JBL Journal](https://joelbastonelopez.com/blog.html): Technical insights on 3D pipelines, real-time WebGL, and Gaussian Splatting for commercial production.
+- [Gaussian Splatting for E-Commerce in 2026](https://joelbastonelopez.com/blog/gaussian-splatting-ecommerce-2026.html): Technical deep dive into KHR_gaussian_splatting, WebGL/WebGPU mobile rendering, and the transition from classical polygonal 3D to volumetric neural representations.
