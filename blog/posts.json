@@ -1,5 +1,16 @@
 [
   {
+    "id": "interactive-3d-viewer-ecommerce",
+    "title": "Does Your Product Really Need an Interactive 3D Viewer?",
+    "url": "blog/interactive-3d-viewer-ecommerce.html",
+    "category": "3D E-commerce",
+    "date": "Oct 28, 2026",
+    "readTime": "5 min read",
+    "image": "assets/img/blog-interactive-3d-viewer.jpg",
+    "excerpt": "Interactive 3D is one of the most powerful tools in e-commerce, but not every product needs it. Real data from Shopify, conversion benchmarks, speed costs, and a 3-question decision framework.",
+    "author": "Joel Bastone Lopez"
+  },
+  {
     "id": "gaussian-splatting-ecommerce-2026",
     "title": "Gaussian Splatting's Leap to E-commerce: We Finally Have a Standard",
     "url": "blog/gaussian-splatting-ecommerce-2026.html",

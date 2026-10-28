@@ -13,8 +13,7 @@
 - [MWO — Modular 3D Character Asset Pipeline](https://joelbastonelopez.com/project-mwo.html): High-fidelity modular character trait ecosystem, ZBrush organic sculpting, hard-surface Blender/C4D modeling, and turnkey GLB/OBJ deliverables.
 - [KAISAR — Luxury Horology & Real-Time LookDev](https://joelbastonelopez.com/project-kaisar.html): High-precision luxury watch hard-surface CGI and Unreal Engine 5 real-time visualization.
 - [Ducharme Seating — Large-Scale Venue ArchViz](https://joelbastonelopez.com/project-ducharme.html): Architectural photorealism, instanced raytracing, and kinematic rigging for international auditoriums.
-- [Lattafa Perfumes — AI Concept Art](https://joelbastonelopez.com/project-lattafa.html): High-end perfume concept generation using generative AI and digital CGI post-production.
 
 ## Technical Writing & Journal
-- [JBL Journal](https://joelbastonelopez.com/blog.html): Technical insights on 3D pipelines, real-time WebGL, and Gaussian Splatting for commercial production.
+- [Does Your Product Really Need an Interactive 3D Viewer?](https://joelbastonelopez.com/blog/interactive-3d-viewer-ecommerce.html): Strategic analysis and decision framework for e-commerce brands: Shopify conversion data, mobile load speed impacts, and when to choose catalog CGI vs animations vs interactive WebGL viewers.
 - [Gaussian Splatting for E-Commerce in 2026](https://joelbastonelopez.com/blog/gaussian-splatting-ecommerce-2026.html): Technical deep dive into KHR_gaussian_splatting, WebGL/WebGPU mobile rendering, and the transition from classical polygonal 3D to volumetric neural representations.

@@ -1262,6 +1262,32 @@ button {
   font-weight: 600;
 }
 
+.about-skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.about-skill-pill {
+  font-family: var(--font-b);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--txt-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+}
+
+.about-skill-pill:hover {
+  color: var(--gold-light);
+  border-color: rgba(201, 169, 110, 0.35);
+  background: rgba(201, 169, 110, 0.08);
+}
+
 .methodology {
   margin-top: 3rem;
   display: grid;
@@ -4016,6 +4042,115 @@ button {
   padding: 0.75rem 1rem;
   font-size: 0.8rem;
   color: var(--txt-muted);
+}
+
+/* Metric Stats Grid inside Post */
+.post-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0 3rem;
+}
+
+.post-stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.4rem 1.1rem;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 169, 110, 0.35);
+  box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.5), 0 0 16px rgba(201, 169, 110, 0.08);
+}
+
+.post-stat-value {
+  font-family: var(--font-d);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.post-stat-label {
+  font-size: 0.82rem;
+  color: var(--txt-secondary);
+  line-height: 1.45;
+}
+
+/* Post Decision Checklist */
+.post-decision-card {
+  background: rgba(18, 18, 24, 0.75);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 3rem 0;
+  backdrop-filter: blur(12px);
+}
+
+.post-decision-title {
+  font-family: var(--font-d);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.post-decision-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-decision-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #e4e3ec;
+}
+
+.post-decision-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(201, 169, 110, 0.15);
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  color: var(--gold-light);
+  font-family: var(--font-d);
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.post-decision-summary {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  border-left: 3px solid var(--gold);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--txt-secondary);
+}
+
+.post-decision-summary strong {
+  color: var(--gold-light);
 }
 
 /* Post Tags */

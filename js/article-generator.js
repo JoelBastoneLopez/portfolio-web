@@ -35,7 +35,7 @@ function renderRichText(str) {
 
 // Helper to fix relative image paths from blog/ subdirectory
 function fixAssetPath(path) {
-  if (!path) return '../assets/img/foto_perfil.webp';
+  if (!path) return '../assets/img/joe-profile.webp';
   if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('../') || path.startsWith('/')) {
     return path;
   }
@@ -84,7 +84,7 @@ function buildArticleHTML(data) {
     else if (type === 'comparison') {
       const inputs = block.querySelectorAll('input');
       const img1 = fixAssetPath(inputs[0].value || 'assets/img/primicia/long-primicia.jpg');
-      const img2 = fixAssetPath(inputs[1].value || 'assets/img/foto_perfil.webp');
+      const img2 = fixAssetPath(inputs[1].value || 'assets/img/joe-profile.webp');
       const caption = inputs[2].value || '';
       bodyHtml += `
       <div class="post-grid-2x" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:2.5rem 0;">
@@ -332,7 +332,7 @@ function buildArticleHTML(data) {
       <!-- Author and Share bar -->
       <div class="post-author-bar">
         <div class="blog-author">
-          <img src="../assets/img/foto_perfil.webp" alt="Joel Bastone Lopez" class="blog-author-avatar" />
+          <img src="../assets/img/joe-profile.webp" alt="Joel Bastone Lopez" class="blog-author-avatar" />
           <div class="blog-author-info">
             <span class="blog-author-name">Joel Bastone Lopez</span>
             <span class="blog-author-role">3D Artist &amp; WebGL Developer</span>
@@ -390,7 +390,7 @@ function buildArticleHTML(data) {
 
     <!-- Author Bio Box -->
     <section class="post-author-box" aria-label="About the author">
-      <img src="../assets/img/foto_perfil.webp" alt="Joel Bastone Lopez" class="post-author-box-avatar" />
+      <img src="../assets/img/joe-profile.webp" alt="Joel Bastone Lopez" class="post-author-box-avatar" />
       <div class="post-author-box-content">
         <h4>Joel Bastone Lopez</h4>
         <span class="role">3D CGI Artist &amp; Real-time WebGL Developer</span>
